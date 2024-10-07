@@ -77,11 +77,11 @@ func (org Org) pruneFolder(node *FolderTreeNode) (*FolderTreeNode, error) {
 	// target is a top-level folder
 	res, found := org.folders.Get(node)
 	if !found {
-		return nil, errors.New("Prune tree error, this should be unreachable 1")
+		return nil, errors.New("Likely Bug: prune tree, this should be unreachable")
 	}
 	res, found = org.folders.Delete(res)
 	if !found {
-		return nil, errors.New("Prune tree error, this should be unreachable 2")
+		return nil, errors.New("Likely Bug: prune tree, this should be unreachable")
 	}
 	return res, nil
 }
@@ -96,7 +96,7 @@ func fixPaths(node *FolderTreeNode, newPrefix string) {
 		curr := stack[len(stack)-1]
 		stack = stack[:len(stack)-1]
 
-		// preprocessing for well-formed top levels
+		// preprocessing for well-formed top level nodes
 		curr.folder.Paths = "." + curr.folder.Paths + "."
 		curr.folder.Paths = strings.Replace(curr.folder.Paths, oldPrefix, newPrefix, 1)
 		curr.folder.Paths = strings.Trim(curr.folder.Paths, ".")

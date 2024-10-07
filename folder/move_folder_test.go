@@ -6,9 +6,9 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/georgechieng-sc/interns-2022/folder"
 	"github.com/go-test/deep"
 	"github.com/gofrs/uuid"
+	"github.com/jon-atkinson/sc-takehome-2024-25/folder"
 )
 
 func Test_folder_MoveFolder(t *testing.T) {
@@ -179,35 +179,166 @@ func Test_folder_MoveFolder(t *testing.T) {
 			f := folder.NewDriver(tt.folders)
 			got, err := f.MoveFolder(tt.target, tt.dst)
 
-			errString := "<nil>"
-			ttErrString := "<nil>"
-			if err != nil {
-				errString = err.Error()
-			}
-			if tt.err != nil {
-				ttErrString = tt.err.Error()
-			}
-			if errString != ttErrString {
-				t.Fatalf("GetFoldersByOrgID wanted=%s. got=%s\n",
-					ttErrString, errString)
-			}
-
-			if len(tt.want) != len(got) {
-				t.Fatalf("GetAllChildFolders output does not contain %d Folders. got=%d\n",
-					len(tt.want), len(got))
-			}
-
-			slices.SortFunc(tt.want, func(a, b folder.Folder) int {
-				return strings.Compare(a.Paths, b.Paths)
-			})
-			slices.SortFunc(got, func(a, b folder.Folder) int {
-				return strings.Compare(a.Paths, b.Paths)
-			})
-
-			if diff := deep.Equal(tt.want, got); diff != nil {
-				t.Fatalf("GetAllChildFolders output folders do not match expected:\n%s",
-					diff)
-			}
+			testFolderResults(t, got, tt.want, err, tt.err)
 		})
+	}
+}
+
+func Test_folder_MoveFolder_Complex(t *testing.T) {
+	firstOrgId := uuid.FromStringOrNil(FirstOrgID)
+
+	t.Parallel()
+	tests := [...]struct {
+		name  string
+		moves []struct {
+			target string
+			dst    string
+		}
+		folders []folder.Folder
+		want    []folder.Folder
+		err     error
+	}{
+		{
+			"two moves, top-level",
+			[]struct {
+				target string
+				dst    string
+			}{
+				{"bravo", "alpha"},
+				{"charlie", "bravo"},
+			},
+			[]folder.Folder{
+				{"bravo", firstOrgId, "bravo"},
+				{"alpha", firstOrgId, "alpha"},
+				{"charlie", firstOrgId, "charlie"},
+			},
+			[]folder.Folder{
+				{"bravo", firstOrgId, "alpha.bravo"},
+				{"alpha", firstOrgId, "alpha"},
+				{"charlie", firstOrgId, "alpha.bravo.charlie"},
+			},
+			nil,
+		},
+		{
+			"moves are commutative",
+			[]struct {
+				target string
+				dst    string
+			}{
+				{"charlie", "bravo"},
+				{"bravo", "alpha"},
+			},
+			[]folder.Folder{
+				{"bravo", firstOrgId, "bravo"},
+				{"alpha", firstOrgId, "alpha"},
+				{"charlie", firstOrgId, "charlie"},
+			},
+			[]folder.Folder{
+				{"bravo", firstOrgId, "alpha.bravo"},
+				{"alpha", firstOrgId, "alpha"},
+				{"charlie", firstOrgId, "alpha.bravo.charlie"},
+			},
+			nil,
+		},
+		{
+			"moving several folders at once",
+			[]struct {
+				target string
+				dst    string
+			}{
+				{"charlie", "bravo"},
+				{"bravo", "alpha"},
+			},
+			[]folder.Folder{
+				{"bravo", firstOrgId, "bravo"},
+				{"alpha", firstOrgId, "alpha"},
+				{"charlie", firstOrgId, "charlie"},
+				{"delta", firstOrgId, "charlie.delta"},
+			},
+			[]folder.Folder{
+				{"bravo", firstOrgId, "alpha.bravo"},
+				{"alpha", firstOrgId, "alpha"},
+				{"charlie", firstOrgId, "alpha.bravo.charlie"},
+				{"delta", firstOrgId, "alpha.bravo.charlie.delta"},
+			},
+			nil,
+		},
+		{
+			"flatten btree",
+			[]struct {
+				target string
+				dst    string
+			}{
+				{"charlie", "bravo"},
+				{"charlie", "bravo"},
+				{"echo", "delta"},
+				{"delta", "charlie"},
+				{"gamma", "foxtrot"},
+				{"foxtrot", "echo"},
+			},
+			[]folder.Folder{
+				{"alpha", firstOrgId, "alpha"},
+				{"bravo", firstOrgId, "alpha.bravo"},
+				{"charlie", firstOrgId, "alpha.charlie"},
+				{"delta", firstOrgId, "alpha.bravo.delta"},
+				{"echo", firstOrgId, "alpha.bravo.echo"},
+				{"foxtrot", firstOrgId, "alpha.charlie.foxtrot"},
+				{"gamma", firstOrgId, "alpha.charlie.gamma"},
+			},
+			[]folder.Folder{
+				{"alpha", firstOrgId, "alpha"},
+				{"bravo", firstOrgId, "alpha.bravo"},
+				{"charlie", firstOrgId, "alpha.bravo.charlie"},
+				{"delta", firstOrgId, "alpha.bravo.charlie.delta"},
+				{"echo", firstOrgId, "alpha.bravo.charlie.delta.echo"},
+				{"foxtrot", firstOrgId, "alpha.bravo.charlie.delta.echo.foxtrot"},
+				{"gamma", firstOrgId, "alpha.bravo.charlie.delta.echo.foxtrot.gamma"},
+			},
+			nil,
+		},
+	}
+	for _, tt := range tests {
+		t.Run(tt.name, func(t *testing.T) {
+			f := folder.NewDriver(tt.folders)
+			var got []folder.Folder
+			var err error
+			for _, move := range tt.moves {
+				got, err = f.MoveFolder(move.target, move.dst)
+			}
+
+			testFolderResults(t, got, tt.want, err, tt.err)
+		})
+	}
+}
+
+func testFolderResults(t *testing.T, got []folder.Folder, want []folder.Folder, gotErr error, expErr error) {
+	errString := "<nil>"
+	ttErrString := "<nil>"
+	if gotErr != nil {
+		errString = gotErr.Error()
+	}
+	if expErr != nil {
+		ttErrString = expErr.Error()
+	}
+	if errString != ttErrString {
+		t.Fatalf("GetFoldersByOrgID wanted=%s. got=%s\n",
+			ttErrString, errString)
+	}
+
+	if len(want) != len(got) {
+		t.Fatalf("GetAllChildFolders output does not contain %d Folders. got=%d\n",
+			len(want), len(got))
+	}
+
+	slices.SortFunc(want, func(a, b folder.Folder) int {
+		return strings.Compare(a.Paths, b.Paths)
+	})
+	slices.SortFunc(got, func(a, b folder.Folder) int {
+		return strings.Compare(a.Paths, b.Paths)
+	})
+
+	if diff := deep.Equal(want, got); diff != nil {
+		t.Fatalf("GetAllChildFolders output folders do not match expected:\n%s",
+			diff)
 	}
 }
