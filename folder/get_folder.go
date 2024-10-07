@@ -3,6 +3,7 @@ package folder
 import (
 	"errors"
 	"fmt"
+	"sync"
 
 	"github.com/gofrs/uuid"
 )
@@ -16,13 +17,17 @@ func (f *driver) GetFoldersByOrgID(orgID uuid.UUID) ([]Folder, error) {
 	if err != nil {
 		return []Folder{}, err
 	}
+	fmt.Println("org is", org.orgId.String())
+	org.mu.Lock()
+	defer org.mu.Unlock()
 
 	// I chose in-order traversal here, this function could be extended to
 	// support different output orderings as required
 	return org.collectFoldersInOrder(), nil
 }
 
-func (org Org) collectFoldersInOrder() []Folder {
+func (org *Org) collectFoldersInOrder() []Folder {
+
 	if org.folders == nil {
 		return []Folder{}
 	}
@@ -57,19 +62,20 @@ func (f *driver) GetAllChildFolders(orgID uuid.UUID, name string) ([]Folder, err
 		return []Folder{}, err
 	}
 
-	target, err := org.GetNamedFolder(name)
+	otherOrg, folder, err := f.nameToOrgFolder(name)
 	if err != nil {
-		for _, org := range f.orgs {
-			// check if folder belongs to another Org
-			if res, _ := org.GetNamedFolder(name); res != nil {
-				return []Folder{}, errors.New("Folder does not exist in the specified organization")
-			}
-		}
 		return []Folder{}, err
 	}
 
+	if otherOrg.orgId != orgID {
+		return []Folder{}, errors.New("Folder does not exist in the specified organization")
+	}
+
 	var folders []Folder
-	stack := []FolderTreeNode{*target}
+	stack := []*FolderTreeNode{folder}
+
+	org.mu.Lock()
+	defer org.mu.Unlock()
 
 	for len(stack) > 0 {
 		curr := stack[len(stack)-1]
@@ -80,7 +86,7 @@ func (f *driver) GetAllChildFolders(orgID uuid.UUID, name string) ([]Folder, err
 		}
 
 		curr.children.Descend(func(child *FolderTreeNode) bool {
-			stack = append(stack, *child)
+			stack = append(stack, child)
 			return true
 		})
 	}
@@ -88,7 +94,10 @@ func (f *driver) GetAllChildFolders(orgID uuid.UUID, name string) ([]Folder, err
 	return folders, nil
 }
 
-func (org Org) GetNamedFolder(name string) (*FolderTreeNode, error) {
+func (org *Org) GetNamedFolder(name string) (*FolderTreeNode, error) {
+	org.mu.RLock()
+	defer org.mu.RUnlock()
+
 	if org.folders == nil {
 		return nil, fmt.Errorf("Org %s has no folders", org.orgId.String())
 	}
@@ -122,13 +131,46 @@ func (org Org) GetNamedFolder(name string) (*FolderTreeNode, error) {
 }
 
 func (f *driver) GetAllFolders() ([]Folder, error) {
-	var folders []Folder
-	for _, org := range f.orgs {
-		orgFolders, err := f.GetFoldersByOrgID(org.orgId)
-		if err != nil {
-			return []Folder{}, err
-		}
-		folders = append(folders, orgFolders...)
+	resultChan := make(chan []Folder)
+	errChan := make(chan error)
+	var wg sync.WaitGroup
+
+	for i := range f.orgs {
+		concOrg := f.orgs[i]
+		wg.Add(1)
+		go func(org *Org) {
+			org.mu.RLock()
+			defer org.mu.RUnlock()
+			defer wg.Done()
+
+			folders, err := f.GetFoldersByOrgID(org.orgId)
+			if err != nil {
+				select {
+				case errChan <- err:
+				}
+				return
+			}
+			resultChan <- folders
+		}(concOrg)
 	}
-	return folders, nil
+
+	go func() {
+		wg.Wait()
+		close(resultChan)
+	}()
+
+	var folders []Folder
+
+	for {
+		select {
+		case orgFolders, ok := <-resultChan:
+			if ok {
+				folders = append(folders, orgFolders...)
+			} else {
+				return folders, nil
+			}
+		case err := <-errChan:
+			return nil, err
+		}
+	}
 }

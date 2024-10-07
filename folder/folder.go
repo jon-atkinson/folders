@@ -1,8 +1,8 @@
 package folder
 
 import (
+	"context"
 	"errors"
-	"fmt"
 	"slices"
 	"sort"
 	"strings"
@@ -37,18 +37,19 @@ type IDriver interface {
 	// I'm not sure how to resolve namespace collisions
 }
 
-type FolderTreeNode struct {
-	folder   *Folder
-	children *btree.BTreeG[*FolderTreeNode]
+type driver struct {
+	orgs []*Org
 }
 
 type Org struct {
 	orgId   uuid.UUID
 	folders *btree.BTreeG[*FolderTreeNode]
+	mu      sync.RWMutex
 }
 
-type driver struct {
-	orgs []Org
+type FolderTreeNode struct {
+	folder   *Folder
+	children *btree.BTreeG[*FolderTreeNode]
 }
 
 func NewDriver(folders []Folder) IDriver {
@@ -57,17 +58,17 @@ func NewDriver(folders []Folder) IDriver {
 	}
 }
 
-func NewFolderTreeNode(folder *Folder) *FolderTreeNode {
-	return &FolderTreeNode{
-		folder:   folder,
-		children: btree.NewG(3, folderTreeLess),
-	}
-}
-
 func NewOrg(orgID uuid.UUID) Org {
 	return Org{
 		orgId:   orgID,
 		folders: btree.NewG(3, folderTreeLess),
+	}
+}
+
+func NewFolderTreeNode(folder *Folder) *FolderTreeNode {
+	return &FolderTreeNode{
+		folder:   folder,
+		children: btree.NewG(3, folderTreeLess),
 	}
 }
 
@@ -92,44 +93,52 @@ func preProcessFolders(folders []Folder) {
 	return
 }
 
-func buildOrgs(folders []Folder) []Org {
-	var orgs []Org
+func buildOrgs(folders []Folder) []*Org {
 	preProcessFolders(folders)
 
-	var orgMu sync.Mutex
+	orgChan := make(chan *Org)
 	var orgWg sync.WaitGroup
+	var mu sync.Mutex
 
 	hi := 0
 	for hi < len(folders) {
+		orgId := folders[hi].OrgId
 		lo := hi
-		orgId := folders[lo].OrgId
+
 		hi = sort.Search(len(folders), func(i int) bool {
 			return folders[i].OrgId != orgId
 		})
 
 		orgWg.Add(1)
-		go func(lo, hi int) {
+		go func(folderSlice []Folder) {
 			defer orgWg.Done()
-			org := buildOrg(folders[lo:hi])
-
-			orgMu.Lock()
-			orgs = append(orgs, org)
-			orgMu.Unlock()
-		}(lo, hi)
+			orgChan <- buildOrg(folderSlice)
+		}(folders[lo:hi])
 	}
 
-	orgWg.Wait()
+	go func() {
+		orgWg.Wait()
+		close(orgChan)
+	}()
+
+	var orgs []*Org
+	for org := range orgChan {
+		mu.Lock()
+		orgs = append(orgs, org)
+		mu.Unlock()
+	}
+
 	return orgs
 }
 
-func buildOrg(folders []Folder) Org {
+func buildOrg(folders []Folder) *Org {
 	org := NewOrg(folders[0].OrgId)
 
 	for _, folder := range folders {
 		org.insertFolder(NewFolderTreeNode(&folder))
 	}
 
-	return org
+	return &org
 }
 
 func lookupTreeNode(folders *btree.BTreeG[*FolderTreeNode], target string) (*FolderTreeNode, bool) {
@@ -139,12 +148,16 @@ func lookupTreeNode(folders *btree.BTreeG[*FolderTreeNode], target string) (*Fol
 }
 
 func (org *Org) insertFolder(node *FolderTreeNode) error {
+	org.mu.Lock()
+	defer org.mu.Unlock()
+
 	parts := strings.Split(node.folder.Paths, ".")
 	if len(parts) == 0 {
 		return errors.New("Cannot insert folder with empty path")
 	}
 
 	curr, found := lookupTreeNode(org.folders, parts[0])
+
 	if found == false {
 		if len(parts) == 1 {
 			org.folders.ReplaceOrInsert(node)
@@ -175,21 +188,69 @@ func (org *Org) insertFolder(node *FolderTreeNode) error {
 }
 
 func (f *driver) getOrg(orgID uuid.UUID) (*Org, error) {
-	for _, org := range f.orgs {
-		if org.orgId == orgID {
-			return &org, nil
-		}
+	idx := sort.Search(len(f.orgs), func(i int) bool {
+		return f.orgs[i].orgId.String() <= orgID.String()
+	})
+
+	if idx == len(f.orgs) {
+		return nil, errors.New("Organization does not exist")
 	}
-	return nil, fmt.Errorf("No Org found with orgID %s", orgID.String())
+
+	return f.orgs[idx], nil
 }
 
+// searches for folder called name in all orgs concurrently
+// returns pointer to the tree node folder is stored in and the owning Org
+// errors on miss
 func (f *driver) nameToOrgFolder(name string) (*Org, *FolderTreeNode, error) {
-	for _, org := range f.orgs {
-		// ignore err as folder may be in a different Org
-		folder, _ := org.GetNamedFolder(name)
-		if folder != nil {
-			return &org, folder, nil
-		}
+	resultChan := make(chan struct {
+		org    *Org
+		folder *FolderTreeNode
+	}, 1)
+	ctx, cancel := context.WithCancel(context.Background())
+	defer cancel()
+
+	var wg sync.WaitGroup
+	wg.Add(len(f.orgs))
+
+	for i := range f.orgs {
+		testOrg := f.orgs[i]
+		go func(routineOrg *Org) {
+			defer wg.Done()
+
+			select {
+			case <-ctx.Done():
+				return
+			default:
+				routineOrg.mu.RLock()
+				defer routineOrg.mu.RUnlock()
+
+				folder, err := routineOrg.GetNamedFolder(name)
+				if folder != nil && err == nil {
+					select {
+					case resultChan <- struct {
+						org    *Org
+						folder *FolderTreeNode
+					}{routineOrg, folder}:
+						cancel()
+					default:
+						return
+					}
+				}
+			}
+		}(testOrg)
 	}
-	return nil, nil, errors.New("Could not locate folder")
+
+	go func() {
+		wg.Wait()
+		close(resultChan)
+	}()
+
+	select {
+	case result, ok := <-resultChan:
+		if ok {
+			return result.org, result.folder, nil
+		}
+		return nil, nil, errors.New("Folder does not exist")
+	}
 }

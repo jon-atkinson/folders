@@ -1,0 +1,888 @@
+?   	github.com/jon-atkinson/sc-takehome-2024-25	[no test files]
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is 38b9879b-f73b-4b0e-b9d9-4fc4c23643a7
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+org is c1556e17-b7c0-45a3-a6ae-9546248fb17a
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/multiple_orgs (0.00s)
+        move_folder_test.go:340: GetAllChildFolders output folders do not match expected:
+            slice[0].Name: alpha != bravo
+FAIL
+FAIL	github.com/jon-atkinson/sc-takehome-2024-25/folder	0.046s
+FAIL
