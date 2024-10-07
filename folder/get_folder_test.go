@@ -165,9 +165,17 @@ func Test_folder_GetFoldersByOrgID(t *testing.T) {
 			f := folder.NewDriver(tt.folders)
 			got, err := f.GetFoldersByOrgID(tt.orgID)
 
-			if err != tt.err && err.Error() != tt.err.Error() {
-				t.Fatalf("GetFoldersByOrgID wanted=%s. got=%s\n", err.Error(),
-					tt.err.Error())
+			errString := "<nil>"
+			ttErrString := "<nil>"
+			if err != nil {
+				errString = err.Error()
+			}
+			if tt.err != nil {
+				ttErrString = tt.err.Error()
+			}
+			if errString != ttErrString {
+				t.Fatalf("GetFoldersByOrgID wanted=%s. got=%s\n",
+					errString, ttErrString)
 			}
 
 			if len(tt.want) != len(got) {
@@ -368,7 +376,7 @@ func Test_folder_GetAllChildFolders(t *testing.T) {
 				{"mike", firstOrgId, "alpha.sierra.mike"},
 			},
 			[]folder.Folder{},
-			errors.New("Error: Folder does not exist"),
+			errors.New("Folder does not exist"),
 		},
 		{
 			"folder belongs to a different organization",
@@ -383,7 +391,7 @@ func Test_folder_GetAllChildFolders(t *testing.T) {
 				{"delta", secondOrgID, "delta"},
 			},
 			[]folder.Folder{},
-			errors.New("Error: Folder does not exist in the specified organization"),
+			errors.New("Folder does not exist in the specified organization"),
 		},
 	}
 	for _, tt := range tests {

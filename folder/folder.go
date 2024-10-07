@@ -1,12 +1,13 @@
 package folder
 
 import (
+	"errors"
 	"fmt"
 	"slices"
-	"sort"
 	"strings"
 
 	"github.com/gofrs/uuid"
+	"github.com/google/btree"
 )
 
 type IDriver interface {
@@ -31,17 +32,17 @@ type IDriver interface {
 	MoveFolder(name string, dst string) ([]Folder, error)
 	// From context I'm assuming that organizations share a file system and
 	// cannot have identical names? I've assumed this to be true since otherwise
-	// I'm not sure how to determine which org to select (name, dst) from here
+	// I'm not sure how to resolve namespace collisions
 }
 
 type FolderTreeNode struct {
 	folder   *Folder
-	children []*FolderTreeNode
+	children *btree.BTreeG[*FolderTreeNode]
 }
 
 type Org struct {
 	orgId   uuid.UUID
-	folders []*FolderTreeNode
+	folders *btree.BTreeG[*FolderTreeNode]
 }
 
 type driver struct {
@@ -54,9 +55,27 @@ func NewDriver(folders []Folder) IDriver {
 	}
 }
 
+func NewFolderTreeNode(folder *Folder) *FolderTreeNode {
+	return &FolderTreeNode{
+		folder:   folder,
+		children: btree.NewG(3, folderTreeLess),
+	}
+}
+
+func NewOrg(orgID uuid.UUID) Org {
+	return Org{
+		orgId:   orgID,
+		folders: btree.NewG(3, folderTreeLess),
+	}
+}
+
+func folderTreeLess(a, b *FolderTreeNode) bool {
+	return a.folder.Name < b.folder.Name
+}
+
 func preProcessFolders(folders []Folder) {
 	// sort folders in place
-	// primary key orgID, secondary key Path
+	// primary key OrgId, secondary key paths
 	slices.SortFunc(folders, func(a, b Folder) int {
 		return strings.Compare(a.Paths, b.Paths)
 	})
@@ -82,8 +101,6 @@ func buildOrgs(folders []Folder) []Org {
 		for hi+1 < len(folders) && folders[hi+1].OrgId == orgId {
 			hi++
 		}
-		// fmt.Printf("%d\t%s\n%d\t%s\n", lo, folders[lo].OrgId, hi, folders[hi].OrgId)
-		// fmt.Println(folders)
 		hi++
 		orgs = append(orgs, buildOrg(folders[lo:hi]))
 	}
@@ -91,71 +108,55 @@ func buildOrgs(folders []Folder) []Org {
 }
 
 func buildOrg(folders []Folder) Org {
-	var org Org = Org{
-		orgId:   folders[0].OrgId,
-		folders: []*FolderTreeNode{},
-	}
+	org := NewOrg(folders[0].OrgId)
 
 	for _, folder := range folders {
-		org.insertFolder(&folder)
+		org.insertFolder(NewFolderTreeNode(&folder))
 	}
 
 	return org
 }
 
-// assumes sorted folders, makes log(len(folders)) calls to the lambda
-// returns nil on miss
-func lookupTreeNode(folders []*FolderTreeNode, target string) *FolderTreeNode {
-	idx := sort.Search(len(folders), func(i int) bool {
-		return folders[i].folder.Name >= target
+func lookupTreeNode(folders *btree.BTreeG[*FolderTreeNode], target string) (*FolderTreeNode, bool) {
+	return folders.Get(&FolderTreeNode{
+		folder: &Folder{Name: target},
 	})
-	if idx == len(folders) {
-		return nil
-	}
-	return folders[idx]
 }
 
-// only for calling from buildOrgs as assumes inputs called in sorted order
-func (org *Org) insertFolder(folder *Folder) {
-	parts := strings.Split(folder.Paths, ".")
+func (org *Org) insertFolder(node *FolderTreeNode) error {
+	parts := strings.Split(node.folder.Paths, ".")
 	if len(parts) == 0 {
-		return
+		return errors.New("Cannot insert folder with empty path")
 	}
 
-	curr := lookupTreeNode(org.folders, parts[0])
-	if curr == nil {
+	curr, found := lookupTreeNode(org.folders, parts[0])
+	if found == false {
 		if len(parts) == 1 {
-			org.folders = append(org.folders, &FolderTreeNode{
-				folder,
-				[]*FolderTreeNode{},
-			})
+			org.folders.ReplaceOrInsert(node)
 		}
-		return
+		return nil
 	}
 	parts = append(parts[1:])
 
 	for idx, part := range parts {
-		next := lookupTreeNode(curr.children, part)
+		next, found := lookupTreeNode(curr.children, part)
 
-		if next == nil {
+		if found == false {
 			if idx != len(parts)-1 {
 				// missing folders on path
-				return
+				return errors.New("Could not insert, missing folders on path")
 			}
 
 			// insert folder to tree
-			curr.children = append(curr.children, &FolderTreeNode{
-				folder:   folder,
-				children: []*FolderTreeNode{},
-			})
-			return
+			curr.children.ReplaceOrInsert(node)
+			return nil
 		}
 
 		curr = next
 	}
 
 	// folder already exists at this location
-	return
+	return errors.New("Could not insert, folder already exists at this location")
 }
 
 func (f *driver) getOrg(orgID uuid.UUID) (*Org, error) {
@@ -165,4 +166,15 @@ func (f *driver) getOrg(orgID uuid.UUID) (*Org, error) {
 		}
 	}
 	return nil, fmt.Errorf("No Org found with orgID %s", orgID.String())
+}
+
+func (f *driver) nameToOrgFolder(name string) (*Org, *FolderTreeNode, error) {
+	for _, org := range f.orgs {
+		// ignore err as folder may be in a different Org
+		folder, _ := org.GetNamedFolder(name)
+		if folder != nil {
+			return &org, folder, nil
+		}
+	}
+	return nil, nil, errors.New("Could not locate folder")
 }

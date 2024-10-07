@@ -4,113 +4,106 @@ import (
 	"errors"
 	"fmt"
 	"slices"
-	"sort"
 	"strings"
 )
 
 func (f *driver) MoveFolder(name string, dst string) ([]Folder, error) {
+	fmt.Println(name, dst)
 	if name == dst {
-		return nil, errors.New("Error: Cannot move a folder to itself")
+		fmt.Println("returning")
+		return []Folder{}, errors.New("Cannot move a folder to itself")
 	}
 
-	var from *FolderTreeNode
-	var fromOrg *Org
-	for _, checkOrg := range f.orgs {
-		// ignore err as folder may be in a different Org
-		from, _ = checkOrg.GetNamedFolder(name)
-		if from != nil {
-			fromOrg = &checkOrg
-			break
-		}
+	fromOrg, fromFolder, err := f.nameToOrgFolder(name)
+	if fromFolder == nil {
+		return []Folder{}, errors.New("Source folder does not exist")
 	}
 
-	if from == nil {
-		return nil, errors.New("Error: Source folder does not exist")
+	toOrg, toFolder, err := f.nameToOrgFolder(dst)
+	if toFolder == nil {
+		return []Folder{}, errors.New("Destination folder does not exist")
 	}
 
-	var to *FolderTreeNode
-	var toOrg *Org
-	for _, checkOrg := range f.orgs {
-		// ignore err as folder may be in a different Org
-		to, _ := checkOrg.GetNamedFolder(dst)
-		if to != nil {
-			toOrg = &checkOrg
-			break
-		}
+	if fromOrg.orgId != toOrg.orgId {
+		return []Folder{}, errors.New("Cannot move a folder to a different organization")
+	}
+	if slices.Contains(strings.Split(toFolder.folder.Paths, "."), fromFolder.folder.Name) {
+		return []Folder{}, errors.New("Cannot move a folder to a child of itself")
 	}
 
-	if to == nil {
-		return nil, errors.New("Error: Destination folder does not exist")
+	_, err = fromOrg.pruneFolder(fromFolder)
+	if err != nil {
+		return []Folder{}, err
 	}
-	if fromOrg != toOrg {
-		return nil, errors.New("Error: Cannot move a folder to a different organization")
-	}
-	if slices.Contains(strings.Split(to.folder.Paths, "."), from.folder.Name) {
-		return nil, errors.New("Error: Cannot move a folder to a child of itself")
-	}
-
-	// todo, make sure ordering is preserved here
-	to.children = append(to.children, from)
-	// fmt.Println(*from, "\n\n\n")
-	// fmt.Println(*to.children[0], "\n\n\n")
-	fromOrg.PruneFolder(from)
-	fixPaths(from, to.folder.Paths)
+	fixPaths(fromFolder, toFolder.folder.Paths)
+	toOrg.insertFolder(fromFolder)
 
 	allFolders, err := f.GetAllFolders()
 	if err != nil {
-		return nil, err
+		return []Folder{}, err
 	}
 	return allFolders, nil
 }
 
-func (org Org) PruneFolder(node *FolderTreeNode) {
+func (org Org) pruneFolder(node *FolderTreeNode) (*FolderTreeNode, error) {
 	paths := strings.Split(node.folder.Paths, ".")
 	if len(paths) == 0 {
-		// bad path, we've got real problems if we're hitting this
-		return
+		return nil, errors.New("Could not prune tree, requested path was empty")
 	}
-	curr := lookupTreeNode(org.folders, paths[0])
+
+	curr, found := lookupTreeNode(org.folders, paths[0])
+	if !found {
+		return nil, errors.New("Could not prune tree, folder not in this organization")
+	}
 	paths = paths[1:]
 
-	// navigate branches
 	for i, path := range paths {
-		idx := sort.Search(len(curr.children), func(i int) bool {
-			return curr.children[i].folder.Name == path
-		})
-
-		// for _, child := range curr.children {
-		// 	fmt.Println(child.folder)
-		// }
-
-		// prune the correct branch
-		if i == len(paths)-1 {
-			fmt.Println(curr.folder.Name)
-			fmt.Println(curr.children[idx].folder.Name)
-			if len(curr.children) > idx+1 {
-				curr.children = append(curr.children[:idx], curr.children[idx+1:]...)
-			} else {
-				curr.children = append(curr.children[:idx])
-			}
-			return
+		next, found := curr.children.Get(&FolderTreeNode{folder: &Folder{Name: path}})
+		if !found {
+			return nil, errors.New("Could not prune tree, missing folders on path")
 		}
 
-		curr = curr.children[idx]
+		if i == len(paths)-1 {
+			res, found := curr.children.Delete(next)
+			if !found {
+				return nil, errors.New("Could not prune tree, folder not in tree")
+			}
+			return res, nil
+		}
+
+		curr = next
 	}
-	return
+
+	// target is a top-level folder
+	res, found := org.folders.Get(node)
+	if !found {
+		return nil, errors.New("Prune tree error, this should be unreachable 1")
+	}
+	res, found = org.folders.Delete(res)
+	if !found {
+		return nil, errors.New("Prune tree error, this should be unreachable 2")
+	}
+	return res, nil
 }
 
 func fixPaths(node *FolderTreeNode, newPrefix string) {
-	oldPrefix := node.folder.Paths
-	stack := []FolderTreeNode{*node}
+	paths := strings.Split(node.folder.Paths, ".")
+	oldPrefix := strings.Trim(strings.Join(paths[:len(paths)-1], "."), ".")
+	newPrefix = strings.Trim(newPrefix, ".")
 
+	stack := []*FolderTreeNode{node}
 	for len(stack) > 0 {
 		curr := stack[len(stack)-1]
 		stack = stack[:len(stack)-1]
 
-		strings.Replace(curr.folder.Paths, oldPrefix, newPrefix, 1)
+		// preprocessing for well-formed top levels
+		curr.folder.Paths = "." + curr.folder.Paths + "."
+		curr.folder.Paths = strings.Replace(curr.folder.Paths, oldPrefix, newPrefix, 1)
+		curr.folder.Paths = strings.Trim(curr.folder.Paths, ".")
 
-		for i := len(curr.children) - 1; i >= 0; i-- {
-			stack = append(stack, *curr.children[i])
-		}
+		curr.children.Ascend(func(child *FolderTreeNode) bool {
+			stack = append(stack, child)
+			return true
+		})
 	}
 }
