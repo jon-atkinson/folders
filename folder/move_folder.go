@@ -2,15 +2,12 @@ package folder
 
 import (
 	"errors"
-	"fmt"
 	"slices"
 	"strings"
 )
 
 func (f *driver) MoveFolder(name string, dst string) ([]Folder, error) {
-	fmt.Println(name, dst)
 	if name == dst {
-		fmt.Println("returning")
 		return []Folder{}, errors.New("Cannot move a folder to itself")
 	}
 
