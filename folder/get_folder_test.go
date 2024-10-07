@@ -3,13 +3,10 @@ package folder_test
 import (
 	"errors"
 	"fmt"
-	"slices"
-	"strings"
 	"testing"
 
-	"github.com/georgechieng-sc/interns-2022/folder"
-	"github.com/go-test/deep"
 	"github.com/gofrs/uuid"
+	"github.com/jon-atkinson/sc-takehome-2024-25/folder"
 )
 
 const (
@@ -165,35 +162,7 @@ func Test_folder_GetFoldersByOrgID(t *testing.T) {
 			f := folder.NewDriver(tt.folders)
 			got, err := f.GetFoldersByOrgID(tt.orgID)
 
-			errString := "<nil>"
-			ttErrString := "<nil>"
-			if err != nil {
-				errString = err.Error()
-			}
-			if tt.err != nil {
-				ttErrString = tt.err.Error()
-			}
-			if errString != ttErrString {
-				t.Fatalf("GetFoldersByOrgID wanted=%s. got=%s\n",
-					errString, ttErrString)
-			}
-
-			if len(tt.want) != len(got) {
-				t.Fatalf("GetFoldersByOrgID output does not contain %d Folders. got=%d\n",
-					len(tt.want), len(got))
-			}
-
-			slices.SortFunc(tt.want, func(a, b folder.Folder) int {
-				return strings.Compare(a.Paths, b.Paths)
-			})
-			slices.SortFunc(got, func(a, b folder.Folder) int {
-				return strings.Compare(a.Paths, b.Paths)
-			})
-
-			if diff := deep.Equal(tt.want, got); diff != nil {
-				t.Fatalf("GetFoldersByOrgID output folders do not match expected:\n%s",
-					diff)
-			}
+			testFolderResults(t, got, tt.want, err, tt.err)
 		})
 	}
 }
@@ -399,27 +368,7 @@ func Test_folder_GetAllChildFolders(t *testing.T) {
 			f := folder.NewDriver(tt.folders)
 			got, err := f.GetAllChildFolders(tt.orgID, tt.targetFolder)
 
-			if err != tt.err && err.Error() != tt.err.Error() {
-				t.Fatalf("GetAllChildFolders wanted=%s. got=%s\n", err.Error(),
-					tt.err.Error())
-			}
-
-			if len(tt.want) != len(got) {
-				t.Fatalf("GetAllChildFolders output does not contain %d Folders. got=%d\n",
-					len(tt.want), len(got))
-			}
-
-			slices.SortFunc(tt.want, func(a, b folder.Folder) int {
-				return strings.Compare(a.Paths, b.Paths)
-			})
-			slices.SortFunc(got, func(a, b folder.Folder) int {
-				return strings.Compare(a.Paths, b.Paths)
-			})
-
-			if diff := deep.Equal(tt.want, got); diff != nil {
-				t.Fatalf("GetAllChildFolders output folders do not match expected:\n%s",
-					diff)
-			}
+			testFolderResults(t, got, tt.want, err, tt.err)
 		})
 	}
 }

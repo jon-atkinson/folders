@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/georgechieng-sc/interns-2022/folder"
+	"github.com/jon-atkinson/sc-takehome-2024-25/folder"
 )
 
 func main() {
