@@ -4,7 +4,9 @@ import (
 	"errors"
 	"fmt"
 	"slices"
+	"sort"
 	"strings"
+	"sync"
 
 	"github.com/gofrs/uuid"
 	"github.com/google/btree"
@@ -94,16 +96,29 @@ func buildOrgs(folders []Folder) []Org {
 	var orgs []Org
 	preProcessFolders(folders)
 
+	var orgMu sync.Mutex
+	var orgWg sync.WaitGroup
+
 	hi := 0
 	for hi < len(folders) {
 		lo := hi
 		orgId := folders[lo].OrgId
-		for hi+1 < len(folders) && folders[hi+1].OrgId == orgId {
-			hi++
-		}
-		hi++
-		orgs = append(orgs, buildOrg(folders[lo:hi]))
+		hi = sort.Search(len(folders), func(i int) bool {
+			return folders[i].OrgId != orgId
+		})
+
+		orgWg.Add(1)
+		go func(lo, hi int) {
+			defer orgWg.Done()
+			org := buildOrg(folders[lo:hi])
+
+			orgMu.Lock()
+			orgs = append(orgs, org)
+			orgMu.Unlock()
+		}(lo, hi)
 	}
+
+	orgWg.Wait()
 	return orgs
 }
 
