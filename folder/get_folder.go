@@ -23,13 +23,14 @@ func (f *driver) GetFoldersByOrgID(orgID uuid.UUID) ([]Folder, error) {
 }
 
 func (org Org) collectFoldersInOrder() []Folder {
-	if org.folders == nil || len(org.folders) == 0 {
+	if org.folders == nil {
 		return []Folder{}
 	}
 
 	var folders []Folder
-	for _, tree := range org.folders {
-		stack := []FolderTreeNode{*tree}
+
+	org.folders.Ascend(func(node *FolderTreeNode) bool {
+		stack := []*FolderTreeNode{node}
 
 		for len(stack) > 0 {
 			curr := stack[len(stack)-1]
@@ -39,11 +40,13 @@ func (org Org) collectFoldersInOrder() []Folder {
 				folders = append(folders, *curr.folder)
 			}
 
-			for i := len(curr.children) - 1; i >= 0; i-- {
-				stack = append(stack, *curr.children[i])
-			}
+			curr.children.Descend(func(child *FolderTreeNode) bool {
+				stack = append(stack, child)
+				return true
+			})
 		}
-	}
+		return true
+	})
 
 	return folders
 }
@@ -59,7 +62,7 @@ func (f *driver) GetAllChildFolders(orgID uuid.UUID, name string) ([]Folder, err
 		for _, org := range f.orgs {
 			// check if folder belongs to another Org
 			if res, _ := org.GetNamedFolder(name); res != nil {
-				return []Folder{}, errors.New("Error: Folder does not exist in the specified organization")
+				return []Folder{}, errors.New("Folder does not exist in the specified organization")
 			}
 		}
 		return []Folder{}, err
@@ -76,37 +79,46 @@ func (f *driver) GetAllChildFolders(orgID uuid.UUID, name string) ([]Folder, err
 			folders = append(folders, *curr.folder)
 		}
 
-		for i := len(curr.children) - 1; i >= 0; i-- {
-			stack = append(stack, *curr.children[i])
-		}
+		curr.children.Descend(func(child *FolderTreeNode) bool {
+			stack = append(stack, *child)
+			return true
+		})
 	}
 
 	return folders, nil
 }
 
 func (org Org) GetNamedFolder(name string) (*FolderTreeNode, error) {
-	if org.folders == nil || len(org.folders) == 0 {
+	if org.folders == nil {
 		return nil, fmt.Errorf("Org %s has no folders", org.orgId.String())
 	}
 
-	for _, tree := range org.folders {
-		stack := []FolderTreeNode{*tree}
+	var targetNode *FolderTreeNode
+
+	org.folders.Ascend(func(node *FolderTreeNode) bool {
+		stack := []*FolderTreeNode{node}
 
 		for len(stack) > 0 {
 			curr := stack[len(stack)-1]
 			stack = stack[:len(stack)-1]
 
 			if curr.folder != nil && curr.folder.Name == name {
-				return &curr, nil
+				targetNode = curr
+				return false
 			}
 
-			for i := len(curr.children) - 1; i >= 0; i-- {
-				stack = append(stack, *curr.children[i])
-			}
+			curr.children.Descend(func(child *FolderTreeNode) bool {
+				stack = append(stack, child)
+				return true
+			})
 		}
-	}
+		return true
+	})
 
-	return nil, errors.New("Error: Folder does not exist")
+	if targetNode == nil {
+		return nil, errors.New("Folder does not exist")
+	}
+	return targetNode, nil
 }
 
 func (f *driver) GetAllFolders() ([]Folder, error) {
@@ -114,7 +126,7 @@ func (f *driver) GetAllFolders() ([]Folder, error) {
 	for _, org := range f.orgs {
 		orgFolders, err := f.GetFoldersByOrgID(org.orgId)
 		if err != nil {
-			return nil, err
+			return []Folder{}, err
 		}
 		folders = append(folders, orgFolders...)
 	}
