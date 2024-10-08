@@ -17,9 +17,8 @@ func (f *driver) GetFoldersByOrgID(orgID uuid.UUID) ([]Folder, error) {
 	if err != nil {
 		return []Folder{}, err
 	}
-	fmt.Println("org is", org.orgId.String())
-	org.mu.Lock()
-	defer org.mu.Unlock()
+	org.mux.Lock()
+	defer org.mux.Unlock()
 
 	// I chose in-order traversal here, this function could be extended to
 	// support different output orderings as required
@@ -27,7 +26,6 @@ func (f *driver) GetFoldersByOrgID(orgID uuid.UUID) ([]Folder, error) {
 }
 
 func (org *Org) collectFoldersInOrder() []Folder {
-
 	if org.folders == nil {
 		return []Folder{}
 	}
@@ -74,8 +72,8 @@ func (f *driver) GetAllChildFolders(orgID uuid.UUID, name string) ([]Folder, err
 	var folders []Folder
 	stack := []*FolderTreeNode{folder}
 
-	org.mu.Lock()
-	defer org.mu.Unlock()
+	org.mux.Lock()
+	defer org.mux.Unlock()
 
 	for len(stack) > 0 {
 		curr := stack[len(stack)-1]
@@ -95,8 +93,8 @@ func (f *driver) GetAllChildFolders(orgID uuid.UUID, name string) ([]Folder, err
 }
 
 func (org *Org) GetNamedFolder(name string) (*FolderTreeNode, error) {
-	org.mu.RLock()
-	defer org.mu.RUnlock()
+	org.mux.RLock()
+	defer org.mux.RUnlock()
 
 	if org.folders == nil {
 		return nil, fmt.Errorf("Org %s has no folders", org.orgId.String())
@@ -139,8 +137,8 @@ func (f *driver) GetAllFolders() ([]Folder, error) {
 		concOrg := f.orgs[i]
 		wg.Add(1)
 		go func(org *Org) {
-			org.mu.RLock()
-			defer org.mu.RUnlock()
+			org.mux.RLock()
+			defer org.mux.RUnlock()
 			defer wg.Done()
 
 			folders, err := f.GetFoldersByOrgID(org.orgId)

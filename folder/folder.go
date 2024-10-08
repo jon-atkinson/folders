@@ -39,12 +39,13 @@ type IDriver interface {
 
 type driver struct {
 	orgs []*Org
+	// mux  sync.RWMutex
 }
 
 type Org struct {
 	orgId   uuid.UUID
 	folders *btree.BTreeG[*FolderTreeNode]
-	mu      sync.RWMutex
+	mux     sync.RWMutex
 }
 
 type FolderTreeNode struct {
@@ -58,8 +59,8 @@ func NewDriver(folders []Folder) IDriver {
 	}
 }
 
-func NewOrg(orgID uuid.UUID) Org {
-	return Org{
+func NewOrg(orgID uuid.UUID) *Org {
+	return &Org{
 		orgId:   orgID,
 		folders: btree.NewG(3, folderTreeLess),
 	}
@@ -90,7 +91,6 @@ func preProcessFolders(folders []Folder) {
 		}
 		return 0
 	})
-	return
 }
 
 func buildOrgs(folders []Folder) []*Org {
@@ -128,6 +128,10 @@ func buildOrgs(folders []Folder) []*Org {
 		mu.Unlock()
 	}
 
+	slices.SortFunc(orgs, func(a, b *Org) int {
+		return strings.Compare(a.orgId.String(), b.orgId.String())
+	})
+
 	return orgs
 }
 
@@ -138,7 +142,7 @@ func buildOrg(folders []Folder) *Org {
 		org.insertFolder(NewFolderTreeNode(&folder))
 	}
 
-	return &org
+	return org
 }
 
 func lookupTreeNode(folders *btree.BTreeG[*FolderTreeNode], target string) (*FolderTreeNode, bool) {
@@ -148,8 +152,8 @@ func lookupTreeNode(folders *btree.BTreeG[*FolderTreeNode], target string) (*Fol
 }
 
 func (org *Org) insertFolder(node *FolderTreeNode) error {
-	org.mu.Lock()
-	defer org.mu.Unlock()
+	org.mux.Lock()
+	defer org.mux.Unlock()
 
 	parts := strings.Split(node.folder.Paths, ".")
 	if len(parts) == 0 {
@@ -189,7 +193,7 @@ func (org *Org) insertFolder(node *FolderTreeNode) error {
 
 func (f *driver) getOrg(orgID uuid.UUID) (*Org, error) {
 	idx := sort.Search(len(f.orgs), func(i int) bool {
-		return f.orgs[i].orgId.String() <= orgID.String()
+		return f.orgs[i].orgId.String() == orgID.String()
 	})
 
 	if idx == len(f.orgs) {
@@ -222,8 +226,8 @@ func (f *driver) nameToOrgFolder(name string) (*Org, *FolderTreeNode, error) {
 			case <-ctx.Done():
 				return
 			default:
-				routineOrg.mu.RLock()
-				defer routineOrg.mu.RUnlock()
+				routineOrg.mux.RLock()
+				defer routineOrg.mux.RUnlock()
 
 				folder, err := routineOrg.GetNamedFolder(name)
 				if folder != nil && err == nil {
