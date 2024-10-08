@@ -125,9 +125,9 @@ func (f *driver) GetAllFolders() ([]Folder, error) {
 	errChan := make(chan error)
 	var wg sync.WaitGroup
 
-	for i := range f.orgs {
-		concOrg := f.orgs[i]
-		wg.Add(1)
+	wg.Add(f.orgs.Len())
+
+	f.orgs.Ascend(func(org *Org) bool {
 		go func(org *Org) {
 			defer wg.Done()
 
@@ -137,8 +137,9 @@ func (f *driver) GetAllFolders() ([]Folder, error) {
 				return
 			}
 			resultChan <- folders
-		}(concOrg)
-	}
+		}(org)
+		return true
+	})
 
 	go func() {
 		wg.Wait()
@@ -153,9 +154,11 @@ func (f *driver) GetAllFolders() ([]Folder, error) {
 			if ok {
 				folders = append(folders, orgFolders...)
 			} else {
+				close(errChan)
 				return folders, nil
 			}
 		case err := <-errChan:
+			close(errChan)
 			return nil, err
 		}
 	}

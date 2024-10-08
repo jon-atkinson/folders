@@ -2,6 +2,7 @@ package folder
 
 import (
 	"errors"
+	"fmt"
 	"slices"
 	"strings"
 )
@@ -11,8 +12,9 @@ func (f *driver) MoveFolder(name string, dst string) ([]Folder, error) {
 		return []Folder{}, errors.New("Cannot move a folder to itself")
 	}
 
-	fromOrg, fromFolder, _ := f.nameToOrgFolder(name)
+	fromOrg, fromFolder, thiserr := f.nameToOrgFolder(name)
 	if fromFolder == nil {
+		fmt.Println(thiserr.Error())
 		return []Folder{}, errors.New("Source folder does not exist")
 	}
 

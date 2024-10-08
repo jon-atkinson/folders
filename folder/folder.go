@@ -38,7 +38,7 @@ type IDriver interface {
 }
 
 type driver struct {
-	orgs []*Org
+	orgs *btree.BTreeG[*Org]
 }
 
 type Org struct {
@@ -71,6 +71,10 @@ func NewFolderTreeNode(folder *Folder) *FolderTreeNode {
 	}
 }
 
+func orgTreeLess(a, b *Org) bool {
+	return a.orgId.String() < b.orgId.String()
+}
+
 func folderTreeLess(a, b *FolderTreeNode) bool {
 	return a.folder.Name < b.folder.Name
 }
@@ -91,8 +95,9 @@ func preProcessFolders(folders []Folder) {
 	})
 }
 
-func buildOrgs(folders []Folder) []*Org {
+func buildOrgs(folders []Folder) *btree.BTreeG[*Org] {
 	preProcessFolders(folders)
+	var orgs *btree.BTreeG[*Org] = btree.NewG(3, orgTreeLess)
 
 	orgChan := make(chan *Org)
 	var orgWg sync.WaitGroup
@@ -119,16 +124,11 @@ func buildOrgs(folders []Folder) []*Org {
 		close(orgChan)
 	}()
 
-	var orgs []*Org
 	for org := range orgChan {
 		mu.Lock()
-		orgs = append(orgs, org)
+		orgs.ReplaceOrInsert(org)
 		mu.Unlock()
 	}
-
-	slices.SortFunc(orgs, func(a, b *Org) int {
-		return strings.Compare(a.orgId.String(), b.orgId.String())
-	})
 
 	return orgs
 }
@@ -187,15 +187,11 @@ func (org *Org) insertFolder(node *FolderTreeNode) error {
 }
 
 func (f *driver) getOrg(orgID uuid.UUID) (*Org, error) {
-	idx := sort.Search(len(f.orgs), func(i int) bool {
-		return f.orgs[i].orgId.String() == orgID.String()
-	})
-
-	if idx == len(f.orgs) {
+	node, found := f.orgs.Get(&Org{orgId: orgID})
+	if !found {
 		return nil, errors.New("Organization does not exist")
 	}
-
-	return f.orgs[idx], nil
+	return node, nil
 }
 
 // searches for folder called name in all orgs concurrently
@@ -210,10 +206,10 @@ func (f *driver) nameToOrgFolder(name string) (*Org, *FolderTreeNode, error) {
 	defer cancel()
 
 	var wg sync.WaitGroup
-	wg.Add(len(f.orgs))
+	wg.Add(f.orgs.Len())
 
-	for i := range f.orgs {
-		testOrg := f.orgs[i]
+	f.orgs.Ascend(func(testOrg *Org) bool {
+
 		go func(routineOrg *Org) {
 			defer wg.Done()
 
@@ -235,7 +231,8 @@ func (f *driver) nameToOrgFolder(name string) (*Org, *FolderTreeNode, error) {
 				}
 			}
 		}(testOrg)
-	}
+		return true
+	})
 
 	go func() {
 		wg.Wait()
