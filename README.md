@@ -1,3 +1,17 @@
+# Hello!
+Hi! Thanks for the opportunity to do this. I didn't have time to properly work on this until the weekend so rather than ask clarifying questions I made some assumptions, listed below.
+
+## My Assumptions:
+- Drivers have long lifetimes
+- Frequent lookups
+- Orgs share Folder namespace
+  - Folder names are unique
+- Hardware is beefy, context switches are cheap
+  - goroutines will improve performance
+- Filesystem is very large
+  - Worst case TC a better target than median TC
+  - Threading setup overhead overtaken by concurrancy time saves
+
 # sc-interns-2024
 
 The technical take home for 2024 internship applications.
