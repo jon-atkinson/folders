@@ -9,6 +9,8 @@ import (
 	"github.com/jon-atkinson/sc-takehome-2024-25/folder"
 )
 
+// helper function for testing folder IDriver interface functions that return
+// ([]Folder, err)
 func testFolderResults(t *testing.T, got []folder.Folder, want []folder.Folder, gotErr error, expErr error) {
 	errString := "<nil>"
 	ttErrString := "<nil>"

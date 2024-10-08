@@ -79,9 +79,9 @@ func folderTreeLess(a, b *FolderTreeNode) bool {
 	return a.folder.Name < b.folder.Name
 }
 
+// sort folders in place
+// primary key OrgId, secondary key paths
 func preProcessFolders(folders []Folder) {
-	// sort folders in place
-	// primary key OrgId, secondary key paths
 	slices.SortFunc(folders, func(a, b Folder) int {
 		return strings.Compare(a.Paths, b.Paths)
 	})
@@ -95,6 +95,8 @@ func preProcessFolders(folders []Folder) {
 	})
 }
 
+// Builds all Orgs, Org construction is managed by one goroutine / Org
+// All goroutines return before returning Orgs btree
 func buildOrgs(folders []Folder) *btree.BTreeG[*Org] {
 	preProcessFolders(folders)
 	var orgs *btree.BTreeG[*Org] = btree.NewG(3, orgTreeLess)
@@ -149,6 +151,9 @@ func lookupTreeNode(folders *btree.BTreeG[*FolderTreeNode], target string) (*Fol
 	})
 }
 
+// inserts folder into correct position in org
+// assumes org is correct
+// navigates org based on node.folder.Paths
 func (org *Org) insertFolder(node *FolderTreeNode) error {
 	parts := strings.Split(node.folder.Paths, ".")
 	if len(parts) == 0 {
