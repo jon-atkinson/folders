@@ -11,12 +11,12 @@ func (f *driver) MoveFolder(name string, dst string) ([]Folder, error) {
 		return []Folder{}, errors.New("Cannot move a folder to itself")
 	}
 
-	fromOrg, fromFolder, err := f.nameToOrgFolder(name)
+	fromOrg, fromFolder, _ := f.nameToOrgFolder(name)
 	if fromFolder == nil {
 		return []Folder{}, errors.New("Source folder does not exist")
 	}
 
-	toOrg, toFolder, err := f.nameToOrgFolder(dst)
+	toOrg, toFolder, _ := f.nameToOrgFolder(dst)
 	if toFolder == nil {
 		return []Folder{}, errors.New("Destination folder does not exist")
 	}
@@ -28,7 +28,7 @@ func (f *driver) MoveFolder(name string, dst string) ([]Folder, error) {
 		return []Folder{}, errors.New("Cannot move a folder to a child of itself")
 	}
 
-	_, err = fromOrg.pruneFolder(fromFolder)
+	_, err := fromOrg.pruneFolder(fromFolder)
 	if err != nil {
 		return []Folder{}, err
 	}

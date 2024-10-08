@@ -53,7 +53,7 @@ func (org *Org) collectFoldersInOrder() []Folder {
 }
 
 func (f *driver) GetAllChildFolders(orgID uuid.UUID, name string) ([]Folder, error) {
-	org, err := f.getOrg(orgID)
+	_, err := f.getOrg(orgID)
 	if err != nil {
 		return []Folder{}, err
 	}
@@ -69,9 +69,6 @@ func (f *driver) GetAllChildFolders(orgID uuid.UUID, name string) ([]Folder, err
 
 	var folders []Folder
 	stack := []*FolderTreeNode{folder}
-
-	org.mux.Lock()
-	defer org.mux.Unlock()
 
 	for len(stack) > 0 {
 		curr := stack[len(stack)-1]
@@ -91,9 +88,6 @@ func (f *driver) GetAllChildFolders(orgID uuid.UUID, name string) ([]Folder, err
 }
 
 func (org *Org) GetNamedFolder(name string) (*FolderTreeNode, error) {
-	org.mux.RLock()
-	defer org.mux.RUnlock()
-
 	if org.folders == nil {
 		return nil, fmt.Errorf("Org %s has no folders", org.orgId.String())
 	}
@@ -135,15 +129,11 @@ func (f *driver) GetAllFolders() ([]Folder, error) {
 		concOrg := f.orgs[i]
 		wg.Add(1)
 		go func(org *Org) {
-			org.mux.RLock()
-			defer org.mux.RUnlock()
 			defer wg.Done()
 
 			folders, err := f.GetFoldersByOrgID(org.orgId)
 			if err != nil {
-				select {
-				case errChan <- err:
-				}
+				errChan <- err
 				return
 			}
 			resultChan <- folders

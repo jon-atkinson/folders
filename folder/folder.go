@@ -39,13 +39,11 @@ type IDriver interface {
 
 type driver struct {
 	orgs []*Org
-	// mux  sync.RWMutex
 }
 
 type Org struct {
 	orgId   uuid.UUID
 	folders *btree.BTreeG[*FolderTreeNode]
-	mux     sync.RWMutex
 }
 
 type FolderTreeNode struct {
@@ -152,9 +150,6 @@ func lookupTreeNode(folders *btree.BTreeG[*FolderTreeNode], target string) (*Fol
 }
 
 func (org *Org) insertFolder(node *FolderTreeNode) error {
-	org.mux.Lock()
-	defer org.mux.Unlock()
-
 	parts := strings.Split(node.folder.Paths, ".")
 	if len(parts) == 0 {
 		return errors.New("Cannot insert folder with empty path")
@@ -162,18 +157,18 @@ func (org *Org) insertFolder(node *FolderTreeNode) error {
 
 	curr, found := lookupTreeNode(org.folders, parts[0])
 
-	if found == false {
+	if !found {
 		if len(parts) == 1 {
 			org.folders.ReplaceOrInsert(node)
 		}
 		return nil
 	}
-	parts = append(parts[1:])
+	parts = parts[1:]
 
 	for idx, part := range parts {
 		next, found := lookupTreeNode(curr.children, part)
 
-		if found == false {
+		if !found {
 			if idx != len(parts)-1 {
 				// missing folders on path
 				return errors.New("Could not insert, missing folders on path")
@@ -226,9 +221,6 @@ func (f *driver) nameToOrgFolder(name string) (*Org, *FolderTreeNode, error) {
 			case <-ctx.Done():
 				return
 			default:
-				routineOrg.mux.RLock()
-				defer routineOrg.mux.RUnlock()
-
 				folder, err := routineOrg.GetNamedFolder(name)
 				if folder != nil && err == nil {
 					select {
@@ -250,11 +242,9 @@ func (f *driver) nameToOrgFolder(name string) (*Org, *FolderTreeNode, error) {
 		close(resultChan)
 	}()
 
-	select {
-	case result, ok := <-resultChan:
-		if ok {
-			return result.org, result.folder, nil
-		}
-		return nil, nil, errors.New("Folder does not exist")
+	result, ok := <-resultChan
+	if ok {
+		return result.org, result.folder, nil
 	}
+	return nil, nil, errors.New("Folder does not exist")
 }
