@@ -2,6 +2,7 @@ package folder
 
 import (
 	"errors"
+	"fmt"
 	"slices"
 	"strings"
 )
@@ -11,12 +12,13 @@ func (f *driver) MoveFolder(name string, dst string) ([]Folder, error) {
 		return []Folder{}, errors.New("Cannot move a folder to itself")
 	}
 
-	fromOrg, fromFolder, err := f.nameToOrgFolder(name)
+	fromOrg, fromFolder, thiserr := f.nameToOrgFolder(name)
 	if fromFolder == nil {
+		fmt.Println(thiserr.Error())
 		return []Folder{}, errors.New("Source folder does not exist")
 	}
 
-	toOrg, toFolder, err := f.nameToOrgFolder(dst)
+	toOrg, toFolder, _ := f.nameToOrgFolder(dst)
 	if toFolder == nil {
 		return []Folder{}, errors.New("Destination folder does not exist")
 	}
@@ -28,7 +30,7 @@ func (f *driver) MoveFolder(name string, dst string) ([]Folder, error) {
 		return []Folder{}, errors.New("Cannot move a folder to a child of itself")
 	}
 
-	_, err = fromOrg.pruneFolder(fromFolder)
+	_, err := fromOrg.pruneFolder(fromFolder)
 	if err != nil {
 		return []Folder{}, err
 	}
@@ -42,7 +44,7 @@ func (f *driver) MoveFolder(name string, dst string) ([]Folder, error) {
 	return allFolders, nil
 }
 
-func (org Org) pruneFolder(node *FolderTreeNode) (*FolderTreeNode, error) {
+func (org *Org) pruneFolder(node *FolderTreeNode) (*FolderTreeNode, error) {
 	paths := strings.Split(node.folder.Paths, ".")
 	if len(paths) == 0 {
 		return nil, errors.New("Could not prune tree, requested path was empty")

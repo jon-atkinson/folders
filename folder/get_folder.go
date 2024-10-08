@@ -3,6 +3,7 @@ package folder
 import (
 	"errors"
 	"fmt"
+	"sync"
 
 	"github.com/gofrs/uuid"
 )
@@ -22,7 +23,7 @@ func (f *driver) GetFoldersByOrgID(orgID uuid.UUID) ([]Folder, error) {
 	return org.collectFoldersInOrder(), nil
 }
 
-func (org Org) collectFoldersInOrder() []Folder {
+func (org *Org) collectFoldersInOrder() []Folder {
 	if org.folders == nil {
 		return []Folder{}
 	}
@@ -52,24 +53,22 @@ func (org Org) collectFoldersInOrder() []Folder {
 }
 
 func (f *driver) GetAllChildFolders(orgID uuid.UUID, name string) ([]Folder, error) {
-	org, err := f.getOrg(orgID)
+	_, err := f.getOrg(orgID)
 	if err != nil {
 		return []Folder{}, err
 	}
 
-	target, err := org.GetNamedFolder(name)
+	otherOrg, folder, err := f.nameToOrgFolder(name)
 	if err != nil {
-		for _, org := range f.orgs {
-			// check if folder belongs to another Org
-			if res, _ := org.GetNamedFolder(name); res != nil {
-				return []Folder{}, errors.New("Folder does not exist in the specified organization")
-			}
-		}
 		return []Folder{}, err
+	}
+
+	if otherOrg.orgId != orgID {
+		return []Folder{}, errors.New("Folder does not exist in the specified organization")
 	}
 
 	var folders []Folder
-	stack := []FolderTreeNode{*target}
+	stack := []*FolderTreeNode{folder}
 
 	for len(stack) > 0 {
 		curr := stack[len(stack)-1]
@@ -80,7 +79,7 @@ func (f *driver) GetAllChildFolders(orgID uuid.UUID, name string) ([]Folder, err
 		}
 
 		curr.children.Descend(func(child *FolderTreeNode) bool {
-			stack = append(stack, *child)
+			stack = append(stack, child)
 			return true
 		})
 	}
@@ -88,7 +87,7 @@ func (f *driver) GetAllChildFolders(orgID uuid.UUID, name string) ([]Folder, err
 	return folders, nil
 }
 
-func (org Org) GetNamedFolder(name string) (*FolderTreeNode, error) {
+func (org *Org) GetNamedFolder(name string) (*FolderTreeNode, error) {
 	if org.folders == nil {
 		return nil, fmt.Errorf("Org %s has no folders", org.orgId.String())
 	}
@@ -122,13 +121,45 @@ func (org Org) GetNamedFolder(name string) (*FolderTreeNode, error) {
 }
 
 func (f *driver) GetAllFolders() ([]Folder, error) {
+	resultChan := make(chan []Folder)
+	errChan := make(chan error)
+	var wg sync.WaitGroup
+
+	wg.Add(f.orgs.Len())
+
+	f.orgs.Ascend(func(org *Org) bool {
+		go func(org *Org) {
+			defer wg.Done()
+
+			folders, err := f.GetFoldersByOrgID(org.orgId)
+			if err != nil {
+				errChan <- err
+				return
+			}
+			resultChan <- folders
+		}(org)
+		return true
+	})
+
+	go func() {
+		wg.Wait()
+		close(resultChan)
+	}()
+
 	var folders []Folder
-	for _, org := range f.orgs {
-		orgFolders, err := f.GetFoldersByOrgID(org.orgId)
-		if err != nil {
-			return []Folder{}, err
+
+	for {
+		select {
+		case orgFolders, ok := <-resultChan:
+			if ok {
+				folders = append(folders, orgFolders...)
+			} else {
+				close(errChan)
+				return folders, nil
+			}
+		case err := <-errChan:
+			close(errChan)
+			return nil, err
 		}
-		folders = append(folders, orgFolders...)
 	}
-	return folders, nil
 }
