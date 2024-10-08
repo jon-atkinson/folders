@@ -232,19 +232,19 @@ func Test_folder_GetAllChildFolders(t *testing.T) {
 			},
 			nil,
 		},
-		// {
-		// 	"multiple orgs",
-		// 	firstOrgId,
-		// 	"alpha",
-		// 	[]folder.Folder{
-		// 		{"alpha", firstOrgId, "alpha"},
-		// 		{"bravo", secondOrgID, "bravo"},
-		// 	},
-		// 	[]folder.Folder{
-		// 		{"alpha", firstOrgId, "alpha"},
-		// 	},
-		// 	nil,
-		// },
+		{
+			"multiple orgs",
+			firstOrgId,
+			"alpha",
+			[]folder.Folder{
+				{"alpha", firstOrgId, "alpha"},
+				{"bravo", secondOrgID, "bravo"},
+			},
+			[]folder.Folder{
+				{"alpha", firstOrgId, "alpha"},
+			},
+			nil,
+		},
 		{
 			"deeper folder trees",
 			firstOrgId,

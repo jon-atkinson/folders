@@ -42,7 +42,7 @@ func (f *driver) MoveFolder(name string, dst string) ([]Folder, error) {
 	return allFolders, nil
 }
 
-func (org Org) pruneFolder(node *FolderTreeNode) (*FolderTreeNode, error) {
+func (org *Org) pruneFolder(node *FolderTreeNode) (*FolderTreeNode, error) {
 	paths := strings.Split(node.folder.Paths, ".")
 	if len(paths) == 0 {
 		return nil, errors.New("Could not prune tree, requested path was empty")

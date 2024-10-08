@@ -44,6 +44,7 @@ func main() {
 		{"foxtrot", firstOrgId, "alpha.charlie.foxtrot"},
 		{"gamma", firstOrgId, "alpha.charlie.gamma"},
 	})
+	f.MoveFolder("gamma", "alpha")
 
 	res, err := f.GetAllFolders()
 	if err != nil {

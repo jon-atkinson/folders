@@ -17,8 +17,6 @@ func (f *driver) GetFoldersByOrgID(orgID uuid.UUID) ([]Folder, error) {
 	if err != nil {
 		return []Folder{}, err
 	}
-	org.mux.Lock()
-	defer org.mux.Unlock()
 
 	// I chose in-order traversal here, this function could be extended to
 	// support different output orderings as required
