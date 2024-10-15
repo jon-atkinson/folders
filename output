@@ -1,118 +1,68 @@
-[
-	{
-		"name": "alpha",
-		"org_id": "c1556e17-b7c0-45a3-a6ae-9546248fb17a",
-		"paths": "alpha"
-	},
-	{
-		"name": "bravo",
-		"org_id": "c1556e17-b7c0-45a3-a6ae-9546248fb17a",
-		"paths": "alpha.bravo"
-	},
-	{
-		"name": "charlie",
-		"org_id": "c1556e17-b7c0-45a3-a6ae-9546248fb17a",
-		"paths": "alpha.bravo.charlie"
-	},
-	{
-		"name": "kilo",
-		"org_id": "c1556e17-b7c0-45a3-a6ae-9546248fb17a",
-		"paths": "alpha.bravo.kilo"
-	},
-	{
-		"name": "delta",
-		"org_id": "c1556e17-b7c0-45a3-a6ae-9546248fb17a",
-		"paths": "alpha.delta"
-	},
-	{
-		"name": "echo",
-		"org_id": "c1556e17-b7c0-45a3-a6ae-9546248fb17a",
-		"paths": "alpha.delta.echo"
-	},
-	{
-		"name": "foxtrot",
-		"org_id": "c1556e17-b7c0-45a3-a6ae-9546248fb17a",
-		"paths": "alpha.foxtrot"
-	},
-	{
-		"name": "hotel",
-		"org_id": "c1556e17-b7c0-45a3-a6ae-9546248fb17a",
-		"paths": "alpha.foxtrot.hotel"
-	},
-	{
-		"name": "india",
-		"org_id": "c1556e17-b7c0-45a3-a6ae-9546248fb17a",
-		"paths": "alpha.foxtrot.india"
-	},
-	{
-		"name": "juliet",
-		"org_id": "c1556e17-b7c0-45a3-a6ae-9546248fb17a",
-		"paths": "alpha.foxtrot.india.juliet"
-	},
-	{
-		"name": "lima",
-		"org_id": "c1556e17-b7c0-45a3-a6ae-9546248fb17a",
-		"paths": "alpha.foxtrot.india.juliet.lima"
-	}
-]
-
-returning fixPaths:	(alpha.bravo.kilo.india)
-returning fixPaths:	(alpha.bravo.kilo.india.juliet)
-returning fixPaths:	(alpha.bravo.kilo.india.juliet.lima)
-[
-	{
-		"name": "alpha",
-		"org_id": "c1556e17-b7c0-45a3-a6ae-9546248fb17a",
-		"paths": "alpha"
-	},
-	{
-		"name": "bravo",
-		"org_id": "c1556e17-b7c0-45a3-a6ae-9546248fb17a",
-		"paths": "alpha.bravo"
-	},
-	{
-		"name": "charlie",
-		"org_id": "c1556e17-b7c0-45a3-a6ae-9546248fb17a",
-		"paths": "alpha.bravo.charlie"
-	},
-	{
-		"name": "kilo",
-		"org_id": "c1556e17-b7c0-45a3-a6ae-9546248fb17a",
-		"paths": "alpha.bravo.kilo"
-	},
-	{
-		"name": "delta",
-		"org_id": "c1556e17-b7c0-45a3-a6ae-9546248fb17a",
-		"paths": "alpha.delta"
-	},
-	{
-		"name": "echo",
-		"org_id": "c1556e17-b7c0-45a3-a6ae-9546248fb17a",
-		"paths": "alpha.delta.echo"
-	},
-	{
-		"name": "foxtrot",
-		"org_id": "c1556e17-b7c0-45a3-a6ae-9546248fb17a",
-		"paths": "alpha.foxtrot"
-	},
-	{
-		"name": "hotel",
-		"org_id": "c1556e17-b7c0-45a3-a6ae-9546248fb17a",
-		"paths": "alpha.foxtrot.hotel"
-	},
-	{
-		"name": "india",
-		"org_id": "c1556e17-b7c0-45a3-a6ae-9546248fb17a",
-		"paths": "alpha.bravo.kilo.india"
-	},
-	{
-		"name": "juliet",
-		"org_id": "c1556e17-b7c0-45a3-a6ae-9546248fb17a",
-		"paths": "alpha.bravo.kilo.india.juliet"
-	},
-	{
-		"name": "lima",
-		"org_id": "c1556e17-b7c0-45a3-a6ae-9546248fb17a",
-		"paths": "alpha.bravo.kilo.india.juliet.lima"
-	}
-]
+?   	github.com/georgechieng-sc/interns-2022	[no test files]
+/home/jon/code/personal/sc-takehome-2024-25/folder/static.go
+/home/jon/code/personal/sc-takehome-2024-25/folder/sample.json
+/home/jon/code/personal/sc-takehome-2024-25/folder/static.go
+/home/jon/code/personal/sc-takehome-2024-25/folder/sample.json
+/home/jon/code/personal/sc-takehome-2024-25/folder/static.go
+/home/jon/code/personal/sc-takehome-2024-25/folder/sample.json
+/home/jon/code/personal/sc-takehome-2024-25/folder/static.go
+/home/jon/code/personal/sc-takehome-2024-25/folder/sample.json
+--- FAIL: Test_Intern_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_Intern_GetFoldersByOrgID/test_intern's_implementation_GetFoldersByOrgID_-_mismatch_orgID (0.00s)
+        jenny_test.go:144: 
+            	Error Trace:	/home/jon/code/personal/sc-takehome-2024-25/folder/jenny_test.go:144
+            	Error:      	Expected nil, but got: []folder.Folder{}
+            	Test:       	Test_Intern_GetFoldersByOrgID/test_intern's_implementation_GetFoldersByOrgID_-_mismatch_orgID
+    --- FAIL: Test_Intern_GetFoldersByOrgID/test_intern's_implementation_GetFoldersByOrgID_-_mismatch_folder (0.00s)
+        jenny_test.go:156: 
+            	Error Trace:	/home/jon/code/personal/sc-takehome-2024-25/folder/jenny_test.go:156
+            	Error:      	Expected nil, but got: []folder.Folder{}
+            	Test:       	Test_Intern_GetFoldersByOrgID/test_intern's_implementation_GetFoldersByOrgID_-_mismatch_folder
+/home/jon/code/personal/sc-takehome-2024-25/folder/static.go
+/home/jon/code/personal/sc-takehome-2024-25/folder/sample.json
+/home/jon/code/personal/sc-takehome-2024-25/folder/static.go
+/home/jon/code/personal/sc-takehome-2024-25/folder/sample.json
+/home/jon/code/personal/sc-takehome-2024-25/folder/static.go
+/home/jon/code/personal/sc-takehome-2024-25/folder/sample.json
+/home/jon/code/personal/sc-takehome-2024-25/folder/static.go
+/home/jon/code/personal/sc-takehome-2024-25/folder/sample.json
+/home/jon/code/personal/sc-takehome-2024-25/folder/static.go
+/home/jon/code/personal/sc-takehome-2024-25/folder/sample.json
+/home/jon/code/personal/sc-takehome-2024-25/folder/static.go
+/home/jon/code/personal/sc-takehome-2024-25/folder/sample.json
+/home/jon/code/personal/sc-takehome-2024-25/folder/static.go
+/home/jon/code/personal/sc-takehome-2024-25/folder/sample.json
+/home/jon/code/personal/sc-takehome-2024-25/folder/static.go
+/home/jon/code/personal/sc-takehome-2024-25/folder/sample.json
+return 1
+return 2
+return 2
+return 2
+return 2
+return 2
+--- FAIL: Test_folder_GetAllChildFolders (0.00s)
+    --- FAIL: Test_folder_GetAllChildFolders/single_folder (0.00s)
+        helpers_test.go:16: GetAllChildFolders output does not contain 1 Folders. got=0
+    --- FAIL: Test_folder_GetAllChildFolders/child_folders (0.00s)
+        helpers_test.go:16: GetAllChildFolders output does not contain 3 Folders. got=2
+    --- FAIL: Test_folder_GetAllChildFolders/child_folders_exclude_some (0.00s)
+        helpers_test.go:16: GetAllChildFolders output does not contain 2 Folders. got=1
+    --- FAIL: Test_folder_GetAllChildFolders/target_not_root (0.00s)
+        helpers_test.go:16: GetAllChildFolders output does not contain 1 Folders. got=0
+    --- FAIL: Test_folder_GetAllChildFolders/multiple_orgs (0.00s)
+        helpers_test.go:16: GetAllChildFolders output does not contain 1 Folders. got=0
+    --- FAIL: Test_folder_GetAllChildFolders/deeper_folder_trees (0.00s)
+        helpers_test.go:16: GetAllChildFolders output does not contain 3 Folders. got=2
+    --- FAIL: Test_folder_GetAllChildFolders/unsorted_input_folders (0.00s)
+        helpers_test.go:16: GetAllChildFolders output does not contain 3 Folders. got=2
+return 1
+--- FAIL: Test_folder_GetFoldersByOrgID (0.00s)
+    --- FAIL: Test_folder_GetFoldersByOrgID/no_folders (0.00s)
+        helpers_test.go:28: GetAllChildFolders output folders do not match expected:
+            [] != <nil slice>
+    --- FAIL: Test_folder_GetFoldersByOrgID/incorrect_OrgID (0.00s)
+        helpers_test.go:28: GetAllChildFolders output folders do not match expected:
+            [] != <nil slice>
+FAIL
+FAIL	github.com/georgechieng-sc/interns-2022/folder	0.011s
+FAIL

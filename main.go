@@ -23,5 +23,7 @@ func main() {
 
 	folder.PrettyPrint(res)
 	fmt.Printf("\n Folders for orgID: %s", orgID)
-	folder.PrettyPrint(orgFolder)
+	for _, f := range(orgFolder) {
+		folder.PrettyPrint(f)
+	}
 }

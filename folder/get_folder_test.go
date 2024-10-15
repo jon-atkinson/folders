@@ -29,7 +29,7 @@ func Test_folder_GetFoldersByOrgID(t *testing.T) {
 			"no folders",
 			firstOrgId,
 			[]folder.Folder{},
-			[]folder.Folder{},
+			nil,
 			errors.New("Organization does not exist"),
 		},
 		{
@@ -140,7 +140,7 @@ func Test_folder_GetFoldersByOrgID(t *testing.T) {
 			[]folder.Folder{
 				{"alpha", firstOrgId, "alpha"},
 			},
-			[]folder.Folder{},
+			nil,
 			errors.New("Organization does not exist"),
 		},
 	}
@@ -172,7 +172,7 @@ func Test_folder_GetAllChildFolders(t *testing.T) {
 			firstOrgId,
 			"alpha",
 			[]folder.Folder{},
-			[]folder.Folder{},
+			nil,
 			errors.New("Organization does not exist"),
 		},
 		{
@@ -182,9 +182,7 @@ func Test_folder_GetAllChildFolders(t *testing.T) {
 			[]folder.Folder{
 				{"alpha", firstOrgId, "alpha"},
 			},
-			[]folder.Folder{
-				{"alpha", firstOrgId, "alpha"},
-			},
+			nil,
 			nil,
 		},
 		{
@@ -197,7 +195,6 @@ func Test_folder_GetAllChildFolders(t *testing.T) {
 				{"charlie", firstOrgId, "alpha.charlie"},
 			},
 			[]folder.Folder{
-				{"alpha", firstOrgId, "alpha"},
 				{"bravo", firstOrgId, "alpha.bravo"},
 				{"charlie", firstOrgId, "alpha.charlie"},
 			},
@@ -213,7 +210,6 @@ func Test_folder_GetAllChildFolders(t *testing.T) {
 				{"charlie", firstOrgId, "charlie"},
 			},
 			[]folder.Folder{
-				{"alpha", firstOrgId, "alpha"},
 				{"bravo", firstOrgId, "alpha.bravo"},
 			},
 			nil,
@@ -227,9 +223,7 @@ func Test_folder_GetAllChildFolders(t *testing.T) {
 				{"bravo", firstOrgId, "alpha.bravo"},
 				{"charlie", firstOrgId, "alpha.charlie"},
 			},
-			[]folder.Folder{
-				{"bravo", firstOrgId, "alpha.bravo"},
-			},
+			nil,
 			nil,
 		},
 		{
@@ -240,9 +234,7 @@ func Test_folder_GetAllChildFolders(t *testing.T) {
 				{"alpha", firstOrgId, "alpha"},
 				{"bravo", secondOrgID, "bravo"},
 			},
-			[]folder.Folder{
-				{"alpha", firstOrgId, "alpha"},
-			},
+			nil,
 			nil,
 		},
 		{
@@ -263,7 +255,6 @@ func Test_folder_GetAllChildFolders(t *testing.T) {
 				{"kilo", firstOrgId, "alpha.foxtrot.india.juliet.kilo"},
 			},
 			[]folder.Folder{
-				{"india", firstOrgId, "alpha.foxtrot.india"},
 				{"juliet", firstOrgId, "alpha.foxtrot.india.juliet"},
 				{"kilo", firstOrgId, "alpha.foxtrot.india.juliet.kilo"},
 			},
@@ -288,7 +279,6 @@ func Test_folder_GetAllChildFolders(t *testing.T) {
 				{"kilo", firstOrgId, "alpha.bravo.kilo"},
 			},
 			[]folder.Folder{
-				{"india", firstOrgId, "alpha.foxtrot.india"},
 				{"juliet", firstOrgId, "alpha.foxtrot.india.juliet"},
 				{"kilo", firstOrgId, "alpha.foxtrot.india.juliet.kilo"},
 			},
@@ -301,7 +291,7 @@ func Test_folder_GetAllChildFolders(t *testing.T) {
 			[]folder.Folder{
 				{"alpha", firstOrgId, "alpha"},
 			},
-			[]folder.Folder{},
+			nil,
 			errors.New("Organization does not exist"),
 		},
 		{
@@ -318,7 +308,7 @@ func Test_folder_GetAllChildFolders(t *testing.T) {
 				{"zulu", firstOrgId, "alpha.sierra.zulu"},
 				{"mike", firstOrgId, "alpha.sierra.mike"},
 			},
-			[]folder.Folder{},
+			nil,
 			errors.New("Folder does not exist"),
 		},
 		{
@@ -333,7 +323,7 @@ func Test_folder_GetAllChildFolders(t *testing.T) {
 				{"kilo", firstOrgId, "alpha.bravo.charlie.kilo"},
 				{"delta", secondOrgID, "delta"},
 			},
-			[]folder.Folder{},
+			nil,
 			errors.New("Folder does not exist in the specified organization"),
 		},
 	}

@@ -113,9 +113,8 @@ func Test_Intern_GetFoldersByOrgID(t *testing.T) {
 		f := folder.NewDriver(folders)
 
 		orgID := uuid.FromStringOrNil(folder.DefaultOrgID)
-		cf, err := f.GetAllChildFolders(orgID, "hip-stingray")
+		cf := f.GetAllChildFolders(orgID, "hip-stingray")
 
-		assert.NoError(t, err)
 		assert.EqualValues(t, expected, cf)
 	})
 
@@ -125,10 +124,9 @@ func Test_Intern_GetFoldersByOrgID(t *testing.T) {
 		f := folder.NewDriver(folders)
 
 		orgID := uuid.FromStringOrNil(folder.DefaultOrgID)
-		cf, err := f.GetAllChildFolders(orgID, "emerging-nova")
+		cf := f.GetAllChildFolders(orgID, "emerging-nova")
 
 		// some students return error, some don't
-		assert.NoError(t, err)
 		if cf == nil {
 			assert.Nil(t, cf)
 		} else {
@@ -142,7 +140,7 @@ func Test_Intern_GetFoldersByOrgID(t *testing.T) {
 		f := folder.NewDriver(folders)
 
 		orgID := uuid.FromStringOrNil("38b9879b-f73b-4b0e-b9d9-4fc4c23643a7")
-		cf, _ := f.GetAllChildFolders(orgID, "hip-stingray")
+		cf := f.GetAllChildFolders(orgID, "hip-stingray")
 		assert.Nil(t, cf)
 
 		// some students return error, some don't
@@ -154,7 +152,7 @@ func Test_Intern_GetFoldersByOrgID(t *testing.T) {
 		f := folder.NewDriver(folders)
 
 		orgID := uuid.FromStringOrNil(folder.DefaultOrgID)
-		cf, _ := f.GetAllChildFolders(orgID, "central-the-anarchis")
+		cf := f.GetAllChildFolders(orgID, "central-the-anarchis")
 		assert.Nil(t, cf)
 
 		// some students return error, some don't
@@ -167,7 +165,7 @@ func Test_Itern_MoveFolder(t *testing.T) {
 
 		f := folder.NewDriver(folders)
 
-		nf, err := f.MoveFolder("sacred-moonstar", "nearby-secret")
+		_, err := f.MoveFolder("sacred-moonstar", "nearby-secret")
 
 		res := f.GetAllChildFolders(uuid.FromStringOrNil("c1556e17-b7c0-45a3-a6ae-9546248fb17a"), "sacred-moonstar")
 
@@ -358,9 +356,9 @@ func Test_Itern_MoveFolder(t *testing.T) {
 
 		f := folder.NewDriver(folders)
 
-		nf, err := f.MoveFolder("sacred-moonstar", "nearby-secret")
+		_, err := f.MoveFolder("sacred-moonstar", "nearby-secret")
 
-		nf, err = f.MoveFolder("dashing-forearm", "pure-blastaar")
+		_, err = f.MoveFolder("dashing-forearm", "pure-blastaar")
 
 		folder1 := f.GetAllChildFolders(uuid.FromStringOrNil("c1556e17-b7c0-45a3-a6ae-9546248fb17a"), "sacred-moonstar")
 
@@ -552,7 +550,7 @@ func Test_Itern_MoveFolder(t *testing.T) {
 
 		f := folder.NewDriver(folders)
 
-		nf, err := f.MoveFolder("related-kitty", "organic-hulk")
+		_, err := f.MoveFolder("related-kitty", "organic-hulk")
 
 		cf := f.GetAllChildFolders(uuid.FromStringOrNil("c1556e17-b7c0-45a3-a6ae-9546248fb17a"), "dashing-forearm")
 
