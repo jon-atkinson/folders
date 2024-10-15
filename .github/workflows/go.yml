@@ -5,9 +5,9 @@ name: Go
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main", "simplified_implementation", "with_all_errors" ]
   pull_request:
-    branches: [ "main" ]
+    branches: [ "main", "simplified_implementation", "with_all_errors" ]
 
 jobs:
 

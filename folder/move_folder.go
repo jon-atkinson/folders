@@ -2,7 +2,6 @@ package folder
 
 import (
 	"errors"
-	"fmt"
 	"slices"
 	"strings"
 )
