@@ -15,7 +15,6 @@ func GetAllFolders() []Folder {
 func (f *driver) GetFoldersByOrgID(orgID uuid.UUID) []Folder {
 	org, err := f.getOrg(orgID)
 	if err != nil {
-		fmt.Println("early return 1", err)
 		return nil
 	}
 

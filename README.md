@@ -1,7 +1,24 @@
 # Hello!
+
 Hi! Thanks for the opportunity to do this. I didn't have time to properly work on this until the weekend so rather than ask clarifying questions I made some assumptions, listed below.
 
+## Different Versions
+
+Per the feedback after my initial runthrough I've created a much simpler implementation,
+it can be found at [this link](https://github.com/jon-atkinson/sc-takehome-2024-25/tree/simplified_implementation).
+
+### Versioning Overview
+
+|            | best driver build time | best lookup time | best insert time | in place edits | stable operations | concurrent scope |
+| ---------- | ---------------------- | ---------------- | ---------------- | -------------- | ----------------- | ---------------- |
+| main       |                        | ✅               | ✅               |                |                   | Between Orgs     |
+| simplified | ✅                     |                  |                  | ✅             | ✅                | None             |
+|            |                        |                  |                  |                |                   |                  |
+
 ## My Assumptions:
+
+This is all to do with the implementation on main.
+
 - Drivers have long lifetimes
 - Frequent lookups
 - Orgs share Folder namespace
