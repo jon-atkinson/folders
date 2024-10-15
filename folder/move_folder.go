@@ -95,7 +95,7 @@ func fixPaths(node *FolderTreeNode, newPrefix string) {
 		curr := stack[len(stack)-1]
 		stack = stack[:len(stack)-1]
 
-		// preprocessing for well-formed top level nodes
+		// preprocessing for well-formed top level nodes in output
 		curr.folder.Paths = "." + curr.folder.Paths + "."
 		curr.folder.Paths = strings.Replace(curr.folder.Paths, oldPrefix, newPrefix, 1)
 		curr.folder.Paths = strings.Trim(curr.folder.Paths, ".")

@@ -12,15 +12,15 @@ func GetAllFolders() []Folder {
 	return GetSampleData()
 }
 
-func (f *driver) GetFoldersByOrgID(orgID uuid.UUID) ([]Folder, error) {
+func (f *driver) GetFoldersByOrgID(orgID uuid.UUID) []Folder {
 	org, err := f.getOrg(orgID)
 	if err != nil {
-		return []Folder{}, err
+		return []Folder{}
 	}
 
 	// I chose in-order traversal here, this function could be extended to
 	// support different output orderings as required
-	return org.collectFoldersInOrder(), nil
+	return org.collectFoldersInOrder()
 }
 
 func (org *Org) collectFoldersInOrder() []Folder {
@@ -52,19 +52,19 @@ func (org *Org) collectFoldersInOrder() []Folder {
 	return folders
 }
 
-func (f *driver) GetAllChildFolders(orgID uuid.UUID, name string) ([]Folder, error) {
+func (f *driver) GetAllChildFolders(orgID uuid.UUID, name string) []Folder {
 	_, err := f.getOrg(orgID)
 	if err != nil {
-		return []Folder{}, err
+		return []Folder{}
 	}
 
 	otherOrg, folder, err := f.nameToOrgFolder(name)
 	if err != nil {
-		return []Folder{}, err
+		return []Folder{}
 	}
 
 	if otherOrg.orgId != orgID {
-		return []Folder{}, errors.New("Folder does not exist in the specified organization")
+		return []Folder{}
 	}
 
 	var folders []Folder
@@ -84,7 +84,7 @@ func (f *driver) GetAllChildFolders(orgID uuid.UUID, name string) ([]Folder, err
 		})
 	}
 
-	return folders, nil
+	return folders
 }
 
 func (org *Org) GetNamedFolder(name string) (*FolderTreeNode, error) {
@@ -131,11 +131,7 @@ func (f *driver) GetAllFolders() ([]Folder, error) {
 		go func(org *Org) {
 			defer wg.Done()
 
-			folders, err := f.GetFoldersByOrgID(org.orgId)
-			if err != nil {
-				errChan <- err
-				return
-			}
+			folders := f.GetFoldersByOrgID(org.orgId)
 			resultChan <- folders
 		}(org)
 		return true

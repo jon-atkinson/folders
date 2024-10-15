@@ -4,7 +4,7 @@ import (
 	"fmt"
 
 	"github.com/gofrs/uuid"
-	"github.com/jon-atkinson/sc-takehome-2024-25/folder"
+	"github.com/georgechieng-sc/interns-2022/folder"
 )
 
 const (
@@ -13,48 +13,15 @@ const (
 )
 
 func main() {
-	firstOrgId := uuid.FromStringOrNil(FirstOrgID)
-	secondOrgId := uuid.FromStringOrNil(SecondOrgID)
+	orgID := uuid.FromStringOrNil(folder.DefaultOrgID)
 
-	f := folder.NewDriver([]folder.Folder{
-		// {"a", firstOrgId, "a"},
-		// {"b", firstOrgId, "b"},
-		// {"c", firstOrgId, "c"},
-		// {"d", firstOrgId, "d"},
-		// {"e", firstOrgId, "e"},
-		// {"f", firstOrgId, "f"},
-		// {"g", firstOrgId, "g"},
-		// {"h", firstOrgId, "h"},
-		// {"i", firstOrgId, "i"},
-		// {"j", firstOrgId, "j"},
-		// {"k", firstOrgId, "k"},
-		// {"l", firstOrgId, "l"},
-		// {"m", firstOrgId, "m"},
-		// {"n", firstOrgId, "n"},
-		// {"o", firstOrgId, "o"},
-		// {"p", firstOrgId, "p"},
-		// {"q", firstOrgId, "q"},
-		// {"r", firstOrgId, "r"},
-		// {"s", firstOrgId, "s"},
-		// {"t", firstOrgId, "t"},
-		{"alpha", firstOrgId, "alpha"},
-		{"bravo", firstOrgId, "alpha.bravo"},
-		{"charlie", firstOrgId, "alpha.charlie"},
-		{"delta", firstOrgId, "alpha.bravo.delta"},
-		{"echo", firstOrgId, "alpha.bravo.echo"},
-		{"foxtrot", firstOrgId, "alpha.charlie.foxtrot"},
-		{"gamma", firstOrgId, "alpha.charlie.gamma"},
-		{"hotel", secondOrgId, "hotel"},
-	})
-	f.MoveFolder("gamma", "alpha")
-	f.MoveFolder("bravo", "gamma")
+	res := folder.GetAllFolders()
 
-	res, err := f.GetAllFolders()
-	if err != nil {
-		fmt.Println(err)
-	} else {
-		for _, ff := range res {
-			folder.PrettyPrint(ff)
-		}
-	}
+	// example usage
+	folderDriver := folder.NewDriver(res)
+	orgFolder := folderDriver.GetFoldersByOrgID(orgID)
+
+	folder.PrettyPrint(res)
+	fmt.Printf("\n Folders for orgID: %s", orgID)
+	folder.PrettyPrint(orgFolder)
 }

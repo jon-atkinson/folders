@@ -13,28 +13,17 @@ import (
 )
 
 type IDriver interface {
-	// I took the liberty of adding an error to the return of these functions
-	// as the spec requests specific error case handling
-
-	// This is just nice to have access to, if having it here is an issue, it
-	// can be made private instead
-	GetAllFolders() ([]Folder, error)
-
 	// GetFoldersByOrgID returns all folders that belong to a specific orgID.
-	GetFoldersByOrgID(orgID uuid.UUID) ([]Folder, error)
-
+	GetFoldersByOrgID(orgID uuid.UUID) []Folder
 	// component 1
 	// Implement the following methods:
 	// GetAllChildFolders returns all child folders of a specific folder.
-	GetAllChildFolders(orgID uuid.UUID, name string) ([]Folder, error)
+	GetAllChildFolders(orgID uuid.UUID, name string) []Folder
 
 	// component 2
 	// Implement the following methods:
 	// MoveFolder moves a folder to a new destination.
 	MoveFolder(name string, dst string) ([]Folder, error)
-	// From context I'm assuming that organizations share a file system and
-	// cannot have identical names? I've assumed this to be true since otherwise
-	// I'm not sure how to resolve namespace collisions
 }
 
 type driver struct {
