@@ -1,16 +1,13 @@
 # Hello!
-Hi! Thanks for the opportunity to do this. I didn't have time to properly work on this until the weekend so rather than ask clarifying questions I made some assumptions, listed below.
+This branch has a simpler implementation that doesn't arrange the data into a tree-like
+structure, per provided feedback.
 
-## My Assumptions:
-- Drivers have long lifetimes
-- Frequent lookups
-- Orgs share Folder namespace
-  - Folder names are unique
-- Hardware is beefy, context switches are cheap
-  - goroutines will improve performance
-- Filesystem is very large
-  - Worst case TC a better target than median TC
-  - Threading setup overhead overtaken by concurrancy time saves
+Instead it modifies the folders in-place.
+
+This implementation is good for when drivers are created and destroyed for relatively
+few operations each time. It should be pretty quick compared to alternatives on all
+benchmarks since drivers have O(1) creation cost and O(n) access cost, which can't
+be beaten for some operations due to the current IDriver interface.
 
 # sc-interns-2024
 
