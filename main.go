@@ -3,8 +3,8 @@ package main
 import (
 	"fmt"
 
-	"github.com/gofrs/uuid"
 	"github.com/georgechieng-sc/interns-2022/folder"
+	"github.com/gofrs/uuid"
 )
 
 const (

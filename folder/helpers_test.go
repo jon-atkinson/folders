@@ -5,10 +5,12 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/go-test/deep"
 	"github.com/georgechieng-sc/interns-2022/folder"
+	"github.com/go-test/deep"
 )
 
+// helper function for testing the folders returned by folder IDriver interface
+// functions
 func testFolderResults(t *testing.T, got []folder.Folder, want []folder.Folder) {
 	if len(want) != len(got) {
 		t.Fatalf("GetAllChildFolders output does not contain %d Folders. got=%d\n",
@@ -44,3 +46,4 @@ func testFolderError(t *testing.T, gotErr error, expErr error) {
 			ttErrString, errString)
 	}
 }
+
