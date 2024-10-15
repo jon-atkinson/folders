@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/gofrs/uuid"
-	"github.com/jon-atkinson/sc-takehome-2024-25/folder"
+	"github.com/georgechieng-sc/interns-2022/folder"
 )
 
 const (
@@ -147,9 +147,9 @@ func Test_folder_GetFoldersByOrgID(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			f := folder.NewDriver(tt.folders)
-			got, err := f.GetFoldersByOrgID(tt.orgID)
+			got := f.GetFoldersByOrgID(tt.orgID)
 
-			testFolderResults(t, got, tt.want, err, tt.err)
+			testFolderResults(t, got, tt.want)
 		})
 	}
 }
@@ -340,9 +340,9 @@ func Test_folder_GetAllChildFolders(t *testing.T) {
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
 			f := folder.NewDriver(tt.folders)
-			got, err := f.GetAllChildFolders(tt.orgID, tt.targetFolder)
+			got := f.GetAllChildFolders(tt.orgID, tt.targetFolder)
 
-			testFolderResults(t, got, tt.want, err, tt.err)
+			testFolderResults(t, got, tt.want)
 		})
 	}
 }

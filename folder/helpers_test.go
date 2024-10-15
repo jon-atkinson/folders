@@ -6,25 +6,10 @@ import (
 	"testing"
 
 	"github.com/go-test/deep"
-	"github.com/jon-atkinson/sc-takehome-2024-25/folder"
+	"github.com/georgechieng-sc/interns-2022/folder"
 )
 
-// helper function for testing folder IDriver interface functions that return
-// ([]Folder, err)
-func testFolderResults(t *testing.T, got []folder.Folder, want []folder.Folder, gotErr error, expErr error) {
-	errString := "<nil>"
-	ttErrString := "<nil>"
-	if gotErr != nil {
-		errString = gotErr.Error()
-	}
-	if expErr != nil {
-		ttErrString = expErr.Error()
-	}
-	if errString != ttErrString {
-		t.Fatalf("GetFoldersByOrgID wanted=%s. got=%s\n",
-			ttErrString, errString)
-	}
-
+func testFolderResults(t *testing.T, got []folder.Folder, want []folder.Folder) {
 	if len(want) != len(got) {
 		t.Fatalf("GetAllChildFolders output does not contain %d Folders. got=%d\n",
 			len(want), len(got))
@@ -40,5 +25,22 @@ func testFolderResults(t *testing.T, got []folder.Folder, want []folder.Folder, 
 	if diff := deep.Equal(want, got); diff != nil {
 		t.Fatalf("GetAllChildFolders output folders do not match expected:\n%s",
 			diff[0])
+	}
+}
+
+// helper function for testing the errors returned by folder IDriver interface
+// functions that return errors
+func testFolderError(t *testing.T, gotErr error, expErr error) {
+	errString := "<nil>"
+	ttErrString := "<nil>"
+	if gotErr != nil {
+		errString = gotErr.Error()
+	}
+	if expErr != nil {
+		ttErrString = expErr.Error()
+	}
+	if errString != ttErrString {
+		t.Fatalf("GetFoldersByOrgID wanted=%s. got=%s\n",
+			ttErrString, errString)
 	}
 }

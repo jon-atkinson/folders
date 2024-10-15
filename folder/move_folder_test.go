@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	"github.com/gofrs/uuid"
-	"github.com/jon-atkinson/sc-takehome-2024-25/folder"
+	"github.com/georgechieng-sc/interns-2022/folder"
 )
 
 func Test_folder_MoveFolder(t *testing.T) {
@@ -290,7 +290,8 @@ func Test_folder_MoveFolder(t *testing.T) {
 			f := folder.NewDriver(tt.folders)
 			got, err := f.MoveFolder(tt.target, tt.dst)
 
-			testFolderResults(t, got, tt.want, err, tt.err)
+			testFolderResults(t, got, tt.want)
+			testFolderError(t, err, tt.err)
 		})
 	}
 }
@@ -417,7 +418,8 @@ func Test_folder_MoveFolder_Complex(t *testing.T) {
 				got, err = f.MoveFolder(move.target, move.dst)
 			}
 
-			testFolderResults(t, got, tt.want, err, tt.err)
+			testFolderResults(t, got, tt.want)
+			testFolderError(t, err, tt.err)
 		})
 	}
 }
