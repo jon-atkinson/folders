@@ -23,6 +23,7 @@ func (f *driver) GetFoldersByOrgID(orgID uuid.UUID) []Folder {
 	return org.collectFoldersInOrder()
 }
 
+// returns folders in Org in-order
 func (org *Org) collectFoldersInOrder() []Folder {
 	if org.folders == nil {
 		return []Folder{}
@@ -87,6 +88,8 @@ func (f *driver) GetAllChildFolders(orgID uuid.UUID, name string) []Folder {
 	return folders
 }
 
+// locates folder node in Org if exists
+// returns nil, err on miss
 func (org *Org) GetNamedFolder(name string) (*FolderTreeNode, error) {
 	if org.folders == nil {
 		return nil, fmt.Errorf("Org %s has no folders", org.orgId.String())
@@ -120,6 +123,8 @@ func (org *Org) GetNamedFolder(name string) (*FolderTreeNode, error) {
 	return targetNode, nil
 }
 
+// returns all folders on f
+// folders are collected for earch Org by seperate goroutines
 func (f *driver) GetAllFolders() ([]Folder, error) {
 	resultChan := make(chan []Folder)
 	errChan := make(chan error)

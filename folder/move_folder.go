@@ -44,6 +44,8 @@ func (f *driver) MoveFolder(name string, dst string) ([]Folder, error) {
 	return allFolders, nil
 }
 
+// removes target node from Org
+// errors on: no/incorrect path, folder not in the org
 func (org *Org) pruneFolder(node *FolderTreeNode) (*FolderTreeNode, error) {
 	paths := strings.Split(node.folder.Paths, ".")
 	if len(paths) == 0 {
@@ -85,6 +87,8 @@ func (org *Org) pruneFolder(node *FolderTreeNode) (*FolderTreeNode, error) {
 	return res, nil
 }
 
+// updates the paths for all nodes in the tree rooted at node
+// node rooted at newPrefix, children are updated as required
 func fixPaths(node *FolderTreeNode, newPrefix string) {
 	paths := strings.Split(node.folder.Paths, ".")
 	oldPrefix := strings.Trim(strings.Join(paths[:len(paths)-1], "."), ".")
