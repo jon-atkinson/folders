@@ -1,16 +1,18 @@
 package folder_test
 
 import (
+	"fmt"
 	"slices"
 	"strings"
 	"testing"
 
-	"github.com/go-test/deep"
 	"github.com/georgechieng-sc/interns-2022/folder"
+	"github.com/go-test/deep"
 )
 
 func testFolderResults(t *testing.T, got []folder.Folder, want []folder.Folder) {
 	if len(want) != len(got) {
+		fmt.Println("got", got, "want", want)
 		t.Fatalf("GetAllChildFolders output does not contain %d Folders. got=%d\n",
 			len(want), len(got))
 	}

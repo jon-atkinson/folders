@@ -115,6 +115,9 @@ func Test_Intern_GetFoldersByOrgID(t *testing.T) {
 		orgID := uuid.FromStringOrNil(folder.DefaultOrgID)
 		cf := f.GetAllChildFolders(orgID, "hip-stingray")
 
+		folder.SortFoldersByPath(expected)
+		folder.SortFoldersByPath(cf)
+
 		assert.EqualValues(t, expected, cf)
 	})
 
@@ -347,6 +350,9 @@ func Test_Itern_MoveFolder(t *testing.T) {
 			},
 		}
 
+		folder.SortFoldersByPath(expected)
+		folder.SortFoldersByPath(res)
+
 		assert.NoError(t, err)
 		assert.EqualValues(t, expected, res)
 	})
@@ -540,6 +546,11 @@ func Test_Itern_MoveFolder(t *testing.T) {
 			},
 		}
 
+		folder.SortFoldersByPath(expectedFolder1)
+		folder.SortFoldersByPath(folder1)
+		folder.SortFoldersByPath(expectedFolder2)
+		folder.SortFoldersByPath(folder2)
+
 		assert.NoError(t, err)
 		assert.EqualValues(t, expectedFolder1, folder1)
 		assert.EqualValues(t, expectedFolder2, folder2)
@@ -571,6 +582,9 @@ func Test_Itern_MoveFolder(t *testing.T) {
 				Paths: "stunning-horridus.sacred-moonstar.nearby-maestro.dashing-forearm.organic-hulk",
 			},
 		}
+
+		folder.SortFoldersByPath(expected)
+		folder.SortFoldersByPath(cf)
 
 		assert.NoError(t, err)
 		assert.EqualValues(t, expected, cf)

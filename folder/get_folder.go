@@ -15,7 +15,8 @@ func GetAllFolders() []Folder {
 func (f *driver) GetFoldersByOrgID(orgID uuid.UUID) []Folder {
 	org, err := f.getOrg(orgID)
 	if err != nil {
-		return []Folder{}
+		fmt.Println("early return 1", err)
+		return nil
 	}
 
 	// I chose in-order traversal here, this function could be extended to
@@ -56,16 +57,16 @@ func (org *Org) collectFoldersInOrder() []Folder {
 func (f *driver) GetAllChildFolders(orgID uuid.UUID, name string) []Folder {
 	_, err := f.getOrg(orgID)
 	if err != nil {
-		return []Folder{}
+		return nil
 	}
 
 	otherOrg, folder, err := f.nameToOrgFolder(name)
 	if err != nil {
-		return []Folder{}
+		return nil
 	}
 
 	if otherOrg.orgId != orgID {
-		return []Folder{}
+		return nil
 	}
 
 	var folders []Folder
@@ -75,7 +76,7 @@ func (f *driver) GetAllChildFolders(orgID uuid.UUID, name string) []Folder {
 		curr := stack[len(stack)-1]
 		stack = stack[:len(stack)-1]
 
-		if curr.folder != nil {
+		if curr.folder != nil && curr.folder.Name != name {
 			folders = append(folders, *curr.folder)
 		}
 
