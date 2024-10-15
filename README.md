@@ -13,7 +13,6 @@ it can be found at [this link](https://github.com/jon-atkinson/sc-takehome-2024-
 | ---------- | ---------------------- | ---------------- | ---------------- | -------------- | ----------------- | ---------------- |
 | main       |                        | ✅               | ✅               |                |                   | Between Orgs     |
 | simplified | ✅                     |                  |                  | ✅             | ✅                | None             |
-|            |                        |                  |                  |                |                   |                  |
 
 ## My Assumptions:
 
