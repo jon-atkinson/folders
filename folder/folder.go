@@ -87,6 +87,10 @@ func preProcessFolders(folders []Folder) {
 // Builds all Orgs, Org construction is managed by one goroutine / Org
 // All goroutines return before returning Orgs btree
 func buildOrgs(folders []Folder) *btree.BTreeG[*Org] {
+	if len(folders) == 0 {
+		return btree.NewG(3, orgTreeLess)
+	}
+
 	preProcessFolders(folders)
 	var orgs *btree.BTreeG[*Org] = btree.NewG(3, orgTreeLess)
 
@@ -95,19 +99,22 @@ func buildOrgs(folders []Folder) *btree.BTreeG[*Org] {
 	var mu sync.Mutex
 
 	hi := 0
-	for hi < len(folders) {
-		orgId := folders[hi].OrgId
-		lo := hi
-
+	for hi <= len(folders) {
+		orgId := folders[0].OrgId
 		hi = sort.Search(len(folders), func(i int) bool {
-			return folders[i].OrgId != orgId
+			return folders[i].OrgId.String() != orgId.String()
 		})
 
 		orgWg.Add(1)
 		go func(folderSlice []Folder) {
 			defer orgWg.Done()
 			orgChan <- buildOrg(folderSlice)
-		}(folders[lo:hi])
+		}(folders[:hi])
+
+		if hi == len(folders) {
+			break
+		}
+		folders = folders[hi:]
 	}
 
 	go func() {
@@ -238,4 +245,13 @@ func (f *driver) nameToOrgFolder(name string) (*Org, *FolderTreeNode, error) {
 		return result.org, result.folder, nil
 	}
 	return nil, nil, errors.New("Folder does not exist")
+}
+
+// used to ensure unordered slices are ordered in the output to match tests that
+// request it
+func SortFoldersByPath(folders []Folder) []Folder {
+	slices.SortFunc(folders, func(a, b Folder) int {
+		return strings.Compare(a.Paths, b.Paths)
+	})
+	return folders
 }
