@@ -50,39 +50,35 @@ func (org *Org) pruneFolder(node *FolderTreeNode) (*FolderTreeNode, error) {
 		return nil, errors.New("Could not prune tree, requested path was empty")
 	}
 
-	curr, found := lookupTreeNode(org.folders, paths[0])
+	curr, found := org.folders[paths[0]]
 	if !found {
 		return nil, errors.New("Could not prune tree, folder not in this organization")
 	}
 	paths = paths[1:]
 
 	for i, path := range paths {
-		next, found := curr.children.Get(&FolderTreeNode{folder: &Folder{Name: path}})
+		next, found := curr.children[path]
 		if !found {
 			return nil, errors.New("Could not prune tree, missing folders on path")
 		}
 
 		if i == len(paths)-1 {
-			res, found := curr.children.Delete(next)
-			if !found {
-				return nil, errors.New("Could not prune tree, folder not in tree")
-			}
-			return res, nil
+			delete(curr.children, path)
+			return next, nil
 		}
 
 		curr = next
 	}
 
 	// target is a top-level folder
-	res, found := org.folders.Get(node)
-	if !found {
-		return nil, errors.New("Likely Bug: prune tree, this should be unreachable")
+	if _, found := org.folders[node.folder.Name]; found {
+		res := org.folders[node.folder.Name]
+		delete(org.folders, node.folder.Name)
+		return res, nil
+
 	}
-	res, found = org.folders.Delete(res)
-	if !found {
-		return nil, errors.New("Likely Bug: prune tree, this should be unreachable")
-	}
-	return res, nil
+
+	return nil, errors.New("Likely Bug: prune tree, this should be unreachable")
 }
 
 // updates the paths for all nodes in the tree rooted at node
@@ -102,9 +98,8 @@ func fixPaths(node *FolderTreeNode, newPrefix string) {
 		curr.folder.Paths = strings.Replace(curr.folder.Paths, oldPrefix, newPrefix, 1)
 		curr.folder.Paths = strings.Trim(curr.folder.Paths, ".")
 
-		curr.children.Ascend(func(child *FolderTreeNode) bool {
+		for _, child := range curr.children {
 			stack = append(stack, child)
-			return true
-		})
+		}
 	}
 }

@@ -9,7 +9,6 @@ import (
 	"sync"
 
 	"github.com/gofrs/uuid"
-	"github.com/google/btree"
 )
 
 type IDriver interface {
@@ -27,17 +26,17 @@ type IDriver interface {
 }
 
 type driver struct {
-	orgs *btree.BTreeG[*Org]
+	orgs map[uuid.UUID]*Org
 }
 
 type Org struct {
 	orgId   uuid.UUID
-	folders *btree.BTreeG[*FolderTreeNode]
+	folders map[string]*FolderTreeNode
 }
 
 type FolderTreeNode struct {
 	folder   *Folder
-	children *btree.BTreeG[*FolderTreeNode]
+	children map[string]*FolderTreeNode
 }
 
 func NewDriver(folders []Folder) IDriver {
@@ -49,23 +48,15 @@ func NewDriver(folders []Folder) IDriver {
 func NewOrg(orgID uuid.UUID) *Org {
 	return &Org{
 		orgId:   orgID,
-		folders: btree.NewG(3, folderTreeLess),
+		folders: make(map[string]*FolderTreeNode),
 	}
 }
 
 func NewFolderTreeNode(folder *Folder) *FolderTreeNode {
 	return &FolderTreeNode{
 		folder:   folder,
-		children: btree.NewG(3, folderTreeLess),
+		children: make(map[string]*FolderTreeNode),
 	}
-}
-
-func orgTreeLess(a, b *Org) bool {
-	return a.orgId.String() < b.orgId.String()
-}
-
-func folderTreeLess(a, b *FolderTreeNode) bool {
-	return a.folder.Name < b.folder.Name
 }
 
 // sort folders in place
@@ -85,14 +76,14 @@ func preProcessFolders(folders []Folder) {
 }
 
 // Builds all Orgs, Org construction is managed by one goroutine / Org
-// All goroutines return before returning Orgs btree
-func buildOrgs(folders []Folder) *btree.BTreeG[*Org] {
+// All goroutines return before returning Orgs map
+func buildOrgs(folders []Folder) map[uuid.UUID]*Org {
 	if len(folders) == 0 {
-		return btree.NewG(3, orgTreeLess)
+		return make(map[uuid.UUID]*Org)
 	}
 
 	preProcessFolders(folders)
-	var orgs *btree.BTreeG[*Org] = btree.NewG(3, orgTreeLess)
+	orgs := make(map[uuid.UUID]*Org)
 
 	orgChan := make(chan *Org)
 	var orgWg sync.WaitGroup
@@ -124,7 +115,7 @@ func buildOrgs(folders []Folder) *btree.BTreeG[*Org] {
 
 	for org := range orgChan {
 		mu.Lock()
-		orgs.ReplaceOrInsert(org)
+		orgs[org.orgId] = org
 		mu.Unlock()
 	}
 
@@ -141,11 +132,11 @@ func buildOrg(folders []Folder) *Org {
 	return org
 }
 
-func lookupTreeNode(folders *btree.BTreeG[*FolderTreeNode], target string) (*FolderTreeNode, bool) {
-	return folders.Get(&FolderTreeNode{
-		folder: &Folder{Name: target},
-	})
-}
+// func lookupTreeNode(folders *btree.BTreeG[*FolderTreeNode], target string) (*FolderTreeNode, bool) {
+// func lookupTreeNode(folders map[string]*FolderTreeNode, target string) (*FolderTreeNode, bool) {
+// 	got, ok := folders[target]
+// 	return got, ok
+// }
 
 // inserts folder into correct position in org
 // assumes org is correct
@@ -156,18 +147,19 @@ func (org *Org) insertFolder(node *FolderTreeNode) error {
 		return errors.New("Cannot insert folder with empty path")
 	}
 
-	curr, found := lookupTreeNode(org.folders, parts[0])
+	curr, found := org.folders[parts[0]]
 
 	if !found {
 		if len(parts) == 1 {
-			org.folders.ReplaceOrInsert(node)
+			// org.folders.ReplaceOrInsert(node)
+			org.folders[node.folder.Name] = node
 		}
 		return nil
 	}
 	parts = parts[1:]
 
 	for idx, part := range parts {
-		next, found := lookupTreeNode(curr.children, part)
+		next, found := curr.children[part]
 
 		if !found {
 			if idx != len(parts)-1 {
@@ -176,7 +168,7 @@ func (org *Org) insertFolder(node *FolderTreeNode) error {
 			}
 
 			// insert folder to tree
-			curr.children.ReplaceOrInsert(node)
+			curr.children[node.folder.Name] = node
 			return nil
 		}
 
@@ -188,7 +180,7 @@ func (org *Org) insertFolder(node *FolderTreeNode) error {
 }
 
 func (f *driver) getOrg(orgID uuid.UUID) (*Org, error) {
-	node, found := f.orgs.Get(&Org{orgId: orgID})
+	node, found := f.orgs[orgID]
 	if !found {
 		return nil, errors.New("Organization does not exist")
 	}
@@ -207,10 +199,9 @@ func (f *driver) nameToOrgFolder(name string) (*Org, *FolderTreeNode, error) {
 	defer cancel()
 
 	var wg sync.WaitGroup
-	wg.Add(f.orgs.Len())
+	wg.Add(len(f.orgs))
 
-	f.orgs.Ascend(func(testOrg *Org) bool {
-
+	for _, org := range f.orgs {
 		go func(routineOrg *Org) {
 			defer wg.Done()
 
@@ -231,9 +222,8 @@ func (f *driver) nameToOrgFolder(name string) (*Org, *FolderTreeNode, error) {
 					}
 				}
 			}
-		}(testOrg)
-		return true
-	})
+		}(org)
+	}
 
 	go func() {
 		wg.Wait()
