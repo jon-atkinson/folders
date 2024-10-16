@@ -21,7 +21,6 @@ func main() {
 	folderDriver := folder.NewDriver(res)
 	orgFolder := folderDriver.GetFoldersByOrgID(orgID)
 
-	folder.PrettyPrint(res)
 	fmt.Printf("\n Folders for orgID: %s", orgID)
 	folder.PrettyPrint(orgFolder)
 }
