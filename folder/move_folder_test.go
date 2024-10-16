@@ -423,3 +423,47 @@ func Test_folder_MoveFolder_Complex(t *testing.T) {
 		})
 	}
 }
+
+func Benchmark_folder_MoveFolder_small_tree_to_shallow(b *testing.B) {
+	folders := folder.GetSampleData()
+	f := folder.NewDriver(folders)
+
+	b.ResetTimer()
+
+	for i := 0; i < b.N; i++ {
+		f.MoveFolder("civil-cyblade", "stunning-horridus")
+	}
+}
+
+func Benchmark_folder_MoveFolder_small_tree_to_deep(b *testing.B) {
+	folders := folder.GetSampleData()
+	f := folder.NewDriver(folders)
+
+	b.ResetTimer()
+
+	for i := 0; i < b.N; i++ {
+		f.MoveFolder("capable-speedball", "literate-neon")
+	}
+}
+
+func Benchmark_folder_MoveFolder_large_tree_to_shallow(b *testing.B) {
+	folders := folder.GetSampleData()
+	f := folder.NewDriver(folders)
+
+	b.ResetTimer()
+
+	for i := 0; i < b.N; i++ {
+		f.MoveFolder("stunning-horridus", "noble-vixen")
+	}
+}
+
+func Benchmark_folder_MoveFolder_large_tree_to_deep(b *testing.B) {
+	folders := folder.GetSampleData()
+	f := folder.NewDriver(folders)
+
+	b.ResetTimer()
+
+	for i := 0; i < b.N; i++ {
+		f.MoveFolder("noble-vixen", "decent-sugar-man")
+	}
+}
