@@ -1,0 +1,39 @@
+goos: linux
+goarch: amd64
+pkg: github.com/georgechieng-sc/interns-2022/folder
+cpu: 11th Gen Intel(R) Core(TM) i5-11400F @ 2.60GHz
+                                            │ bench_maps_impl.txt │
+                                            │       sec/op        │
+_folder_NewDriver-12                                 123.1µ ±  1%
+_folder_GetFoldersByOrgID-12                         7.769µ ±  1%
+_folder_GetAllChildFolders_large_subtree-12          12.38µ ±  7%
+_folder_GetAllChildFolders_small_subtree-12          8.046µ ± 11%
+_folder_MoveFolder_small_tree_to_shallow-12          58.28µ ±  1%
+_folder_MoveFolder_small_tree_to_deep-12             67.16µ ±  4%
+_folder_MoveFolder_large_tree_to_shallow-12          67.73µ ±  4%
+_folder_MoveFolder_large_tree_to_deep-12             74.53µ ±  1%
+geomean                                              34.22µ
+
+                                            │ bench_maps_impl.txt │
+                                            │        B/op         │
+_folder_NewDriver-12                                 74.16Ki ± 0%
+_folder_GetFoldersByOrgID-12                         15.57Ki ± 0%
+_folder_GetAllChildFolders_large_subtree-12          8.328Ki ± 1%
+_folder_GetAllChildFolders_small_subtree-12          1.161Ki ± 4%
+_folder_MoveFolder_small_tree_to_shallow-12          63.35Ki ± 3%
+_folder_MoveFolder_small_tree_to_deep-12             62.61Ki ± 0%
+_folder_MoveFolder_large_tree_to_shallow-12          69.01Ki ± 2%
+_folder_MoveFolder_large_tree_to_deep-12             72.20Ki ± 1%
+geomean                                              26.18Ki
+
+                                            │ bench_maps_impl.txt │
+                                            │      allocs/op      │
+_folder_NewDriver-12                                  1.276k ± 0%
+_folder_GetFoldersByOrgID-12                           12.00 ± 0%
+_folder_GetAllChildFolders_large_subtree-12            29.00 ± 3%
+_folder_GetAllChildFolders_small_subtree-12            26.00 ± 8%
+_folder_MoveFolder_small_tree_to_shallow-12            102.0 ± 3%
+_folder_MoveFolder_small_tree_to_deep-12               110.0 ± 2%
+_folder_MoveFolder_large_tree_to_shallow-12            177.0 ± 1%
+_folder_MoveFolder_large_tree_to_deep-12               161.0 ± 1%
+geomean                                                88.29
