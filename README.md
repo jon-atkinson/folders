@@ -2,6 +2,9 @@
 
 Hi! Thanks for the opportunity to do this. I didn't have time to properly work on this until the weekend so rather than ask clarifying questions I made some assumptions, listed below.
 
+## Benchmarks Coming!
+Should find a couple hours to straighten all this out soon. Benchmark tests and some outputs available on this branch.
+
 ## Different Versions
 
 Per the feedback after my initial runthrough I've created a much simpler implementation,
