@@ -15,12 +15,18 @@ const (
 func main() {
 	orgID := uuid.FromStringOrNil(folder.DefaultOrgID)
 
-	res := folder.GetAllFolders()
+	// res := folder.GetAllFolders()
 
 	// example usage
-	folderDriver := folder.NewDriver(res)
-	orgFolder := folderDriver.GetFoldersByOrgID(orgID)
+	folderDriver := folder.NewDriver([]folder.Folder{
+		{"bravo", orgID, "bravo"},
+		{"alpha", orgID, "alpha"},
+		{"charlie", orgID, "charlie"},
+	})
+	// orgFolder := folderDriver.GetFoldersByOrgID(orgID)
+	folders, _ := folderDriver.MoveFolder("bravo", "alpha")
+	folders, _ = folderDriver.MoveFolder("charlie", "bravo")
 
 	fmt.Printf("\n Folders for orgID: %s", orgID)
-	folder.PrettyPrint(orgFolder)
+	folder.PrettyPrint(folders)
 }

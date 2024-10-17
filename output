@@ -1,0 +1,4177 @@
+?   	github.com/georgechieng-sc/interns-2022	[no test files]
+ok  	github.com/georgechieng-sc/interns-2022/folder	0.010s
+: 1726837709:0;ls
+: 1726837710:0;clear
+: 1726837711:0;ls
+: 1726837712:0;clear
+: 1726837713:0;make
+: 1726837713:0;clear
+: 1726837714:0;ls
+: 1726837717:0;cd code
+: 1726837717:0;ls
+: 1726837719:0;cd personal
+: 1726837720:0;ls
+: 1726837724:0;cd ..
+: 1726837724:0;clear
+: 1726837730:0;source .zshrc
+: 1726837732:0;clear
+: 1726837733:0;cd ..
+: 1726837734:0;clear
+: 1726837735:0;source .zshrc
+: 1726837780:0;sudo apt-get install docker-compose-plugin
+: 1726837811:0;fpath+=~/.zsh/completions
+: 1726837818:0;source ~/.zshrc
+: 1726837820:0;clear
+: 1726837820:0;ls
+: 1726837822:0;clear
+: 1726837843:0;vim .zshrc
+: 1726837860:0;nvim .zshrc
+: 1726837926:0;ls
+: 1726837928:0;cd code/
+: 1726837938:0;ls
+: 1726837941:0;cd personal
+: 1726837942:0;ls
+: 1726837945:0;cd interpreter
+: 1726837945:0;ls
+: 1726837951:0;go run main.go
+: 1726837997:0;clear
+: 1726837998:0;ls
+: 1726838002:0;sl
+: 1726838003:0;ls
+: 1726838004:0;clear
+: 1726838010:0;go version
+: 1726838039:0;clear
+: 1726838040:0;cd
+: 1726838069:0;source ~/.zshrc
+: 1726838074:0;vim .zsh
+: 1726838080:0;vim .zshrc
+: 1726838086:0;nvim .zshrc
+: 1726838155:0;nvim .
+: 1726838890:0;clear
+: 1726838895:0;cd code
+: 1726838896:0;clear
+: 1726838937:0;cat /usr/share/zsh/vendor-completions
+: 1726838945:0;ls /usr/share/zsh/vendor-completions
+: 1726838957:0;cat /usr/share/zsh/vendor-completions/_docker
+: 1726838971:0;cd /usr/share/zsh/vendor-completions/
+: 1726838972:0;ls
+: 1726838979:0;ls -l _docker
+: 1726839285:0;ls /mnt/wsl
+: 1726839291:0;ls /mnt/wsl/docker-desktop
+: 1726839919:0;ls
+: 1726839925:0;cat _docker
+: 1726839931:0;cd _docker
+: 1726839941:0;ls -la _docker
+: 1726839952:0;pwd
+: 1726840053:0;sudo ln -sf /mnt/wsl/docker-desktop/cli-tools/usr/share/zsh/vendor-completions/_docker /usr/share/zsh/vendor-completions/_docker
+: 1726840062:0;ls
+: 1726840063:0;clear
+: 1726840126:0;source ~/.zshrc
+: 1726841149:0;ls
+: 1726841160:0;source ~/.zshrc
+: 1726841257:0;ls
+: 1726841258:0;clear
+: 1726841366:0;source ~/.zshrc
+: 1726841462:0;compinit
+: 1726841463:0;clear
+: 1726841465:0;cdc
+: 1726841466:0;cd
+: 1726841469:0;compinit
+: 1726841470:0;clear
+: 1726844146:0;ls
+: 1726844148:0;cd code
+: 1726844149:0;ls
+: 1726844151:0;cd personal
+: 1726844151:0;ls
+: 1726844157:0;cd ..
+: 1726844158:0;cd studies
+: 1726844159:0;ls
+: 1726844201:0;gh repo clone jon-atkinson/ctfs
+: 1726844206:0;cd ctfs
+: 1726844207:0;ls
+: 1726844209:0;cd cs6841
+: 1726844210:0;ls
+: 1726844213:0;cd itsAlive
+: 1726844214:0;ls
+: 1726844215:0;clear
+: 1726844221:0;vim .
+: 1726844226:0;cd 
+: 1726844227:0;ls
+: 1726844238:0;nvim .zshrc
+: 1726844253:0;jls
+: 1726844255:0;cd
+: 1726844255:0;ls
+: 1726844256:0;clear
+: 1726844263:0;nvim .zshrc
+: 1726844269:0;nvim .backup_zshrc
+: 1726844659:0;code .backup_zshrc
+: 1726844763:0;clearw
+: 1726844764:0;cleqr
+: 1726844766:0;clear 
+: 1726844770:0;source .zshrc
+: 1726844773:0;ls
+: 1726844774:0;clear
+: 1726844781:0;cd code
+: 1726844782:0;ls
+: 1726844786:0;cd studies
+: 1726844787:0;ls
+: 1726844789:0;cd ctfs
+: 1726844790:0;ls
+: 1726844792:0;git pull
+: 1726844795:0;cd cs6841
+: 1726844797:0;ls
+: 1726844800:0;cd itsAlive
+: 1726844800:0;ls
+: 1726844801:0;clear
+: 1726844802:0;ls
+: 1726844803:0;clea
+: 1726844804:0;clear
+: 1726844809:0;gdb --version
+: 1726844816:0;clear
+: 1726844863:0;cd
+: 1726844893:0;git clone https://github.com/pwndbg/pwndbg\
+cd pwndbg\
+./setup.sh
+: 1726844985:0;ls
+: 1726844997:0;cd ../code/studies/ctg
+: 1726844998:0;cd ../code/studies/ctfs
+: 1726844999:0;ls
+: 1726845000:0;clear
+: 1726845002:0;cd cs6841/
+: 1726845003:0;ls
+: 1726845008:0;cd itsAlive
+: 1726845008:0;ls
+: 1726845009:0;clear
+: 1726845010:0;make
+: 1726845015:0;vim Makefile
+: 1726845045:0;make
+: 1726845051:0;clear
+: 1726845052:0;ls
+: 1726845057:0;gdb challenge 
+: 1726845083:0;clea
+: 1726845084:0;clear
+: 1726845531:0;git pull
+: 1726845699:0;ls
+: 1726845704:0;gdb challenge
+: 1726845824:0;clear
+: 1726845825:0;gdb challenge
+: 1726845950:0;clear
+: 1726845952:0;gdb challenge
+: 1726846669:0;clear
+: 1726846683:0;gdb challenge
+: 1726846774:0;vim challenge l
+: 1726846788:0;vim .
+: 1726846880:0;gdb challenge
+: 1726846993:0;cd code/studies/ctfs/cs6841/itsAlive/ls
+: 1726846994:0;clear
+: 1726847013:0;cd code/studies/ctfs/cs6841/itsAlive
+: 1726847013:0;ls
+: 1726847017:0;vim itsAlive.c
+: 1726847256:0;gdb challenge
+: 1726877000:0;ls
+: 1726877029:0;cd srvrr
+: 1726877030:0;cd srvr
+: 1726877031:0;ls
+: 1726877032:0;cd 
+: 1726877033:0;ls
+: 1726877034:0;clear
+: 1726877034:0;ls
+: 1726877037:0;cd
+: 1726877038:0;ls
+: 1726877043:0;csemnt
+: 1726877055:0;ls
+: 1726877060:0;clear
+: 1726877062:0;cse
+: 1726877089:0;cseumount
+: 1726877101:0;vim .zshrc
+: 1726877109:0;cseumount
+: 1726877112:0;vim .zshrc
+: 1726877124:0;source .zshrc
+: 1726877130:0;vim .zshrc
+: 1726877134:0;cseumount
+: 1726877141:0;ls cse
+: 1726877144:0;csemnt
+: 1726877148:0;ls csee
+: 1726877150:0;ls cse
+: 1726877154:0;cseumount
+: 1726877155:0;ls
+: 1726877158:0;ls cse
+: 1726877163:0;clear
+: 1726877164:0;ls
+: 1726877170:0;source .zshrc
+: 1726877171:0;clear
+: 1726877200:0;cd code/studies/ctfs
+: 1726877201:0;ls
+: 1726877213:0;vim notes
+: 1726877229:0;mv notes notes.md
+: 1726877233:0;vim notes.md sl
+: 1726877240:0;vim notes.md
+: 1726878088:0;tmux
+: 1726878116:0;tmux a
+: 1726878142:0;nc 170.64.222.246 1339
+: 1726878150:0;ls
+: 1726878151:0;cd cs6841
+: 1726878152:0;ls
+: 1726878154:0;cd tweetTweet
+: 1726878155:0;ls
+: 1726878157:0;vim .
+: 1726878300:0;ls
+: 1726878309:0;cd code/studies/ctfs
+: 1726878309:0;ls
+: 1726878318:0;vim notes.md
+: 1726878602:0;nc 170.64.222.246 1339
+: 1726878698:0;echo AAAAAAAAAAAAAAAA1111 | nc 170.64.222.246 1339
+: 1726879342:0;ls
+: 1726879385:0;vim boverflow.py
+: 1726879554:0;chmid boverflow.py
+: 1726879557:0;chmod boverflow.py
+: 1726879563:0;chmod +x boverflow.py
+: 1726879566:0;./boverflow.py
+: 1726879567:0;ls
+: 1726879580:0;chmod -x boverflow.py
+: 1726879581:0;clear
+: 1726879594:0;./python3 boverflow.py
+: 1726879600:0;./python boverflow.py
+: 1726879606:0;python3 boverflow.py
+: 1726879908:0;ls
+: 1726879910:0;cd cs6841
+: 1726879910:0;ls
+: 1726879914:0;cd itsAlive
+: 1726879914:0;ls
+: 1726879916:0;cd ..
+: 1726879919:0;clear
+: 1726879920:0;ls
+: 1726879921:0;clear
+: 1726879921:0;ls
+: 1726879927:0;cd tweetTweet
+: 1726879928:0;ls
+: 1726879933:0;gdb tweetTweet.c 
+: 1726879979:0;clear
+: 1726879980:0;gdb tweetTweet.c 
+: 1726880007:0;nm -A tweetTweet.c
+: 1726880024:0;nm -A tweetTweet
+: 1726880026:0;make
+: 1726880033:0;vim makee
+: 1726880038:0;vim Makefile
+: 1726880052:0;make
+: 1726880055:0;clear
+: 1726880061:0;nm -A tweetTweet
+: 1726880065:0;nm -A challenge
+: 1726880075:0;ls
+: 1726880076:0;cd ..
+: 1726880077:0;ls
+: 1726880078:0;cd ..
+: 1726880079:0;ls
+: 1726880090:0;useful_cli.md
+: 1726880094:0;vim useful_cli.md
+: 1726880748:0;nc 170.64.222.246 1339
+: 1726880920:0;echo AAAAAAAAAAAAAAAA\xEF\xBE\xAD\xDE\x01 | nc 170.64.222.246 1339
+: 1726880936:0;echo AAAAAAAAAAAAAAAA\xEF\xBE\xAD\xDE | nc 170.64.222.246 1339
+: 1726880971:0;ls
+: 1726880973:0;cd cs6841
+: 1726880973:0;ls
+: 1726880974:0;cd tweetTweet
+: 1726880982:0;vim .
+: 1726881040:0;echo AAAAAAAAAAAAAAAA\xEF\xBE\xAD | nc 170.64.222.246 1339
+: 1726881053:0;echo AAAAAAAAAAAAAAAA\xEF\xBE | nc 170.64.222.246 1339
+: 1726881057:0;echo AAAAAAAAAAAAAAAA\xEF | nc 170.64.222.246 1339
+: 1726881100:0;echo AAAAAAAAAAAAAAAA\xEFBEADDE\x01 | nc 170.64.222.246 1339
+: 1726881184:0;echo "AAAAAAAAAAAAAAAA\xEF\xBE\xAD\xDE\x01" | nc 170.64.222.246 1339
+: 1726881214:0;ls
+: 1726881221:0;soln.c
+: 1726881228:0;vim soln
+: 1726881303:0;echo "echo "AAAAAAAAAAAAAAAA\xEF\xBE\xAD\xDE\x01" | nc 170.64.222.246 1339" > code/studies/ctfs/cs6841/tweetTweet/soln
+: 1726881306:0;vim soln
+: 1726881460:0;clear
+: 1726881460:0;ls
+: 1726881462:0;clear
+: 1726881472:0;ls
+: 1726881509:0;vim soln
+: 1726881511:0;ls
+: 1726881513:0;cd code
+: 1726881516:0;cd ct
+: 1726881523:0;cd studies/ctfs
+: 1726881524:0;ls
+: 1726881525:0;clear
+: 1726881525:0;ls
+: 1726881527:0;pwd
+: 1726881528:0;clear
+: 1726881529:0;ls
+: 1726881532:0;cd cs6841
+: 1726881533:0;ls
+: 1726881533:0;clear
+: 1726882267:0;nc 170.64.222.246 1340
+: 1726882393:0;cd ../itsAlive
+: 1726882393:0;ls
+: 1726882395:0;vim .
+: 1726882662:0;nc 170.64.222.246 1340
+: 1726882728:0;clear
+: 1726882735:0;ls
+: 1726882737:0;cd itsAlive
+: 1726882738:0;ls
+: 1726882741:0;./challenge
+: 1726882747:0;gdb challenge
+: 1726882785:0;clear
+: 1726882786:0;gdb challenge
+: 1726882973:0;clear
+: 1726883461:0;lls
+: 1726883462:0;ls
+: 1726883466:0;strings Makefile
+: 1726883473:0;ls
+: 1726883474:0;cleear
+: 1726883477:0;clear
+: 1726883478:0;ls
+: 1726883482:0;strings challenge
+: 1726884105:0;/bin/python3 /home/jon/.vscode-server/extensions/ms-python.python-2024.14.1-linux-x64/python_files/printEnvVariablesToFile.py /home/jon/.vscode-server/extensions/ms-python.python-2024.14.1-linux-x64/python_files/deactivate/zsh/envVars.txt
+: 1726884238:0;conda --version
+: 1726884240:0;ls
+: 1726884242:0;clear
+: 1726884244:0;exit
+: 1726885562:0;cleear
+: 1726885564:0;clear
+: 1726885566:0;ls
+: 1726885569:0;soln.py
+: 1726885574:0;vim soln.py
+: 1726885598:0;clear
+: 1726885599:0;sl
+: 1726885599:0;ls
+: 1726885613:0;nc 170.64.222.246 1340
+: 1726885820:0;pip install pwntools
+: 1726885926:0;cleear
+: 1726885927:0;clear
+: 1726885934:0;ls
+: 1726885939:0;clear
+: 1726885963:0;python3 soln.py | nc 170.64.222.246 1340
+: 1726886017:0;ls
+: 1726886018:0;s
+: 1726886019:0;cd ..
+: 1726886020:0;ls
+: 1726886031:0;mkdir rce system
+: 1726886032:0;ls
+: 1726886133:0;clear
+: 1726886135:0;cd rce
+: 1726886136:0;ls
+: 1726886137:0;vim .
+: 1726886163:0;clear
+: 1726886164:0;ls
+: 1726886418:0;vim .
+: 1726886435:0;makw
+: 1726886436:0;make
+: 1726886440:0;./challenge
+: 1726886449:0;clear
+: 1726886451:0;vim .
+: 1726890404:0;sl
+: 1726890404:0;ls
+: 1726890432:0;cp ../itsAlive/soln.py ./soln.py
+: 1726890433:0;ls
+: 1726890436:0;vim soln.py
+: 1726890557:0;clear
+: 1726890558:0;sl
+: 1726890559:0;ls
+: 1726890560:0;clear
+: 1726890560:0;ls
+: 1726890564:0;gdb challenge
+: 1726890670:0;vim soln.py
+: 1726890691:0;python3 soln.py | nc 170.64.222.246 1340
+: 1726890702:0;python3 soln.py | nc 170.64.222.246 1341
+: 1726890760:0;clear
+: 1726890762:0;python3 soln.py | nc 170.64.222.246 1341
+: 1726890797:0;python3 soln.py | nc 170.64.222.246 1343
+: 1726890939:0;clear
+: 1726890941:0;tmux
+: 1726890950:0;:attach -d
+: 1726890962:0;kill-session
+: 1726890964:0;clear
+: 1726890971:0;tmux a
+: 1726890976:0;exit
+: 1726890979:0;tmux a
+: 1726890989:0;cleare
+: 1726890990:0;clear
+: 1726890991:0;ls
+: 1726891016:0;tmux a
+: 1726891039:0;tmux new
+: 1726891051:0;clear
+: 1726891089:0;tmux new -s nc
+: 1726891127:0;tmux new -s editor
+: 1726891138:0;vim .
+: 1726891171:0;ls
+: 1726891173:0;clear
+: 1726891173:0;ls
+: 1726891178:0;gdb challenge
+: 1726891413:0;tmux a
+: 1726891503:0;vim .
+: 1726891743:0;gdb challenge
+: 1726892354:0;c
+: 1726892355:0;cl
+: 1726892357:0;crl
+: 1726892358:0;clr
+: 1726892359:0;cleear
+: 1726892360:0;clear
+: 1726892365:0;gdb challenge
+: 1726892382:0;clear
+: 1726892382:0;gdb challenge
+: 1726892615:0;clear
+: 1726892616:0;gdb challenge
+: 1726893002:0;clea
+: 1726893003:0;cleear
+: 1726893006:0;clear
+: 1726893013:0;nm -A RCE.c
+: 1726893015:0;nm -A RCE
+: 1726893018:0;nm -A challenge
+: 1726893119:0;ls
+: 1726893121:0;makee
+: 1726893128:0;make
+: 1726893130:0;clea
+: 1726893132:0;clear
+: 1726893134:0;make
+: 1726893139:0;clear
+: 1726893142:0;nm -A challenge
+: 1726893302:0;ls
+: 1726893307:0;vim .
+: 1726893611:0;ls
+: 1726893632:0;python3 soln.py | nc 170.64.222.246 1343
+: 1726893670:0;clear
+: 1726893672:0;python3 soln.py | nc 170.64.222.246 1343
+: 1726893690:0;clear
+: 1726893724:0;python3 soln.py | nc 170.64.222.246 1343
+: 1726893738:0;clear
+: 1726893740:0;python3 soln.py | nc 170.64.222.246 1343
+: 1726893752:0;clear
+: 1726893785:0;python3 soln.py | nc 170.64.222.246 1343
+: 1726893800:0;clear
+: 1726893927:0;python3 soln.py | nc 170.64.222.246 1343
+: 1726893932:0;clear
+: 1726893961:0;python3 soln.py | nc 170.64.222.246 1343
+: 1726893971:0;clear
+: 1726893974:0;python3 soln.py | nc 170.64.222.246 1343
+: 1726894048:0;clear
+: 1726894049:0;python3 soln.py | nc 170.64.222.246 1343
+: 1726894060:0;clear
+: 1726894071:0;python3 soln.py | nc 170.64.222.246 1343
+: 1726894242:0;clear
+: 1726894243:0;python3 soln.py | nc 170.64.222.246 1343
+: 1726894252:0;clear
+: 1726894269:0;vim .
+: 1726894300:0;nc 170.64.222.246 1343
+: 1726894329:0;clear
+: 1726894333:0;python3 soln.py | nc 170.64.222.246 1343
+: 1726894358:0;clear
+: 1726894359:0;python3 soln.py | nc 170.64.222.246 1343
+: 1726894518:0;ls
+: 1726894519:0;cleawr
+: 1726894520:0;clear
+: 1726894525:0;vim .
+: 1726894725:0;clear
+: 1726894730:0;python3 soln.py | nc 170.64.222.246 1343
+: 1726896185:0;clear
+: 1726896191:0;tmux a
+: 1726896206:0;clera
+: 1726896209:0;clear
+: 1726896220:0;gdb challenge
+: 1726896333:0;gdb
+: 1726896583:0;python3
+: 1726896776:0;vim .
+: 1726896811:0;python3 soln.py | nc 170.64.222.246 1343
+: 1726896815:0;clera
+: 1726896818:0;clear
+: 1726896820:0;python3 soln.py | nc 170.64.222.246 1343
+: 1726896940:0;cleear
+: 1726896942:0;clear
+: 1726896947:0;vim soln.py
+: 1726896975:0;python3 soln.py | nc 170.64.222.246 1343
+: 1726897030:0;clear
+: 1726897037:0;vim 
+: 1726897042:0;vim .
+: 1726897070:0;python3 soln.py | nc 170.64.222.246 1343
+: 1726897295:0;clear
+: 1726898482:0;vim .
+: 1726901678:0;python3 soln.py | nc 170.64.222.246 1343
+: 1726901684:0;cleaar
+: 1726901685:0;clear
+: 1726912306:0;git status
+: 1726912308:0;git add --all
+: 1726912310:0;git pull
+: 1726912349:0;git commit -m 'adding some more source code and solutions to a few problems'
+: 1726912350:0;git pull
+: 1726912353:0;git push
+: 1726912357:0;clear
+: 1726912978:0;cse
+: 1726913036:0;clear
+: 1726913038:0;csemnt
+: 1726913043:0;cd~/cs
+: 1726913045:0;cd~/cse
+: 1726913047:0;cd
+: 1726913049:0;cd cse
+: 1726913050:0;ls
+: 1726913055:0;tutor
+: 1726913063:0;source ./.bashrc
+: 1726913065:0;tutor
+: 1726913075:0;source ~/.zshrc
+: 1726913078:0;ls
+: 1726913089:0;tutor
+: 1726913095:0;cd 1511-tut
+: 1726913096:0;ls
+: 1726913100:0;cd 24s3
+: 1726913100:0;ls
+: 1726913104:0;cd t09a
+: 1726913104:0;ls
+: 1726913108:0;cd 02
+: 1726913109:0;ls
+: 1726913109:0;clear
+: 1726913110:0;ls
+: 1726913111:0;cd starter_code
+: 1726913112:0;ls
+: 1726913121:0;vim part
+: 1726913126:0;vim part1_variables
+: 1726913131:0;vim part1_variables.c
+: 1726913179:0;ls
+: 1726913186:0;vim part5_roller_coaster
+: 1726913191:0;vim part5_roller_coaster.c
+: 1726913506:0;clear
+: 1726913514:0;ls
+: 1726913524:0;vim part4_diagramming.txt
+: 1726918334:0;cd code/work/1511
+: 1726918335:0;ls
+: 1726918342:0;cd course_materials/activities/cs_moonlander/
+: 1726918345:0;git pull
+: 1726918372:0;git checkout 24T3
+: 1726918374:0;git pull
+: 1726918380:0;clear
+: 1726920673:0;git pull
+: 1726920681:0;clear
+: 1726920684:0;exit
+: 1726979778:0;lsls
+: 1726979784:0;slclear
+: 1726979785:0;clear
+: 1726979785:0;sl
+: 1726979786:0;lear
+: 1726979788:0;clear
+: 1726979789:0;ls
+: 1726979791:0;cd code
+: 1726979792:0;ls
+: 1726979796:0;cd work
+: 1726979796:0;ls
+: 1726979799:0;cd 1511/tutorial-code
+: 1726979800:0;ls
+: 1726979825:0;/bin/python3 /home/jon/.vscode-server/extensions/ms-python.python-2024.14.1-linux-x64/python_files/printEnvVariablesToFile.py /home/jon/.vscode-server/extensions/ms-python.python-2024.14.1-linux-x64/python_files/deactivate/zsh/envVars.txt
+: 1726979917:0;docker --version
+: 1726979920:0;clear
+: 1726980104:0;pip install "fastapi[standard]"
+: 1726980120:0;python --version
+: 1726980123:0;which python
+: 1726980128:0;which python3
+: 1726980140:0;python3 --version
+: 1726980142:0;clear
+: 1726981466:0;csemnt
+: 1726983844:0;ls
+: 1726983852:0;cd cs1511-24t3-t09a/
+: 1726983854:0;git pull
+: 1726983858:0;git status
+: 1726983984:0;git pull
+: 1726983987:0;git add --all
+: 1726984010:0;git commit -m 'adding week 2 code, slides and venn diagram for leap year rules'
+: 1726984012:0;git pull
+: 1726984015:0;git push
+: 1726984033:0;cd ../cs1511-24t3-w09b
+: 1726984036:0;git pull
+: 1726984044:0;git add --all
+: 1726984047:0;git status
+: 1726984050:0;git commit -m 'adding week 2 code, slides and venn diagram for leap year rules'
+: 1726984054:0;git pull
+: 1726984057:0;git push
+: 1727023013:0;ls
+: 1727023021:0;git status
+: 1727023023:0;clear
+: 1727023038:0;cd .
+: 1727023041:0;cd ..
+: 1727023042:0;clera
+: 1727023043:0;ls
+: 1727023045:0;cd ..
+: 1727023046:0;ls
+: 1727023048:0;cd course_materials
+: 1727023049:0;ls
+: 1727023058:0;cd activities/cs_moonlander
+: 1727023063:0;git branch
+: 1727023103:0;git checkout -b 24T3_cs_moonlander_revision2
+: 1727023106:0;git pull
+: 1727023135:0;git branch --set-upstream-to=origin/<branch> 24T3_cs_moonlander_revision2
+: 1727023152:0;clear
+: 1727023154:0;git push
+: 1727023166:0;git push --set-upstream origin 24T3_cs_moonlander_revision2
+: 1727023180:0;git branch
+: 1727023185:0;git status
+: 1727023188:0;clear
+: 1727093998:0;tmux a
+: 1727094024:0;tmux -n cse
+: 1727094035:0;clear
+: 1727094037:0;tmux
+: 1727094053:0;cse
+: 1727094186:0;ls
+: 1727094188:0;clear
+: 1727094453:0;ls
+: 1727094455:0;csemnt
+: 1727094457:0;ls
+: 1727094458:0;clear
+: 1727094461:0;cd cse
+: 1727094462:0;ls
+: 1727094464:0;tuto
+: 1727094474:0;source .bashrc
+: 1727094476:0;tutor
+: 1727094501:0;source %userprofile%/~lsl
+: 1727094511:0;clear
+: 1727094513:0;cd
+: 1727094519:0;source .zshrc
+: 1727094522:0;ls
+: 1727094523:0;clear
+: 1727094523:0;sl
+: 1727094524:0;ls
+: 1727094526:0;clear
+: 1727094531:0;source .zshrc
+: 1727094535:0;ls
+: 1727094535:0;clear
+: 1727094537:0;ls
+: 1727094555:0;cd cse/1511-tut/24s3/w09b
+: 1727094556:0;ls
+: 1727094559:0;vim char_overflow.c
+: 1727095236:0;ls
+: 1727095671:0;cse
+: 1727095914:0;python3
+: 1727096137:0;clear
+: 1727096137:0;ls
+: 1727096138:0;clear
+: 1727096139:0;ls
+: 1727096140:0;clear
+: 1727096140:0;l
+: 1727096141:0;clear
+: 1727096454:0;python3
+: 1727096736:0;clear
+: 1727096737:0;ls
+: 1727096752:0;vim twenty_six.py
+: 1727096791:0;python3 twenty_six.py
+: 1727096897:0;ls
+: 1727096899:0;cd cse
+: 1727096900:0;ls
+: 1727096918:0;cd 1511-tut/24s3/w09b
+: 1727096918:0;ls
+: 1727096921:0;clear
+: 1727096922:0;ls
+: 1727096927:0;code .
+: 1727096937:0;clear
+: 1727096938:0;ls
+: 1727096947:0;vim shift_inversion.c
+: 1727096963:0;/bin/python3 /home/jon/.vscode-server/extensions/ms-python.python-2024.14.1-linux-x64/python_files/printEnvVariablesToFile.py /home/jon/.vscode-server/extensions/ms-python.python-2024.14.1-linux-x64/python_files/deactivate/zsh/envVars.txt
+: 1727097140:0;vim shift_inversion.c
+: 1727097804:0;/bin/python3 /home/jon/.vscode-server/extensions/ms-python.python-2024.14.1-linux-x64/python_files/printEnvVariablesToFile.py /home/jon/.vscode-server/extensions/ms-python.python-2024.14.1-linux-x64/python_files/deactivate/zsh/envVars.txt
+: 1727101481:0;clear
+: 1727101481:0;ls
+: 1727101484:0;clear
+: 1727179003:0;l
+: 1727179005:0;cd code
+: 1727179005:0;ls
+: 1727179007:0;cd wo
+: 1727179008:0;cd work
+: 1727179009:0;ls
+: 1727179010:0;clear
+: 1727179011:0;l
+: 1727179014:0;cd 1511
+: 1727179015:0;ls
+: 1727179028:0;cd course_materials/activities/cs_moonlander
+: 1727179030:0;ls
+: 1727179032:0;git pull
+: 1727179041:0;git branch
+: 1727179051:0;clear
+: 1727179052:0;ls
+: 1727179053:0;l
+: 1727179058:0;tmux
+: 1727179061:0;vim .
+: 1727179452:0;vim stage1.md
+: 1727180047:0;ls
+: 1727180058:0;vim stage2.md
+: 1727212127:0;clear 
+: 1727212130:0;tmux a
+: 1727234832:0;ls
+: 1727234832:0;clear
+: 1727234852:0;ls
+: 1727234853:0;l
+: 1727234854:0;lear
+: 1727234855:0;clear
+: 1727234855:0;ls
+: 1727234856:0;clear
+: 1727234857:0;l
+: 1727234863:0;tmux a
+: 1727234936:0;ls
+: 1727234937:0;cd
+: 1727234937:0;ls
+: 1727234940:0;cd in
+: 1727234943:0;cd code/personal/interpreter
+: 1727234944:0;ls
+: 1727234945:0;clear
+: 1727234946:0;git stuat
+: 1727234951:0;g status
+: 1727234953:0;clear
+: 1727234954:0;git pll
+: 1727234956:0;git pull
+: 1727235643:0;l
+: 1727235645:0;clear
+: 1727238537:0;ls
+: 1727238540:0;cse
+: 1727239026:0;l
+: 1727239029:0;clear
+: 1727239031:0;tmux a
+: 1727239036:0;clear
+: 1727239224:0;ls
+: 1727239225:0;l
+: 1727239226:0;clea
+: 1727239227:0;clear
+: 1727239228:0;c
+: 1727239229:0;clear
+: 1727239231:0;l
+: 1727239232:0;clear
+: 1727239256:0;csemnt
+: 1727239266:0;l
+: 1727239267:0;cd rc
+: 1727239269:0;cd cs
+: 1727239273:0;cd
+: 1727239277:0;cd cse
+: 1727239277:0;l
+: 1727239280:0;clear
+: 1727239281:0;ls
+: 1727239282:0;l
+: 1727239287:0;cd 1511-tut/ls
+: 1727239289:0;ls
+: 1727239291:0;cd 1511-tut/
+: 1727239291:0;ls
+: 1727239305:0;cd 24s3/t09a/03/starter_code/part1_activity
+: 1727239306:0;l
+: 1727239308:0;clear
+: 1727239308:0;ls
+: 1727239309:0;l
+: 1727239312:0;cd ..
+: 1727239313:0;ls
+: 1727239314:0;l
+: 1727239317:0;vim .
+: 1727239551:0;dcc part4_coffee_shop.c -o part4
+: 1727239558:0;gcc part4_coffee_shop.c -o part4
+: 1727239560:0;./part4
+: 1727239587:0;l
+: 1727239600:0;rm part1 part2 part4 scan
+: 1727239605:0;l
+: 1727239610:0;vim scan_loops.c
+: 1727239629:0;rm scan_loops.c
+: 1727239629:0;ls
+: 1727239632:0;l
+: 1727239636:0;vim scanning.x
+: 1727239640:0;vim scanning.c
+: 1727239662:0;clear
+: 1727239663:0;l
+: 1727239668:0;ls part1_
+: 1727239670:0;ls part1_activity
+: 1727239675:0;l
+: 1727239682:0;cd part1_activity
+: 1727239682:0;ls
+: 1727239683:0;l
+: 1727239688:0;clear
+: 1727239689:0;q
+: 1727239690:0;clear
+: 1727239699:0;pwd
+: 1727239704:0;/bin/python3 /home/jon/.vscode-server/extensions/ms-python.python-2024.14.1-linux-x64/python_files/printEnvVariablesToFile.py /home/jon/.vscode-server/extensions/ms-python.python-2024.14.1-linux-x64/python_files/deactivate/zsh/envVars.txt
+: 1727240735:0;l
+: 1727240982:0;clear
+: 1727240993:0;tmux a
+: 1727241008:0;source ~.zshrc
+: 1727241012:0;source ~/.zshrc
+: 1727241276:0;vim stage1.md
+: 1727241282:0;clear
+: 1727242799:0;tmux a
+: 1727242810:0;exit
+: 1727243049:0;ls
+: 1727243051:0;git status
+: 1727243054:0;clear
+: 1727243055:0;ls
+: 1727243055:0;l
+: 1727243063:0;vim index.md
+: 1727244171:0;vim .
+: 1727246056:0;vim stage1.md
+: 1727248227:0;echo "this is a line" >> ex.txt
+: 1727248232:0;caat ex.txt
+: 1727248235:0;cat ex.txt
+: 1727248238:0;caat ex.txt
+: 1727248241:0;echo "this is a line" >> ex.txt
+: 1727248249:0;cat ex.txt
+: 1727248263:0;head -n ex.txt
+: 1727248268:0;head -n 2ex.txt
+: 1727248270:0;head -n 2 ex.txt
+: 1727248273:0;head -n 0 ex.txt
+: 1727248276:0;head -n 1 ex.txt
+: 1727248278:0;cat ex.txt
+: 1727248282:0;head -n 100 ex.txt
+: 1727248296:0;head 2 ex.txt
+: 1727248312:0;head -n 2 ex.txt
+: 1727248395:0;l
+: 1727248398:0;ls
+: 1727248402:0;rm ex.txt
+: 1727248402:0;ls
+: 1727248404:0;clear
+: 1727249427:0;ls
+: 1727249431:0;cd code
+: 1727249431:0;ls
+: 1727249434:0;cd wo
+: 1727249435:0;cd work
+: 1727249435:0;ls
+: 1727249439:0;cd 1511
+: 1727249439:0;ls
+: 1727249474:0;cd course_materials/activities/cs_moonlander/solutions
+: 1727249475:0;ls
+: 1727249477:0;clear
+: 1727249478:0;l
+: 1727249488:0;clear
+: 1727249489:0;ls
+: 1727249500:0;gcc cs_moonlander.c -o csm
+: 1727249505:0;./csm
+: 1727249513:0;rm csm
+: 1727249514:0;clear
+: 1727249515:0;l
+: 1727249518:0;clear
+: 1727249519:0;l
+: 1727249520:0;clear
+: 1727249521:0;ls
+: 1727249533:0;pws
+: 1727249534:0;pwd
+: 1727249542:0;cd solutions
+: 1727249542:0;ls
+: 1727249544:0;l
+: 1727249546:0;clear
+: 1727249546:0;l
+: 1727249558:0;gcc cs_moonlander.c -o cs_moonlander
+: 1727249560:0;./cs_moonlander
+: 1727249667:0;gcc ../../../cs_sokoban/solutions/cs_sokoban.c -o cs_sokoban
+: 1727249673:0;./cs_sokoban
+: 1727249692:0;clear
+: 1727249693:0;./cs_sokoban
+: 1727249990:0;clear
+: 1727249992:0;l
+: 1727249993:0;clear
+: 1727249996:0;./cs_moonlander
+: 1727250833:0;clear
+: 1727251128:0;./cs_moonlander
+: 1727251306:0;clear
+: 1727251516:0;./cs_
+: 1727251518:0;./cs_moonlander
+: 1727251560:0;clear
+: 1727251561:0;./cs_moonlander
+: 1727251669:0;ls
+: 1727251974:0;gcc cs_moonlander.c -o cs_moonlander
+: 1727251979:0;./cs_moonlander
+: 1727252251:0;clear
+: 1727252252:0;gcc cs_moonlander.c -o cs_moonlander
+: 1727252254:0;clear
+: 1727252255:0;./cs_moonlander
+: 1727252365:0;clear
+: 1727252366:0;./cs_moonlander
+: 1727252369:0;gcc cs_moonlander.c -o cs_moonlander
+: 1727252370:0;clera
+: 1727252371:0;clear
+: 1727252372:0;./cs_moonlander
+: 1727252437:0;clear
+: 1727252438:0;./cs_moonlander
+: 1727253035:0;q
+: 1727253037:0;clear
+: 1727257959:0;./cs_moonlander
+: 1727258058:0;clear
+: 1727258060:0;./cs_moonlander
+: 1727258072:0;clear
+: 1727258075:0;gcc cs_moonlander.c -o cs_moonlander
+: 1727258077:0;./cs_moonlander
+: 1727259667:0;grep . "is the target quantity of cheese"
+: 1727259674:0;grep "is the target quantity of cheese" .
+: 1727259687:0;grep -r "is the target quantity of cheese" .
+: 1727259699:0;grep -r is the target quantity of cheese .
+: 1727259711:0;clear
+: 1727259721:0;grep -r `is the target quantity of cheese` .
+: 1727259770:0;clear
+: 1727259771:0;l
+: 1727259775:0;git status
+: 1727259922:0;clear
+: 1727259922:0;l
+: 1727260028:0;./cs_moonlander
+: 1727260035:0;clear
+: 1727260037:0;./cs_moonlander
+: 1727260041:0;clear
+: 1727260294:0;l
+: 1727260296:0;clear
+: 1727260297:0;l
+: 1727260298:0;clera
+: 1727260299:0;clear
+: 1727260300:0;l
+: 1727260301:0;clear
+: 1727260308:0;g p
+: 1727260311:0;g pull
+: 1727260319:0;g --version
+: 1727260329:0;clear
+: 1727261619:0;gcc cs_moonlander.c -o cs_moonlander
+: 1727261622:0;./cs_moonlander
+: 1727261656:0;clear
+: 1727261686:0;gcc cs_moonlander.c -o cs_moonlander
+: 1727261687:0;clear
+: 1727261688:0;./cs_moonlander
+: 1727261737:0;gcc cs_moonlander.c -o cs_moonlander
+: 1727261739:0;clear
+: 1727261740:0;./cs_moonlander
+: 1727261832:0;clear
+: 1727261833:0;gcc cs_moonlander.c -o cs_moonlander
+: 1727261835:0;./cs_moonlander
+: 1727261902:0;clear
+: 1727261904:0;gcc cs_moonlander.c -o cs_moonlander
+: 1727261905:0;./cs_moonlander
+: 1727261937:0;clear
+: 1727261938:0;./cs_moonlander
+: 1727261941:0;gcc cs_moonlander.c -o cs_moonlander
+: 1727261942:0;cleart
+: 1727261943:0;clear
+: 1727261946:0;./cs_moonlander
+: 1727261959:0;clear
+: 1727261962:0;./cs_moonlander
+: 1727261974:0;clera
+: 1727261977:0;clear
+: 1727261978:0;./cs_moonlander
+: 1727262029:0;clera
+: 1727262030:0;clar
+: 1727262031:0;clear
+: 1727262035:0;gcc cs_moonlander.c -o cs_moonlander
+: 1727262038:0;./cs_moonlander
+: 1727262091:0;clear
+: 1727262094:0;gcc cs_moonlander.c -o cs_moonlander
+: 1727262095:0;./cs_moonlander
+: 1727262116:0;clear
+: 1727262125:0;gcc cs_moonlander.c -o cs_moonlander
+: 1727262126:0;./cs_moonlander
+: 1727262190:0;clear
+: 1727262448:0;l
+: 1727262450:0;clear
+: 1727262841:0;./cs_moonlander
+: 1727262994:0;l find*
+: 1727262996:0;l
+: 1727263000:0;cd ..
+: 1727263001:0;l
+: 1727263009:0;python3 find_head_values.py
+: 1727263024:0;clear
+: 1727265835:0;./cs_moonlander
+: 1727265838:0;ls
+: 1727265839:0;l
+: 1727265843:0;cd solutions
+: 1727265845:0;./cs_moonlander
+: 1727265857:0;gcc cs_moonlander.c -o cs_moonlander
+: 1727265860:0;clear
+: 1727265864:0;./cs_moonlander 
+: 1727265902:0;clear
+: 1727265904:0;gcc cs_moonlander.c -o cs_moonlander
+: 1727266158:0;clear
+: 1727266158:0;gcc cs_moonlander.c -o cs_moonlander
+: 1727266164:0;./cs_moonlander 
+: 1727267879:0;q
+: 1727267880:0;clear
+: 1727267903:0;ls
+: 1727267906:0;clear
+: 1727268377:0;python3 find_head_values.py
+: 1727268380:0;l
+: 1727268381:0;cd ..
+: 1727268382:0;l
+: 1727268384:0;python3 find_head_values.py
+: 1727268386:0;clear
+: 1727268389:0;python3 find_head_values.py
+: 1727269122:0;ls cs_moonla
+: 1727269125:0;ls cs_moonla*
+: 1727269127:0;l
+: 1727269129:0;cd solutions
+: 1727269130:0;ls
+: 1727269157:0;./cs_moonlander < ../autotest/
+: 1727269171:0;l
+: 1727269173:0;clear
+: 1727269191:0;./cs_moonlander < ../autotest/tests/02_02_04_exhaust_oxy_test
+: 1727269661:0;./cs_moonlander < ../automarking/tests/03_01_14_exhaust_oxy_mark
+: 1727269723:0;./cs_moonlander < ../automarking/tests/03_01_15_exhaust_oxy_mark
+: 1727269730:0;./cs_moonlander < ../automarking/tests/03_01_15_move_off_lander_exhaust_oxy_mark
+: 1727269788:0;clear
+: 1727269789:0;c
+: 1727269790:0;clera
+: 1727269792:0;clear
+: 1727269822:0;./cs_moonlander < ../autotest/tests/02_02_07_only_good_moves_consume_oxy_test
+: 1727269964:0;./cs_moonlander < ../automarking/tests/02_02_16_only_good_moves_consume_oxy_mark
+: 1727269979:0;clear
+: 1727269980:0;./cs_moonlander < ../automarking/tests/02_02_16_only_good_moves_consume_oxy_mark
+: 1727270021:0;./cs_moonlander < ../automarking/tests/02_03_06_drop_off_cheese_mark
+: 1727270034:0;clear
+: 1727270415:0;./cs_moonlander < ../autotest/tests/04_02_02_create_portal_test
+: 1727270778:0;clear
+: 1727270811:0;./cs_moonlander < ../automarking/tests/04_02_14_too_many_portals_mark
+: 1727271575:0;clear
+: 1727271598:0;solutions/cs_moonlander < autotest/tests/01_01_01* > solutions/output
+: 1727271629:0;l
+: 1727271635:0;cd ..
+: 1727271639:0;solutions/cs_moonlander < autotest/tests/01_01_01* > solutions/output
+: 1727271646:0;cat solutions/out
+: 1727271647:0;cat solutions/output
+: 1727271654:0;code solutions/output
+: 1727271712:0;solutions/cs_moonlander < autotest/tests/01_01_02* > solutions/output
+: 1727271725:0;solutions/cs_moonlander < autotest/tests/01_01_03* > solutions/output
+: 1727271753:0;head -n 26 solutions/output
+: 1727271792:0;solutions/cs_moonlander < autotest/tests/01_02_01* > solutions/output
+: 1727271842:0;solutions/cs_moonlander < autotest/tests/01_02_06* > solutions/output
+: 1727271849:0;solutions/cs_moonlander < autotest/tests/01_02_05* > solutions/output
+: 1727271871:0;head -n 54 solutions/output
+: 1727271901:0;solutions/cs_moonlander < autotest/tests/01_03_08* > solutions/output
+: 1727271906:0;solutions/cs_moonlander < autotest/tests/01_03_06* > solutions/output
+: 1727271926:0;head -n 54 solutions/output
+: 1727271980:0;solutions/cs_moonlander < autotest/tests/01_04_01* > solutions/output
+: 1727271992:0;solutions/cs_moonlander < autotest/tests/01_03_05* > solutions/output
+: 1727272006:0;head -n 62 solutions/output
+: 1727272440:0;clear
+: 1727272470:0;solutions/cs_moonlander < autotest/tests/01_04_05* > solutions/output
+: 1727272482:0;head -n 84 solutions/output
+: 1727272493:0;cat solutions/output
+: 1727272506:0;head -n 84 solutions/output
+: 1727272508:0;cat solutions/output
+: 1727272510:0;head -n 84 solutions/output
+: 1727272511:0;cat solutions/output
+: 1727272512:0;head -n 84 solutions/output
+: 1727272513:0;cat solutions/output
+: 1727272538:0;solutions/cs_moonlander < autotest/tests/01_04_82* > solutions/output
+: 1727272559:0;solutions/cs_moonlander < autotest/tests/01_04_11* > solutions/output
+: 1727272571:0;solutions/cs_moonlander < autotest/tests/01_04_12* > solutions/output
+: 1727272579:0;solutions/cs_moonlander < autotest/tests/01_04_09* > solutions/output
+: 1727272617:0;solutions/cs_moonlander < automark/tests/01_04_12* > solutions/output
+: 1727272621:0;solutions/cs_moonlander < automarking/tests/01_04_12* > solutions/output
+: 1727272628:0;cat solutions/output
+: 1727272647:0;head -n 82 solutions/output
+: 1727272651:0;head -n 81 solutions/output
+: 1727272661:0;clear
+: 1727272681:0;solutions/cs_moonlander < automarking/tests/02_01_01* > solutions/output
+: 1727272689:0;solutions/cs_moonlander < autotest/tests/02_01_01* > solutions/output
+: 1727272697:0;cat solutions/output
+: 1727273481:0;rm solutions/output
+: 1727273482:0;ls
+: 1727273483:0;l
+: 1727273489:0;clear
+: 1727273490:0;l
+: 1727273491:0;clear
+: 1727275111:0;python3 find_head_values.py
+: 1727275160:0;clear
+: 1727275171:0;solutions/cs_moonlander < autotest/tests/02_01_01* > solutions/output
+: 1727275179:0;rm solutions/output
+: 1727275181:0;clear
+: 1727275251:0;python3 generate_tests_file.py 
+: 1727275410:0;diff autotest/autotest_only.txt autotest/tests.txt
+: 1727275424:0;clear
+: 1727275446:0;python3 generate_tests_file.py 
+: 1727275449:0;clear
+: 1727275576:0;diff head -n 10 autotest/autotest_only.txt head -n 10 autotest/tests.txt
+: 1727275590:0;diff head -n 10 `autotest/autotest_only.txt` `head -n 10 autotest/tests.txt`
+: 1727275607:0;diff `head -n 10 autotest/autotest_only.txt` `head -n 10 autotest/tests.txt`
+: 1727275628:0;diff (head -n 10 autotest/autotest_only.txt) (head -n 10 autotest/tests.txt)
+: 1727275721:0;clear
+: 1727275755:0;python3 generate_tests_file.py > autotest/tests.txt
+: 1727275764:0;l
+: 1727275776:0;code autotest/tests.txt
+: 1727275883:0;python3 generate_tests_file.py > automarking/tests.txt
+: 1727276057:0;clear
+: 1727276075:0;vim automarking/tests.txt
+: 1727276181:0;g status
+: 1727276240:0;clear
+: 1727276250:0;l
+: 1727276251:0;clear
+: 1727276308:0;l
+: 1727276309:0;clear
+: 1727276350:0;diff stage1.md ../stage1.md
+: 1727276353:0;clear
+: 1727277912:0;l
+: 1727277926:0;./solutions/cs_moonlander
+: 1727278288:0;clear
+: 1727278297:0;./solutions/cs_moonlander
+: 1727278356:0;clear
+: 1727278357:0;./solutions/cs_moonlander
+: 1727278576:0;clear
+: 1727278591:0;l
+: 1727278594:0;cd solutions
+: 1727278594:0;ls
+: 1727278596:0;l
+: 1727278612:0;gcc cs_moonlander.c -o cs_moonlander
+: 1727278614:0;clear
+: 1727278615:0;cd ..
+: 1727278620:0;./solutions/cs_moonlander
+: 1727279854:0;cleart
+: 1727279855:0;clera
+: 1727279856:0;clear
+: 1727279859:0;./solutions/cs_moonlander
+: 1727279927:0;clear
+: 1727279934:0;./solutions/cs_moonlander
+: 1727279943:0;clear
+: 1727279944:0;./solutions/cs_moonlander
+: 1727280072:0;clear
+: 1727280074:0;./solutions/cs_moonlander
+: 1727280168:0;clear
+: 1727280169:0;./solutions/cs_moonlander
+: 1727280230:0;clear
+: 1727280231:0;./solutions/cs_moonlander
+: 1727280534:0;clear
+: 1727280535:0;./solutions/cs_moonlander
+: 1727281011:0;clear
+: 1727281026:0;./solutions/cs_moonlander
+: 1727281283:0;clear
+: 1727281284:0;./solutions/cs_moonlander
+: 1727281614:0;clear
+: 1727281615:0;./solutions/cs_moonlander
+: 1727282118:0;l
+: 1727282133:0;cd code/work/1511/course_materials/activities/cs_moonlander
+: 1727282133:0;ls
+: 1727282134:0;clear
+: 1727282139:0;cd solutions
+: 1727282139:0;ls
+: 1727282142:0;clear
+: 1727282142:0;l
+: 1727282147:0;cd solutions
+: 1727282147:0;l
+: 1727282152:0;rm cs_sokoban
+: 1727282152:0;ls
+: 1727282153:0;l
+: 1727282155:0;clear
+: 1727282155:0;l
+: 1727282157:0;clear
+: 1727282159:0;./cs_moonlander
+: 1727282545:0;clear
+: 1727282546:0;./cs_moonlander
+: 1727282770:0;clear
+: 1727282772:0;./cs_moonlander
+: 1727282851:0;clear
+: 1727282888:0;./cs_moonlander
+: 1727283000:0;lear
+: 1727283001:0;clear
+: 1727283004:0;./cs_moonlander
+: 1727283121:0;clear
+: 1727283122:0;./cs_moonlander
+: 1727284712:0;clear
+: 1727284713:0;./cs_moonlander
+: 1727284837:0;clear
+: 1727284839:0;./cs_moonlander
+: 1727284985:0;clear
+: 1727284987:0;./cs_moonlander
+: 1727285080:0;clear
+: 1727285081:0;./cs_moonlander
+: 1727285169:0;clear
+: 1727285170:0;./cs_moonlander
+: 1727285272:0;clear
+: 1727285273:0;./cs_moonlander
+: 1727285349:0;clear
+: 1727285350:0;./cs_moonlander
+: 1727285552:0;clear
+: 1727285553:0;./cs_moonlander
+: 1727285838:0;clear
+: 1727285839:0;./cs_moonlander
+: 1727286142:0;cleatr
+: 1727286143:0;clear
+: 1727286145:0;./cs_moonlander
+: 1727286206:0;clear
+: 1727286207:0;./cs_moonlander
+: 1727286370:0;clear
+: 1727286372:0;l
+: 1727286376:0;rm cs_moonlander
+: 1727286377:0;l
+: 1727286390:0;cat .editorconfig
+: 1727286403:0;g status
+: 1727286432:0;g add ./cs_moonlander.c
+: 1727286435:0;g status
+: 1727286443:0;clear
+: 1727286445:0;cd ..
+: 1727286446:0;ls
+: 1727286462:0;cd autotest
+: 1727286464:0;git add .
+: 1727286468:0;git status
+: 1727286485:0;l
+: 1727286506:0;cd ..
+: 1727286512:0;git add automarking/
+: 1727286517:0;git status
+: 1727286527:0;g add index.md
+: 1727286538:0;g add extension.md index.md stage1.md stage2.md stage3.md stage4.md 
+: 1727286540:0;l
+: 1727286543:0;git status
+: 1727286551:0;g add cs_moonlander.c 
+: 1727286556:0;git add find_head_values.py
+: 1727286559:0;git add generate_tests_file.py
+: 1727286561:0;git status
+: 1727286650:0;git commit -m 'feedback runthrough 2 feedback impelemented, TODO: check whether splashkit extension source code requires changes'
+: 1727286656:0;clear
+: 1727286657:0;git pull
+: 1727286672:0;git merge 24T3
+: 1727286678:0;clear
+: 1727286680:0;git push
+: 1727287062:0;git status
+: 1727287072:0;git add index.md stage1.md stage4.md
+: 1727287075:0;git status
+: 1727287111:0;git commit -m 'more spelling clarifications and removing language from previous spec version'
+: 1727287116:0;git statats
+: 1727287117:0;git statas
+: 1727287120:0;git status
+: 1727287122:0;clear
+: 1727287124:0;git pull
+: 1727287127:0;g status
+: 1727287131:0;git push
+: 1727288023:0;git status
+: 1727288024:0;git pull
+: 1727414127:0;l
+: 1727414128:0;clear
+: 1727414130:0;cd col
+: 1727414131:0;cd code
+: 1727414132:0;ls
+: 1727414133:0;cd personal
+: 1727414134:0;ls
+: 1727414135:0;l
+: 1727414137:0;cd interpreter
+: 1727414138:0;ls
+: 1727414139:0;clear
+: 1727414139:0;l
+: 1727414224:0;cd l
+: 1727414226:0;git pull
+: 1727414230:0;git branch
+: 1727414252:0;git checkout feat_float
+: 1727414255:0;git branch
+: 1727414263:0;clear
+: 1727414264:0;l
+: 1727414268:0;clear
+: 1727414278:0;go test ./parser
+: 1727414283:0;go run main.go
+: 1727414357:0;cd evaluator
+: 1727414358:0;vim .
+: 1727417427:0;tmux a
+: 1727417429:0;tmux
+: 1727417435:0;vim .
+: 1727417606:0;vim evaluator_test.go
+: 1727417796:0;python3 
+: 1727418247:0;vim .
+: 1727418455:0;clear
+: 1727418458:0;l
+: 1727418460:0;clear
+: 1727418461:0;cd ..
+: 1727418465:0;cd evaluator
+: 1727418467:0;l
+: 1727418470:0;clear
+: 1727418472:0;vim .
+: 1727418482:0;l
+: 1727418484:0;cd ..
+: 1727418485:0;ls
+: 1727418486:0;clear
+: 1727418486:0;l
+: 1727418494:0;go test ./evaluator
+: 1727418538:0;clera
+: 1727418540:0;clear
+: 1727418552:0;clear && go test ./evaluator
+: 1727418655:0;python3
+: 1727418741:0;clera
+: 1727418742:0;cear
+: 1727418761:0;clera
+: 1727418764:0;clear && go test ./evaluator
+: 1727418839:0;ls
+: 1727418840:0;l
+: 1727418841:0;clear
+: 1727418937:0;clear && go test ./evaluator
+: 1727419016:0;vim .
+: 1727419027:0;git status
+: 1727419029:0;git pull
+: 1727419033:0;git add .
+: 1727419072:0;git commit -m 'adding object.Float defintion and test infrastructure for testing float expression evaluation'
+: 1727419074:0;git statu
+: 1727419075:0;git status
+: 1727419076:0;git pull
+: 1727419079:0;git push
+: 1727419138:0;clear && go test ./evaluator
+: 1727419703:0;grep -h
+: 1727419721:0;grep -r "unkown operator: " .
+: 1727419726:0;grep -r "unkown operator: " ..
+: 1727419754:0;grep -r "unknown operator: " .
+: 1727419788:0;grep -rv "unknown operator: " .
+: 1727419795:0;grep -rl "unknown operator: " .
+: 1727419802:0;grep -r "unknown operator: " .
+: 1727419811:0;clear
+: 1727419817:0;vim ./evaluator.go
+: 1727420169:0;clear && go test ./evaluator
+: 1727424643:0;clera
+: 1727424645:0;clear && go test ./evaluator
+: 1727425585:0;vim .
+: 1727425661:0;vim ./evaluator.go
+: 1727425746:0;clear && go test ./evaluator
+: 1727426283:0;vim ./evaluator.go
+: 1727426308:0;clear && go test ./evaluator
+: 1727427142:0;/bin/python3 /home/jon/.vscode-server/extensions/ms-python.python-2024.14.1-linux-x64/python_files/printEnvVariablesToFile.py /home/jon/.vscode-server/extensions/ms-python.python-2024.14.1-linux-x64/python_files/deactivate/zsh/envVars.txt
+: 1727427268:0;vim ./evaluator.go
+: 1727427272:0;clear && go test ./evaluator
+: 1727427276:0;clear
+: 1727427282:0;git status
+: 1727427284:0;git add .
+: 1727427320:0;git commit -m 'added prefix and infix parsing for float-float and float-int expressions'
+: 1727427322:0;git pull
+: 1727427326:0;git push
+: 1727427332:0;clera
+: 1727427333:0;clear
+: 1727427335:0;cd ..
+: 1727427338:0;cd interpreter
+: 1727427340:0;clear
+: 1727427343:0;go run main.go
+: 1727427370:0;clear
+: 1727427391:0;go run main.go
+: 1727427425:0;clear
+: 1727427927:0;l
+: 1727427953:0;git test ./evaluator ./ast ./lexer ./object ./parser ./token
+: 1727427959:0;go test ./evaluator ./ast ./lexer ./object ./parser ./token
+: 1727427975:0;go test
+: 1727427981:0;go test ./
+: 1727427983:0;go test ./*
+: 1727428009:0;ls -r . | go test
+: 1727428021:0;go test < ls
+: 1727428026:0;go test < `ls`
+: 1727428037:0;go test < `ls ./*`
+: 1727428049:0;go test < `ls *`
+: 1727428064:0;ls *
+: 1727428069:0;clear
+: 1727428070:0;ls *
+: 1727428077:0;ls -d *
+: 1727428084:0;go test < ls -d *
+: 1727428090:0;go test < `ls -d *`
+: 1727428264:0;ls -d *
+: 1727428296:0;ls -d */
+: 1727428301:0;ls */
+: 1727428308:0;ls - */
+: 1727428310:0;ls -d */
+: 1727428335:0;ls
+: 1727428339:0;ls *
+: 1727428348:0;ls -d */
+: 1727428351:0;ls -d ./
+: 1727428354:0;ls -d */
+: 1727428414:0;go test < ls -d */
+: 1727428419:0;go test < `ls -d */`
+: 1727428431:0;go test << `ls -d */`
+: 1727428437:0;go test < `ls -d */`
+: 1727428439:0;clear
+: 1727428440:0;l
+: 1727428504:0;go test < `ls -d */`
+: 1727428514:0;go test evaluator
+: 1727428519:0;go test ./evaluator
+: 1727428526:0;clear
+: 1727428736:0;go test ./evaluator
+: 1727429192:0;tmux
+: 1727429221:0;tmux a
+: 1727429229:0;tmux l
+: 1727429244:0;clear
+: 1727429244:0;l
+: 1727429281:0;clear
+: 1727429285:0;tmux a
+: 1727429286:0;clear
+: 1727429294:0;l
+: 1727429296:0;cd code
+: 1727429297:0;l
+: 1727429298:0;cledar
+: 1727429298:0;l
+: 1727429299:0;clear
+: 1727429300:0;l
+: 1727429302:0;cd personal/interpreter
+: 1727429303:0;l
+: 1727429304:0;git pull
+: 1727429313:0;g status
+: 1727429316:0;git add .
+: 1727429338:0;git commit -m 'fixed tests for float evaluation'
+: 1727429339:0;git pull
+: 1727429343:0;git status
+: 1727429343:0;git push
+: 1727429349:0;c
+: 1727429350:0;clera
+: 1727429351:0;clear
+: 1727429689:0;go test -v ./...
+: 1727430230:0;clera
+: 1727430232:0;clear
+: 1727430233:0;git pull
+: 1727430241:0;vim .git
+: 1727430287:0;git checkout main
+: 1727430291:0;git pull
+: 1727430299:0;go run main.go
+: 1727430312:0;clear
+: 1727430316:0;vim .github
+: 1727430341:0;git statusw
+: 1727430342:0;git status
+: 1727430354:0;git add .
+: 1727430356:0;git status
+: 1727430371:0;git commit -m 'update workflow to use correct go version'
+: 1727430372:0;git pull
+: 1727430376:0;git push
+: 1727430410:0;go version
+: 1727430425:0;vim ./.githu
+: 1727430430:0;vim ./.github
+: 1727430439:0;go version
+: 1727430453:0;git add .
+: 1727430467:0;git commit -m 'update workflow to use actually correct go version'
+: 1727430470:0;git pull
+: 1727430474:0;git push
+: 1727454478:0;tmux a
+: 1727454482:0;l
+: 1727454483:0;clear
+: 1727454488:0;git branch
+: 1727454492:0;git status
+: 1727454494:0;clear
+: 1727454494:0;l
+: 1727454495:0;clear
+: 1727454497:0;l
+: 1727454499:0;clear
+: 1727490691:0;l
+: 1727490697:0;cd code
+: 1727490698:0;l
+: 1727490701:0;cd work/
+: 1727490701:0;l
+: 1727490702:0;clear
+: 1727490702:0;l
+: 1727490712:0;rn 1511 cs1511
+: 1727490712:0;l
+: 1727490717:0;mv 1511 cs1511
+: 1727490719:0;l
+: 1727490724:0;mkdir cs3121
+: 1727490724:0;l
+: 1727490728:0;cd cs3121
+: 1727490729:0;l
+: 1727490730:0;clear
+: 1727490749:0;vim gridRotation.py
+: 1727491135:0;python3 gridRotation.py
+: 1727491162:0;vim gridRotation.py
+: 1727491307:0;python3 gridRotation.py
+: 1727491540:0;vim gridRotation.py
+: 1727491717:0;python3 gridRotation.py
+: 1727491901:0;python3
+: 1727492005:0;clear
+: 1727492006:0;vim gridRotation.py
+: 1727492050:0;python3 gridRotation.py
+: 1727492090:0;vim gridRotation.py
+: 1727492132:0;python3 gridRotation.py
+: 1727492227:0;vim gridRotation.py
+: 1727492574:0;python3 gridRotation.py
+: 1727492583:0;vim gridRotation.py
+: 1727492590:0;python3 gridRotation.py
+: 1727497531:0;l
+: 1727497533:0;cd ..
+: 1727497534:0;l
+: 1727497537:0;cd ..
+: 1727497537:0;l
+: 1727497540:0;cd studies
+: 1727497540:0;l
+: 1727497546:0;cd cs6841/l
+: 1727497549:0;cd cs6841/
+: 1727497549:0;l
+: 1727497550:0;clear
+: 1727497551:0;l
+: 1727497554:0;git pull
+: 1727497558:0;clear
+: 1727497559:0;l
+: 1727497589:0;vim length.py
+: 1727497689:0;python3 length.py
+: 1727497706:0;q
+: 1727497707:0;clear
+: 1727497709:0;python3 length.py
+: 1727497714:0;vim length.py
+: 1727497798:0;python3 length.py
+: 1727497807:0;clera
+: 1727497808:0;clear
+: 1727497811:0;vim length.py
+: 1727497887:0;python3 length.py
+: 1727497901:0;clear 
+: 1727497904:0;vim length.py
+: 1727498061:0;python3 length.py
+: 1727498088:0;A leader leads by example, not by force
+: 1727498091:0;python3 length.py
+: 1727498328:0;clear
+: 1727498328:0;l
+: 1727498329:0;clear
+: 1727508024:0;l
+: 1727508028:0;cd
+: 1727508037:0;cd code/work/cs1511
+: 1727508038:0;l
+: 1727508050:0;cd course_materials/activities/cs_moonlander
+: 1727508051:0;l
+: 1727508061:0;git checkout 24T3
+: 1727508062:0;l
+: 1727508068:0;git pull
+: 1727508080:0;l
+: 1727508084:0;clear
+: 1727508084:0;l
+: 1727508086:0;cd solutions
+: 1727508089:0;vim l
+: 1727508094:0;vim cs_moonlander
+: 1727508097:0;vim cs_moonlander.c
+: 1727508347:0;git checkout -b hotfix_cs_moonlander_portals_array
+: 1727508350:0;git status
+: 1727508356:0;git branch
+: 1727508361:0;vim .
+: 1727508659:0;/bin/python3 /home/jon/.vscode-server/extensions/ms-python.python-2024.14.1-linux-x64/python_files/printEnvVariablesToFile.py /home/jon/.vscode-server/extensions/ms-python.python-2024.14.1-linux-x64/python_files/deactivate/zsh/envVars.txt
+: 1727508914:0;git status
+: 1727508936:0;git statusw
+: 1727508938:0;git status
+: 1727508943:0;git add .
+: 1727508944:0;git status
+: 1727508948:0;git pull
+: 1727508979:0;git commit -m 'correct portals argument size in attempt portal (cs_moonlander)'
+: 1727508981:0;git status
+: 1727508982:0;git pull
+: 1727508985:0;git push
+: 1727509020:0;git push --set-upstream origin hotfix_cs_moonlander_portals_array
+: 1727509868:0;git checkout 24T3
+: 1727509870:0;git pull
+: 1727509885:0;vim cs_moonlander.c
+: 1727574848:0;l
+: 1727574850:0;cd code/studies
+: 1727574851:0;l
+: 1727574856:0;clear
+: 1727610945:0;l
+: 1727610946:0;cd code
+: 1727610947:0;l
+: 1727610948:0;clear
+: 1727610952:0;cd wo
+: 1727610953:0;cd work
+: 1727610953:0;l
+: 1727610957:0;cd cs3121/l
+: 1727610959:0;cd cs3121/
+: 1727610960:0;l
+: 1727610961:0;clera
+: 1727610962:0;clear
+: 1727610965:0;git status
+: 1727610966:0;l
+: 1727610970:0;vim .
+: 1727611025:0;vim gridRotation.py
+: 1727611039:0;python3 gridRotation.py 
+: 1727611071:0;vim gridRotation.py
+: 1727611081:0;python3 gridRotation.py 
+: 1727611086:0;vim gridRotation.py
+: 1727611161:0;vim gridRotation.c
+: 1727611604:0;gcc gridRotation.c -o rot
+: 1727611607:0;./or
+: 1727611609:0;./rot
+: 1727611623:0;vim gridRotation.c
+: 1727611639:0;gcc gridRotation.c -o rot
+: 1727611642:0;./rot
+: 1727611666:0;clear
+: 1727611668:0;vim gridRotation.c
+: 1727611685:0;clear
+: 1727611689:0;gcc gridRotation.c -o rot
+: 1727611691:0;./rot
+: 1727612861:0;gcc gridRotation.c -o rot
+: 1727612865:0;vim gridRotation.c
+: 1727612875:0;gcc gridRotation.c -o rot
+: 1727612876:0;./rot
+: 1727612898:0;vim gridRotation.c
+: 1727612905:0;gcc gridRotation.c -o rot
+: 1727612906:0;./rot
+: 1727612921:0;vim gridRotation.py
+: 1727612939:0;python3 gridRotation.py
+: 1727612946:0;clear
+: 1727612947:0;q
+: 1727612948:0;clear
+: 1727612953:0;vim gridRotation.c
+: 1727613005:0;gcc gridRotation.c -o rot
+: 1727613006:0;./ro
+: 1727613011:0;./rot
+: 1727617334:0;l
+: 1727617336:0;cd .
+: 1727617337:0;l
+: 1727617339:0;cd ..
+: 1727617339:0;l
+: 1727617341:0;clear
+: 1727617341:0;l
+: 1727617342:0;clear
+: 1727618136:0;l
+: 1727618138:0;cd ..
+: 1727618138:0;l
+: 1727618142:0;cd personal/p
+: 1727618144:0;cd personal/pySorts
+: 1727618144:0;l
+: 1727618145:0;clera
+: 1727618148:0;vim README.md
+: 1727618179:0;python3 -version
+: 1727618183:0;python3 -v
+: 1727618190:0;clera
+: 1727618191:0;clear
+: 1727618196:0;python3 --version
+: 1727618205:0;pySortsApp.exe
+: 1727618217:0;vim README.md
+: 1727618254:0;git status
+: 1727618256:0;git add .
+: 1727618267:0;git commit -m 'update required python version'
+: 1727618268:0;git pull
+: 1727618272:0;git push
+: 1727618284:0;git puyll
+: 1727618286:0;git pull
+: 1727618300:0;git stash
+: 1727618315:0;git pull
+: 1727618378:0;git status
+: 1727618382:0;git pull
+: 1727618458:0;git reset --hard origin/main
+: 1727618460:0;l
+: 1727618464:0;git pull
+: 1727618471:0;clear
+: 1727618482:0;pip uninstall pySorts
+: 1727618489:0;pip install .
+: 1727618497:0;l
+: 1727618504:0;pySortsApp
+: 1727618509:0;./pySortsApp
+: 1727618521:0;pySortsApp.exe
+: 1727618553:0;clear
+: 1727618561:0;l
+: 1727618572:0;l -a
+: 1727618581:0;vim pyproject.toml
+: 1727618601:0;l
+: 1727618602:0;clear
+: 1727618602:0;l
+: 1727618609:0;cat setup.cfg
+: 1727624689:0;l
+: 1727624693:0;cd 
+: 1727624717:0;cd code/work/cs1511/course_materials/activities/cs_moonlander/solutions/solutions/
+: 1727624717:0;l
+: 1727624725:0;vim cs_moonlander.c
+: 1727625017:0;git pull
+: 1727625038:0;git stash
+: 1727625040:0;git pull
+: 1727625056:0;git stash pop
+: 1727625073:0;git restore --staged cs_moonlander.c
+: 1727625074:0;l
+: 1727625077:0;clear
+: 1727625079:0;l
+: 1727625081:0;git status
+: 1727625099:0;git restore ../../../../_infra
+: 1727625099:0;l
+: 1727625102:0;git status
+: 1727783791:0;	l
+: 1727783793:0;clear
+: 1727783793:0;l
+: 1727783795:0;cd code
+: 1727783795:0;l
+: 1727783796:0;clear
+: 1727783797:0;l
+: 1727783820:0;cd personal
+: 1727783821:0;l
+: 1727783823:0;gh repo clone jon-atkinson/sc-takehome-2024-25
+: 1727783828:0;l
+: 1727783830:0;clear
+: 1727783830:0;l
+: 1727783835:0;cd sc-takehome-2024-25
+: 1727783835:0;l
+: 1727783837:0;clear
+: 1727783837:0;l
+: 1727783841:0;vim README.md
+: 1727783847:0;l
+: 1727783849:0;cd sc-take-home-assessment-take-home-2025
+: 1727783849:0;l
+: 1727783850:0;cleawr
+: 1727783850:0;l
+: 1727783852:0;clear
+: 1727783852:0;l
+: 1727783856:0;vim README.md
+: 1727849326:0;cd code/personal/interpreter
+: 1727849332:0;l
+: 1727849340:0;g pull
+: 1727849632:0;l
+: 1727849634:0;clear
+: 1727849642:0;git checkout feat_imports
+: 1727849645:0;l
+: 1727849648:0;clear
+: 1727850018:0;go run main.go mky_src/sum.mky
+: 1727850464:0;go run main.go mky_src/sum.mky mky_src/reduce.mky
+: 1727851380:0;clera
+: 1727851380:0;l
+: 1727851383:0;clera
+: 1727851384:0;clear
+: 1727851385:0;l
+: 1727851386:0;cd ..
+: 1727851387:0;.
+: 1727851388:0;l
+: 1727851391:0;clear
+: 1727851391:0;l
+: 1727851396:0;cd sc-takehome-2024-25
+: 1727851397:0;l
+: 1727851403:0;vim README.md
+: 1727851694:0;/bin/python3 /home/jon/.vscode-server/extensions/ms-python.python-2024.14.1-linux-x64/python_files/printEnvVariablesToFile.py /home/jon/.vscode-server/extensions/ms-python.python-2024.14.1-linux-x64/python_files/deactivate/zsh/envVars.txt
+: 1727861346:0;l
+: 1727861350:0;cd code/personal/sc-takehome-2024-25
+: 1727861351:0;l
+: 1727861352:0;cd sc-take-home-assessment-take-home-2025
+: 1727861353:0;l
+: 1727861356:0;clear
+: 1727861356:0;l
+: 1727861394:0;git status
+: 1727861399:0;l
+: 1727861402:0;cd ..
+: 1727861403:0;l
+: 1727861404:0;cd
+: 1727861418:0;cd code/personal/sc-takehome-2024-25
+: 1727861418:0;l
+: 1727861423:0;clear
+: 1727861423:0;l
+: 1727861429:0;go run main.go
+: 1727861494:0;clear
+: 1727861496:0;go run main.go
+: 1727861499:0;clear
+: 1727862473:0;go help test
+: 1727867047:0;clear
+: 1727867049:0;l
+: 1727867050:0;ls
+: 1727867059:0;clear
+: 1727867060:0;make
+: 1727867061:0;lcear
+: 1727867062:0;clear
+: 1727874288:0;go run main.go
+: 1727874320:0;clear
+: 1727874321:0;go run main.go
+: 1727874352:0;ls
+: 1727874363:0;go run main.go >> out.txt
+: 1727874368:0;vim out.txt
+: 1727874436:0;git status
+: 1728006869:0;source /home/jon/miniconda3/bin/activate tensorflow
+: 1728006872:0;git pull
+: 1728007038:0;printenv > "/tmp/tmp-9696hzUNOu6ImcJ7.txt"
+: 1728007756:0;git pull
+: 1728008125:0;git status
+: 1728008140:0;git commit -m 'adding week 4 tut code and slides'
+: 1728008144:0;git add .
+: 1728008145:0;git commit -m 'adding week 4 tut code and slides'
+: 1728008147:0;git pull
+: 1728008151:0;git push
+: 1728008166:0;cd ../cs1511-24t3-t09a
+: 1728008171:0;git status
+: 1728008172:0;git pull
+: 1728008175:0;git add .
+: 1728008182:0;git commit -m 'adding week 4 tut code and slides'
+: 1728008183:0;git pull
+: 1728008187:0;git push
+: 1728032305:0;perf --version
+: 1728032316:0;apt install perfr
+: 1728032317:0;apt install perf
+: 1728032324:0;sudo apt-install perf
+: 1728032345:0;sudo apt install perf
+: 1728032389:0;sudo apt-get install linux-tools-common linux-tools-generic
+: 1728032409:0;perf --version
+: 1728033051:0;sudo apt-install linux-tools-standard-WSL2
+: 1728033056:0;sudo apt install linux-tools-standard-WSL2
+: 1728033067:0;sudo apt update
+: 1728033079:0;sudo apt install linux-tools-standard-WSL2
+: 1728033736:0;sudo apt install build-essential flex bison libssl-dev libelf-dev
+: 1728033805:0;perf top
+: 1728033815:0;clear 
+: 1728033820:0;l
+: 1728033821:0;clea
+: 1728033824:0;cd ..
+: 1728033824:0;l
+: 1728033825:0;clear
+: 1728033832:0;cd sc-takehome-2024-25
+: 1728033833:0;l
+: 1728033839:0;cat out.txt
+: 1728045560:0;clear
+: 1728045570:0;len
+: 1728045575:0;len-help
+: 1728045855:0;lines
+: 1728045886:0;wc --version
+: 1728045890:0;clear
+: 1728045892:0;wc -l
+: 1728045905:0;wc -l out.txt
+: 1728045911:0;wc out.txt
+: 1728045923:0;wc -c out.txt
+: 1728045927:0;wc -w out.txt
+: 1728045931:0;wc out.txt
+: 1728046659:0;head out.txt
+: 1728046663:0;head -n 100out.txt
+: 1728046666:0;head -n 100  out.txt
+: 1728046686:0;clear
+: 1728049566:0;ls
+: 1728049569:0;git branch
+: 1728049580:0;git status
+: 1728049584:0;clear
+: 1728049587:0;git stash
+: 1728049591:0;ls
+: 1728049610:0;git checkout -b feat_add_tests
+: 1728049612:0;l
+: 1728049613:0;clear
+: 1728049617:0;git stash pop
+: 1728049620:0;git status
+: 1728049622:0;clear
+: 1728049629:0;pwd
+: 1728049637:0;l
+: 1728049643:0;cd folder
+: 1728049644:0;l
+: 1728051941:0;clear
+: 1728051942:0;l
+: 1728051946:0;clea
+: 1728051946:0;rl
+: 1728051947:0;clear
+: 1728051948:0;l
+: 1728051961:0;code folder.go
+: 1728051976:0;go run main.go
+: 1728051978:0;clear
+: 1728051978:0;l
+: 1728051989:0;go run ../main.go
+: 1728051997:0;clear
+: 1728051998:0;l
+: 1728051999:0;clear
+: 1728058401:0;go run ../main.go
+: 1728058518:0;ckear
+: 1728058519:0;clear
+: 1728097783:0;go run main.go
+: 1728099384:0;code out.txt
+: 1728109086:0;clear
+: 1728109093:0;grep PrettyPrint .
+: 1728109097:0;grep . PrettyPrint
+: 1728109103:0;grep . -t PrettyPrint
+: 1728109106:0;grep . -r PrettyPrint
+: 1728109112:0;grep -r . PrettyPrint
+: 1728109120:0;grep -r PrettyPrint
+: 1728109226:0;go run main.go
+: 1728109275:0;,
+: 1728109276:0;clear
+: 1728109277:0;go run main.go
+: 1728109479:0;clear
+: 1728109480:0;go run main.go
+: 1728109487:0;clear
+: 1728109488:0;go run main.go
+: 1728109527:0;clear
+: 1728109528:0;go run main.go
+: 1728109666:0;clera
+: 1728109670:0;clear
+: 1728109687:0;go run main.go
+: 1728110192:0;clear
+: 1728110193:0;go run main.go
+: 1728118403:0;clera
+: 1728118404:0;clear
+: 1728118406:0;go run main.go
+: 1728118444:0;clear
+: 1728118445:0;go run main.go
+: 1728118554:0;clear
+: 1728118554:0;go run main.go
+: 1728118604:0;clear
+: 1728118605:0;go run main.go
+: 1728118639:0;clear
+: 1728118640:0;go run main.go
+: 1728118645:0;clear && go run main.go
+: 1728119398:0;clear && go run main.go >> secondout
+: 1728120275:0;clear && go run main.go
+: 1728120290:0;clear
+: 1728120291:0;clear && go run main.go
+: 1728120294:0;clear
+: 1728120318:0;clear && go run main.go
+: 1728121227:0;clear && go run main.go >> output
+: 1728121309:0;clear
+: 1728121310:0;clear && go run main.go >> output
+: 1728121314:0;clear && go run main.go > output
+: 1728129750:0;clear && go run main.go
+: 1728129767:0;clear && go run main.go > output
+: 1728134076:0;python3
+: 1728134479:0;pprof
+: 1728134480:0;clera
+: 1728134482:0;prof
+: 1728134483:0;clear
+: 1728135537:0;clear && go run main.go > output
+: 1728135618:0;clear
+: 1728135683:0;clear && go run main.go > output
+: 1728182334:0;clear
+: 1728182335:0;l
+: 1728182336:0;clear
+: 1728184984:0;go mod init folder
+: 1728184993:0;clear
+: 1728184998:0;go mod init folder_test
+: 1728185000:0;clear
+: 1728185064:0;go get .
+: 1728185140:0;go get github.com/go-test/deep@v1.1.1
+: 1728185148:0;clear
+: 1728185175:0;go get .
+: 1728185196:0;go get github.com/go-test/deep@v1.1.1
+: 1728185548:0;go test .
+: 1728185554:0;go test ./folder
+: 1728185834:0;clear && go test ./folder
+: 1728185958:0;go test ./folder
+: 1728185995:0;clear &&go test ./folder
+: 1728185999:0;clear && go test ./folder
+: 1728186215:0;go test ./folder
+: 1728186234:0;go run main.go
+: 1728186262:0;clear
+: 1728190314:0;go test ./folder
+: 1728191313:0;clear && go test ./folder
+: 1728191884:0;grep -r fmtr
+: 1728191885:0;grep -r fmt
+: 1728195273:0;clear
+: 1728195274:0;clear && go test ./folder
+: 1728196309:0;go run main.go
+: 1728196843:0;clear
+: 1728196844:0;go run main.go
+: 1728196852:0;go run main.go >> output
+: 1728196873:0;go run main.go > output
+: 1728197084:0;clear && go test ./folder
+: 1728198671:0;go run main.go > output
+: 1728198891:0;clear
+: 1728198929:0;cd ..
+: 1728198932:0;ls
+: 1728198934:0;cd sc-takehome-2024-25
+: 1728198935:0;l
+: 1728198936:0;clear
+: 1728199245:0;clear && go test ./folder
+: 1728199454:0;go run main.go > output
+: 1728200283:0;clear
+: 1728200356:0;go run main.go > output
+: 1728201066:0;clear
+: 1728201067:0;l
+: 1728201068:0;clear
+: 1728201472:0;grep -r Search
+: 1728203666:0;l
+: 1728203667:0;clear
+: 1728203667:0;l
+: 1728203668:0;ls
+: 1728203669:0;clear
+: 1728204921:0;go run main.go > output
+: 1728205481:0;clear
+: 1728205485:0;go run main.go > output
+: 1728206627:0;clear && go test ./folder
+: 1728206758:0;clear
+: 1728206758:0;clear && go test ./folder
+: 1728206960:0;go run main.go > output
+: 1728206969:0;clear
+: 1728207035:0;go run main.go > output
+: 1728207252:0;clear && go test ./folder
+: 1728207279:0;go run main.go > output
+: 1728208776:0;clear
+: 1728208777:0;go run main.go > output
+: 1728208780:0;clear && go test ./folder
+: 1728208904:0;go run main.go > output
+: 1728208966:0;clear && go test ./folder
+: 1728208968:0;go run main.go > output
+: 1728209033:0;clear && go test ./folder
+: 1728209055:0;go run main.go > output
+: 1728209074:0;clear && go test ./folder
+: 1728209145:0;cleraq
+: 1728209146:0;clear
+: 1728209147:0;l
+: 1728209148:0;clear
+: 1728209149:0;clear && go test ./folder
+: 1728210347:0;clear
+: 1728210597:0;go run main.go > output
+: 1728210724:0;clera && go run main.go > output
+: 1728210729:0;clear && go run main.go > output
+: 1728210747:0;clear && go test ./folder
+: 1728212521:0;grep -r sort
+: 1728212933:0;clear && go test ./folder
+: 1728212985:0;go run main.go > output
+: 1728213193:0;clear && go test ./folder
+: 1728213378:0;Folder does not exist
+: 1728213423:0;go run main.go > output
+: 1728213426:0;clear && go test ./folder
+: 1728213495:0;clear
+: 1728216986:0;clear && go test ./folder
+: 1728217299:0;git status
+: 1728217362:0;go run main.go > output
+: 1728217497:0;git add go.sum go.mod folder/get_folder_test.go folder/get_folder.go main.go README.md
+: 1728217498:0;l
+: 1728217499:0;git status
+: 1728217512:0;git add folder/folder.go
+: 1728217512:0;l
+: 1728217514:0;git status
+: 1728217531:0;git add folder/s
+: 1728217533:0;git add folder/sample.json
+: 1728217533:0;l
+: 1728217537:0;git status
+: 1728217544:0;rm out.txt output
+: 1728217544:0;l
+: 1728217546:0;git status
+: 1728217556:0;git pull
+: 1728217580:0;git add sc-take-home-assessment-take-home-2025/
+: 1728217581:0;git status
+: 1728217593:0;git add folder/static.go
+: 1728217593:0;l
+: 1728217595:0;git status
+: 1728217596:0;git pull
+: 1728217619:0;git commit -m 'get_folder tests written and passing'
+: 1728217622:0;git status
+: 1728217868:0;go version
+: 1728217952:0;git push
+: 1728217957:0;git push --set-upstream origin feat_add_tests
+: 1728218087:0;clear && go test ./folder
+: 1728218221:0;git add folder/move_folder.go
+: 1728218232:0;git commit -m 'adding 
+: 1728218288:0;git commit -m 'adding incomplete impl of move_folder to completee IDriver complience and allow CI to run'
+: 1728218289:0;git pull
+: 1728218292:0;git push
+: 1728218545:0;clear
+: 1728218566:0;git checkout main
+: 1728218567:0;git pull
+: 1728218578:0;git checkout feat_add_tests
+: 1728218581:0;git merge main
+: 1728218583:0;git  pull
+: 1728218587:0;git status
+: 1728218591:0;clear
+: 1728218593:0;git push
+: 1728218669:0;git checkout main 
+: 1728218674:0;git pull
+: 1728218695:0;git checkout -b feat_move_folder
+: 1728218697:0;clera
+: 1728218699:0;clear
+: 1728218699:0;l
+: 1728218700:0;clera
+: 1728218701:0;clear
+: 1728218702:0;git status
+: 1728218705:0;git branch
+: 1728218708:0;clera
+: 1728218709:0;clear
+: 1728218710:0;l
+: 1728218745:0;clear && go run main.go > output
+: 1728222783:0;git status
+: 1728222784:0;l
+: 1728222927:0;clear && go run main.go > output
+: 1728224527:0;w
+: 1728224529:0;:w
+: 1728224531:0;clear
+: 1728224584:0;clear && go run main.go > output
+: 1728238757:0;k
+: 1728238761:0;clear && go run main.go > output
+: 1728264392:0;go test ./folder
+: 1728265182:0;clear
+: 1728265711:0;go get github.com/google/btree
+: 1728269441:0;go test ./folder
+: 1728269461:0;clear && go run main.go > output
+: 1728269966:0;go test ./folder
+: 1728270035:0;clera
+: 1728270037:0;clear
+: 1728270039:0;go test ./folder
+: 1728270269:0;clear && go run main.go > output
+: 1728270325:0;go test ./folder
+: 1728270385:0;clear && go test ./folder
+: 1728270688:0;clear
+: 1728270690:0;clear && go run main.go > output
+: 1728270993:0;go test ./folder
+: 1728271203:0;clear
+: 1728272397:0;go test ./folder
+: 1728272489:0;clear && go run main.go > output
+: 1728272545:0;k
+: 1728272548:0;clear && go run main.go > output
+: 1728273739:0;git status
+: 1728273755:0;go test ./folder
+: 1728273757:0;clear
+: 1728273824:0;go test ./folder
+: 1728273827:0;clear && go run main.go > output
+: 1728273960:0;git 
+: 1728273965:0;git status
+: 1728273978:0;git add folder/
+: 1728273980:0;git status
+: 1728273986:0;git add go.mod go.sum
+: 1728273991:0;git status
+: 1728275091:0;lear
+: 1728275092:0;clear
+: 1728275098:0;got test ./folder
+: 1728275102:0;go test ./folder
+: 1728275213:0;clera
+: 1728275218:0;clear
+: 1728275219:0;go test ./folder
+: 1728275322:0;clear && go test ./folder
+: 1728276305:0;clear && go run main.go > output
+: 1728276863:0;go test ./folder
+: 1728276869:0;clear && go run main.go > output
+: 1728279598:0;go test ./folder
+: 1728279943:0;clear
+: 1728279944:0;go test ./folder
+: 1728280013:0;clear
+: 1728280014:0;go test ./folder
+: 1728280102:0;clear
+: 1728280105:0;go test ./folder
+: 1728280405:0;clear
+: 1728280553:0;go test ./folder
+: 1728280584:0;clear
+: 1728280709:0;go test ./folder
+: 1728281514:0;clear
+: 1728281519:0;clear && go run main.go > output
+: 1728281624:0;go test ./folder
+: 1728281734:0;clear
+: 1728281735:0;go test ./folder
+: 1728282528:0;clear
+: 1728282572:0;go test ./folder
+: 1728282686:0;clear
+: 1728282687:0;go test ./folder
+: 1728282688:0;clera
+: 1728282690:0;clear
+: 1728282812:0;go test ./folder
+: 1728282994:0;clear
+: 1728282995:0;go test ./folder
+: 1728283211:0;clear && go run main.go > output
+: 1728283257:0;go mod tidy
+: 1728283274:0;clear
+: 1728283381:0;clear && go run main.go > output
+: 1728283412:0;go test ./folder
+: 1728283452:0;l
+: 1728283455:0;rm output
+: 1728283456:0;ls
+: 1728283457:0;clear
+: 1728283474:0;git checkout main
+: 1728283476:0;git pull
+: 1728283485:0;git checkout feat_
+: 1728283498:0;git checkout feat_move_folder
+: 1728283499:0;git pull
+: 1728283503:0;git status
+: 1728283508:0;git add folder/
+: 1728283511:0;git add main.go
+: 1728283515:0;git status
+: 1728283580:0;git commit -m 'refactor children to btree, general cleanup, added tests for moving folders, fixed moving folders'
+: 1728283583:0;git push
+: 1728283589:0;git push --set-upstream origin feat_move_folder
+: 1728288814:0;go test ./folder
+: 1728288817:0;clear
+: 1728288837:0;git stash
+: 1728288843:0;git checkout main
+: 1728288849:0;git pull
+: 1728288876:0;git checkout -b feat_threading
+: 1728288880:0;git stash pop
+: 1728288896:0;clear
+: 1728289342:0;go test ./folder
+: 1728289469:0;grep -r sort
+: 1728289479:0;grep -r Sort
+: 1728289525:0;grep -r Search
+: 1728289529:0;grep -r search
+: 1728289534:0;grep -r Search
+: 1728289539:0;grep -r lookup
+: 1728289544:0;clear
+: 1728289561:0;grep -r sort.
+: 1728289568:0;grep -r sort
+: 1728289574:0;clear
+: 1728289711:0;go test ./folder
+: 1728289782:0;git pull
+: 1728289794:0;git add .
+: 1728289862:0;git commit -m 'minor optimisation, multithread org creation' 
+: 1728289885:0;clear
+: 1728289886:0;git pull
+: 1728289895:0;git push
+: 1728289901:0;git push --set-upstream origin feat_threading
+: 1728290502:0;grep -r print
+: 1728290505:0;grep -r Print
+: 1728290538:0;clear
+: 1728290543:0;git stash
+: 1728290735:0;git checkout main
+: 1728290741:0;git status
+: 1728290742:0;git pull
+: 1728290766:0;git checkout -b cleanup
+: 1728290770:0;git stash pop
+: 1728290787:0;go test ./folder
+: 1728290789:0;clear
+: 1728292096:0;go test ./folder
+: 1728292339:0;go mod tidy
+: 1728292340:0;:w
+: 1728292342:0;clear
+: 1728292430:0;go test ./folder
+: 1728292432:0;clear
+: 1728292578:0;go test ./folder
+: 1728292672:0;clear
+: 1728292674:0;go test ./folder
+: 1728293112:0;git status
+: 1728293124:0;git add --all
+: 1728293357:0;go test ./folder
+: 1728293458:0;clear
+: 1728293462:0;git status
+: 1728293465:0;git add .
+: 1728293467:0;git status
+: 1728293617:0;git commit -m 'Refactored testing framework, added multi-move state management testing, cleaned up mod.go, general refactoring'
+: 1728293618:0;git pull
+: 1728293621:0;git push
+: 1728293650:0;git branch --set-upstream-to=origin/<branch> cleanup
+: 1728293661:0;git push
+: 1728293666:0;git push --set-upstream origin cleanup
+: 1728293912:0;grep -r print
+: 1728293915:0;grep -r Print
+: 1728293951:0;git stash poop
+: 1728293952:0;git stash pop
+: 1728293959:0;clear
+: 1728293961:0;git stash pop
+: 1728294018:0;git add .
+: 1728294026:0;git commit -m 'remove prints'
+: 1728294027:0;git pull
+: 1728294030:0;git push
+: 1728297636:0;ls
+: 1728297640:0;git checkout main
+: 1728297641:0;git pull
+: 1728297705:0;git checkout -bb feat_better_concurrency
+: 1728297711:0;git checkout -b feat_better_concurrency
+: 1728297715:0;git status
+: 1728297720:0;clear
+: 1728298869:0;go test ./folder
+: 1728299265:0;clear
+: 1728299719:0;go test ./folder
+: 1728299776:0;clera
+: 1728299777:0;clear
+: 1728300217:0;go test ./folder
+: 1728301476:0;clear
+: 1728301600:0;go test ./folder
+: 1728301606:0;clear
+: 1728301686:0;go test ./folder
+: 1728301690:0;clera
+: 1728301691:0;clear
+: 1728301990:0;go test ./folder
+: 1728302274:0;clear
+: 1728302800:0;go test ./folder
+: 1728303042:0;clear
+: 1728303044:0;go test ./folder
+: 1728303064:0;grep -r Could not loc
+: 1728303071:0;grep -r "Could not"
+: 1728303076:0;grep -r "Could not locate "
+: 1728303109:0;clear && go test ./folder
+: 1728303115:0;go test ./folder
+: 1728303116:0;clera
+: 1728303119:0;clear
+: 1728303121:0;go test ./folder
+: 1728303993:0;clear
+: 1728304346:0;go test ./folder
+: 1728304530:0;:w
+: 1728304533:0;clear
+: 1728304563:0;go test ./folder
+: 1728304572:0;go test -count=1 ./folder
+: 1728304584:0;go test -count=1 ./...
+: 1728304657:0;go test -count=100 ./...
+: 1728304776:0;grep -r "Folder does not exist"
+: 1728305094:0;go test -count=100 ./...
+: 1728305102:0;go test -count=10 ./...
+: 1728305103:0;clear
+: 1728305105:0;go test -count=10 ./...
+: 1728305173:0;grep -r "Folder does not exist in the spe"
+: 1728305288:0;clear
+: 1728305289:0;go test -count=10 ./...
+: 1728305492:0;clear
+: 1728305493:0;go test -count=10 ./...
+: 1728305516:0;go test -count=1 ./...
+: 1728305523:0;clear
+: 1728305525:0;go test -count=1 ./...
+: 1728305677:0;clear
+: 1728305678:0;go test -count=1 ./...
+: 1728305754:0;clear
+: 1728305756:0;go test -count=1 ./...
+: 1728305802:0;clear
+: 1728305803:0;go test -count=1 ./...
+: 1728305813:0;clear
+: 1728305815:0;go test -count=10 ./...
+: 1728306051:0;grep -r "Organization does not exist"
+: 1728306139:0;go test -count=10 ./...
+: 1728306142:0;clear
+: 1728306144:0;go test -count=10 ./...
+: 1728306631:0;go test -race -count=10 ./...
+: 1728306686:0;clear && go test -race -count=10 ./...
+: 1728306699:0;go test -race -count=10 ./...
+: 1728306700:0;clear
+: 1728306701:0;go test -race -count=10 ./...
+: 1728306720:0;go test -race ./...
+: 1728307151:0;go run main.go
+: 1728307155:0;clear
+: 1728307159:0;go run main.go > output
+: 1728307606:0;clear
+: 1728307607:0;go run main.go > output
+: 1728307629:0;l
+: 1728307644:0;rm folder/L_folder_test.go
+: 1728307649:0;ls -al
+: 1728307656:0;cd folder
+: 1728307657:0;ls -al
+: 1728307666:0;ls *_test.go
+: 1728307670:0;clear
+: 1728307672:0;cd ..
+: 1728307677:0;go run main.go > output
+: 1728307690:0;go run main.go > output && wc output
+: 1728307954:0;go run main.go > output
+: 1728308124:0;clear
+: 1728308130:0;go run main.go > output
+: 1728308288:0;k
+: 1728308292:0;go run main.go > output
+: 1728308300:0;clear
+: 1728308302:0;ll
+: 1728308303:0;clear
+: 1728308304:0;l
+: 1728308304:0;ll
+: 1728308306:0;lll
+: 1728308308:0;ll
+: 1728308311:0;l
+: 1728308312:0;ll
+: 1728308314:0;l
+: 1728308315:0;ll
+: 1728308317:0;clera
+: 1728308318:0;clear
+: 1728308319:0;ls
+: 1728308320:0;ll
+: 1728308322:0;l
+: 1728308323:0;ll
+: 1728308325:0;clear
+: 1728308530:0;go run main.go > output
+: 1728308539:0;k
+: 1728308542:0;clear
+: 1728308543:0;go run main.go > output
+: 1728308548:0;clear
+: 1728308558:0;go test ./...
+: 1728308583:0;go test -times=100 ./...
+: 1728308667:0;go test -count=100 ./...
+: 1728308675:0;go test -count=1 ./...
+: 1728308676:0;clear
+: 1728308678:0;go test -count=1 ./...
+: 1728309106:0;go test -count=100 ./...
+: 1728309119:0;clear
+: 1728309122:0;go test -count=10 ./...
+: 1728309629:0;OA
+: 1728309631:0;clear
+: 1728309632:0;go test -count=10 ./...
+: 1728309722:0;clear
+: 1728309723:0;go test -count=10 ./...
+: 1728309859:0;clear
+: 1728309862:0;go test -count=10 ./...
+: 1728310516:0;clear
+: 1728310517:0;go test -count=10 ./...
+: 1728310604:0;clear
+: 1728310604:0;go test -count=10 ./...
+: 1728310805:0;clear
+: 1728310806:0;go test -count=10 ./...
+: 1728311013:0;clear && go test -count=10 ./...
+: 1728311744:0;clear && go test -count=10 ./folder/get_folder_test.go
+: 1728311814:0;clear && go test -count=10 -run Test_folder_GetAllChildFolders
+: 1728311830:0;clear && go test -count=10 -run folder_GetAllChildFolders
+: 1728311833:0;clear && go test -count=10 -run GetAllChildFolders
+: 1728311836:0;clear && go test -count=10 -run folder_GetAllChildFolders
+: 1728311838:0;clear && go test -count=10 -run Test_folder_GetAllChildFolders
+: 1728311889:0;clear && go test -count=10 ./...
+: 1728311954:0;clear && go test -count=10 -run Test_folder_GetAllChildFolders
+: 1728311960:0;clear && go test -count=10 ./...
+: 1728311988:0;clear && go test -count=100 ./...
+: 1728311990:0;clear && go test -count=1000 ./...
+: 1728312497:0;clera
+: 1728312499:0;clear
+: 1728312502:0;clear && go test -count=10 ./...
+: 1728312516:0;clear
+: 1728312519:0;clear && go test -count=10 ./...
+: 1728312534:0;clear && go test -count=100 ./...
+: 1728312835:0;clear
+: 1728312849:0;clear && go test -count=100 ./...
+: 1728313352:0;clear && go test -count=100 ./... > output
+: 1728313683:0;clear && go test -race -count=100 ./... > output
+: 1728313790:0;clear && go test -count=100 ./...
+: 1728313802:0;clear && go test -count=100 ./... > output
+: 1728314035:0;clear && go test -count=10000 ./... > output
+: 1728314091:0;clear && go test -race -count=10000 ./... > output
+: 1728314928:0;clear && go test -race -count=1000 ./... > output
+: 1728314950:0;clear && go test -race -count=100 ./... > output
+: 1728314964:0;clear && go test -count=100 ./... > output
+: 1728315371:0;clear && go test -race -count=100 ./... > output
+: 1728316646:0;clear && go test -count=100 ./... > output
+: 1728317109:0;clear && go test -race -count=100 ./... > output
+: 1728317876:0;clear && go test -count=100 ./... > output
+: 1728317891:0;clear && go test -race -count=100 ./... > output
+: 1728318398:0;clear && go test -count=100 ./... > output
+: 1728318428:0;go test ./...
+: 1728318442:0;go test -count=1 ./...
+: 1728318466:0;kill-session
+: 1728318470:0;go test -count=1 ./...
+: 1728318543:0;clear && go test -race -count=100 ./... > output
+: 1728319489:0;clear && go test -race -count=10000 ./... > output
+: 1728319921:0;clear && go test -race -count=100 ./... > output
+: 1728320901:0;clear && go test -count=100 ./... > output
+: 1728320914:0;clear && go test ./... > output
+: 1728320946:0;clear && go test -count=1 ./... > output
+: 1728321550:0;clear && go test -count=100 ./... > output
+: 1728322885:0;git add --all
+: 1728322932:0;git commit -m 'multiple orgs still not playing nice with -race flag on tests, havent looked at move_folder'
+: 1728322933:0;git pul
+: 1728322935:0;git pull
+: 1728322941:0;git push
+: 1728322947:0;git push --set-upstream origin feat_better_concurrency
+: 1728322952:0;git pull
+: 1728322957:0;git push
+: 1728390185:0;cd code/personal/sc-takehome-2024-25
+: 1728390186:0;l
+: 1728390187:0;clear
+: 1728390188:0;l
+: 1728390192:0;clear
+: 1728390226:0;go test -race -count=100 ./...
+: 1728390230:0;git pull
+: 1728390234:0;go test -race -count=100 ./...
+: 1728390238:0;clear
+: 1728390244:0;go test -race -count=10000 ./...
+: 1728390291:0;clear
+: 1728390298:0;git checkout main
+: 1728390300:0;go test -race -count=10000 ./...
+: 1728390342:0;git pull
+: 1728390351:0;go test -race -count=10000 ./...
+: 1728561296:0;l
+: 1728561299:0;cd code
+: 1728561299:0;l
+: 1728561301:0;clear
+: 1728561301:0;l
+: 1728561322:0;cd personal
+: 1728561323:0;l
+: 1728561325:0;cd inn
+: 1728561327:0;cd interpreter
+: 1728561328:0;l
+: 1728561329:0;clear
+: 1728561330:0;ls
+: 1728561331:0;clear
+: 1728561332:0;l
+: 1728561335:0;git pull
+: 1728561340:0;clear
+: 1728561340:0;l
+: 1728561341:0;clear
+: 1728561346:0;tmux a
+: 1728561348:0;tmux 
+: 1728561354:0;l
+: 1728561356:0;clear
+: 1728561358:0;vim .
+: 1728561360:0;l
+: 1728561361:0;clear
+: 1728561364:0;go run main
+: 1728561365:0;go run main.
+: 1728561367:0;cleara
+: 1728561368:0;clear
+: 1728561372:0;go run main.go
+: 1728561400:0;exit
+: 1728621149:0;l
+: 1728621153:0;cd .config/nvim
+: 1728621154:0;l
+: 1728621154:0;clear
+: 1728621155:0;l
+: 1728621158:0;vim .
+: 1728622068:0;l
+: 1728622070:0;cd
+: 1728622070:0;l
+: 1728622073:0;cd code
+: 1728622073:0;l
+: 1728622075:0;clear
+: 1728622075:0;l
+: 1728622079:0;cd personal
+: 1728622080:0;l
+: 1728622094:0;vim prog.py
+: 1728622320:0;python3 prog.py
+: 1728622333:0;tmux
+: 1728622342:0;vim prog.py
+: 1728622346:0;python3 prog.py
+: 1728622437:0;clear
+: 1728623058:0;python3 prog.py
+: 1728623295:0;clera
+: 1728623296:0;clear
+: 1728623298:0;python3 prog.py
+: 1728623478:0;clear
+: 1728623479:0;python3 prog.py
+: 1728623644:0;tmux a
+: 1728623665:0;l
+: 1728623666:0;cd
+: 1728623669:0;l
+: 1728623669:0;clera
+: 1728623672:0;clear
+: 1728623673:0;l
+: 1728623679:0;cd
+: 1728623680:0;l
+: 1728623682:0;clear
+: 1728623686:0;l
+: 1728623687:0;clera
+: 1728623688:0;clear
+: 1728623691:0;cd .config
+: 1728623691:0;l
+: 1728623692:0;clear
+: 1728623693:0;l
+: 1728623694:0;cd nvim
+: 1728623695:0;l
+: 1728623698:0;clear
+: 1728623699:0;l
+: 1728625571:0;vim .
+: 1728631501:0;l
+: 1728631502:0;clera
+: 1728631503:0;clear
+: 1728631513:0;vim prog.py
+: 1728631593:0;python3 prog.py
+: 1728631598:0;vim prog.py
+: 1728631609:0;python3 prog.py
+: 1728631618:0;vim prog.py
+: 1728631644:0;python3 prog.py
+: 1728631652:0;vim prog.py
+: 1728631732:0;python3 prog.py
+: 1728631745:0;clear
+: 1728631749:0;python3 prog.py
+: 1728631755:0;tmux a
+: 1728631763:0;cd
+: 1728631765:0;python3 prog.py
+: 1728631809:0;tmux a
+: 1728631812:0;vim prog.py
+: 1728631824:0;python3 prog.py
+: 1728631863:0;tmux a
+: 1728631866:0;python3 prog.py
+: 1728631869:0;vim prog.py
+: 1728631904:0;python3 prog.py
+: 1728631908:0;vim prog.py
+: 1728631916:0;python3 prog.py
+: 1728631918:0;clear
+: 1728631919:0;python3 prog.py
+: 1728631932:0;vim prog.py
+: 1728631944:0;python3 prog.py
+: 1728631946:0;vim prog.py
+: 1728632094:0;python3 prog.py
+: 1728632103:0;python3 prog.py >> output
+: 1728632108:0;vim output
+: 1728632196:0;rm output
+: 1728632196:0;l
+: 1728632197:0;clear
+: 1728632198:0;l
+: 1728632205:0;clear
+: 1728632206:0;l
+: 1728632215:0;vim twenty_six.py
+: 1728632226:0;vim prog.py
+: 1728632380:0;vim twenty_six.py
+: 1728632387:0;python3 prog.py
+: 1728632393:0;vim prog.py
+: 1728632416:0;python3 prog.py
+: 1728632428:0;clear
+: 1728632431:0;vim prog.py
+: 1728632482:0;rm prog.py
+: 1728632482:0;l
+: 1728632489:0;vim twenty_six.py
+: 1728632531:0;python3 twenty_six.py
+: 1728634499:0;exit
+: 1728635386:0;vim .
+: 1728636085:0;cd code
+: 1728636086:0;l
+: 1728636096:0;vim example.go
+: 1728636211:0;l
+: 1728636219:0;go init example
+: 1728636226:0;go new example
+: 1728636229:0;go help
+: 1728636244:0;go creat example
+: 1728636251:0;clear
+: 1728636254:0;go create example
+: 1728636259:0;clear && go help
+: 1728636331:0;l
+: 1728636333:0;clear
+: 1728636333:0;l
+: 1728636342:0;mkdir go_example
+: 1728636359:0;mv example.go go_example/example.go
+: 1728636361:0;cd go_example
+: 1728636362:0;l
+: 1728636362:0;clear
+: 1728636378:0;go mod init go_example
+: 1728636381:0;l
+: 1728636390:0;go run example.go
+: 1728636396:0;vim example.go
+: 1728636483:0;vim .
+: 1728636708:0;vim example.go
+: 1728636885:0;vim .
+: 1728638550:0;cd 
+: 1728638552:0;cd code
+: 1728638552:0;l
+: 1728638555:0;cd go_example
+: 1728638555:0;l
+: 1728638559:0;vim examp
+: 1728638564:0;vim example.go
+: 1728640140:0;tmux a
+: 1728640253:0;l
+: 1728640263:0;cd 
+: 1728640264:0;l
+: 1728640265:0;clear
+: 1728640268:0;cd .config
+: 1728640268:0;l
+: 1728640270:0;cd nvim
+: 1728640270:0;l
+: 1728640271:0;clear
+: 1728640272:0;l
+: 1728640273:0;cler
+: 1728640275:0;cear
+: 1728640276:0;clear 
+: 1728640277:0;vim .
+: 1728640312:0;l
+: 1728640317:0;cd lua/jon/plugins
+: 1728640318:0;l
+: 1728640320:0;cd ..
+: 1728640321:0;l
+: 1728640325:0;cd ..
+: 1728640325:0;l
+: 1728640327:0;cd ..
+: 1728640327:0;l
+: 1728640331:0;cd lua/jon
+: 1728640331:0;l
+: 1728640332:0;clear
+: 1728640333:0;l
+: 1728640342:0;cd plugins
+: 1728640342:0;l
+: 1728640353:0;mv lsp.lua lsp2.lua
+: 1728640353:0;l
+: 1728640358:0;vim lsp.lua
+: 1728640805:0;vim .
+: 1728640867:0;l
+: 1728640868:0;clear
+: 1728640869:0;l
+: 1728640872:0;cd ..
+: 1728640872:0;l
+: 1728640873:0;cd ..
+: 1728640874:0;l
+: 1728640876:0;cd ..
+: 1728640876:0;l
+: 1728640898:0;vim .stylua.toml
+: 1728643511:0;l
+: 1728643514:0;vim .
+: 1728647073:0;l
+: 1728647075:0;clearw
+: 1728647076:0;clear
+: 1728647093:0;l
+: 1728647096:0;cd lua
+: 1728647097:0;l
+: 1728647100:0;cd jon/plugins
+: 1728647100:0;l
+: 1728647240:0;vim formatting.lua
+: 1728659562:0;vim example.go
+: 1728659932:0;l
+: 1728659936:0;cd lsp
+: 1728659936:0;l
+: 1728659944:0;vim mason.lua
+: 1728660300:0;l
+: 1728660304:0;vim
+: 1728660603:0;vim mason.lua
+: 1728660717:0;vim
+: 1728660819:0;vim mason.lua
+: 1728660871:0;clear
+: 1728660871:0;l
+: 1728660872:0;clear
+: 1728661388:0;vim mason.lua
+: 1728661459:0;vim
+: 1728689145:0;l
+: 1728689148:0;cd .con
+: 1728689151:0;cd .config
+: 1728689151:0;l
+: 1728689153:0;cleawrw
+: 1728689154:0;clear
+: 1728689154:0;l
+: 1728689157:0;cd nvim
+: 1728689158:0;l
+: 1728689163:0;git pull
+: 1728689186:0;git status
+: 1728689196:0;clear
+: 1728689197:0;l
+: 1728689199:0;clear
+: 1728689200:0;l
+: 1728689259:0;vim .
+: 1728699586:0;vim --version
+: 1728699835:0;brew --version
+: 1728699837:0;clera
+: 1728699838:0;clear
+: 1728699842:0;homebrew --version
+: 1728699843:0;clear
+: 1728700010:0;apt list neovim
+: 1728700025:0;apt list --installed neovim
+: 1728700058:0;apt list --installed
+: 1728700262:0;clear 
+: 1728700265:0;snap --version
+: 1728700272:0;flatpack --version
+: 1728700274:0;clear
+: 1728700295:0;snap list --installed
+: 1728700298:0;snap list
+: 1728700441:0;echo $PATH
+: 1728700542:0;glibc --version
+: 1728700548:0;help glibc
+: 1728700562:0;help +x
+: 1728700569:0;chmod +x help
+: 1728700625:0;l
+: 1728700627:0;cd
+: 1728700627:0;l
+: 1728700629:0;clera
+: 1728700629:0;clear
+: 1728700722:0;ldd --version
+: 1728700938:0;cp -r ~/.config/nvim ~/.config/nvim.bak\
+cp -r ~/.local/share/nvim ~/.local/share/nvim.bak\
+cp -r ~/.cache/nvim ~/.cache/nvim.bak
+: 1728700959:0;sudo apt remove neovim
+: 1728700973:0;brew uninstall neovim
+: 1728700978:0;sudo apt update
+: 1728701036:0;chmod u+x nvim.appimage && ./nvim.appimage
+: 1728701078:0;viim
+: 1728701079:0;vim
+: 1728701083:0;l
+: 1728701084:0;clearw
+: 1728701085:0;clear
+: 1728701086:0;l
+: 1728701091:0;which vim
+: 1728701096:0;which nvim
+: 1728701113:0;ls /usr/local/bin/nvim
+: 1728701116:0;ls /usr/local/bin/nvim/*
+: 1728701119:0;ls /usr/local/bin/
+: 1728701125:0;l /usr/local/bin/nvim
+: 1728701134:0;rm /usr/local/bin/nvim
+: 1728701149:0;sudo rm /usr/local/bin/nvim
+: 1728701152:0;l /usr/local/bin/nvim
+: 1728701155:0;clear
+: 1728701156:0;vim 
+: 1728701158:0;clear
+: 1728701164:0;cd
+: 1728701164:0;l
+: 1728701169:0;ls neovim
+: 1728701170:0;l
+: 1728701172:0;cd neovim/o
+: 1728701173:0;cd neovim/
+: 1728701174:0;l
+: 1728701180:0;git branchh
+: 1728701181:0;git branch
+: 1728701188:0;git pull
+: 1728701219:0;git checkout release-0.10.2
+: 1728701227:0;l
+: 1728701233:0;clear
+: 1728701233:0;l
+: 1728701235:0;clear
+: 1728701272:0;l
+: 1728701292:0;git fetch --all
+: 1728701296:0;git checkout tags/v0.10.2
+: 1728701304:0;l
+: 1728701305:0;clear
+: 1728701321:0;sudo apt install ninja-build gettext libtool libtool-bin autoconf automake cmake g++ pkg-config unzip curl doxygen
+: 1728701366:0;make CMAKE_BUILD_TYPE=Release
+: 1728702414:0;nvim --version
+: 1728702419:0;sudo make install
+: 1728702435:0;nvim --version
+: 1728702439:0;vim
+: 1728702498:0;tmux a
+: 1728702503:0;l
+: 1728702513:0;cd code/go_example
+: 1728702514:0;l
+: 1728702517:0;vim .
+: 1728704334:0;vim 
+: 1728704338:0;vim .
+: 1728704880:0;rm -rf ~/.cache/nvim
+: 1728704883:0;vim .
+: 1728706660:0;clear
+: 1728706664:0;vim .
+: 1728708264:0;cd
+: 1728708264:0;l
+: 1728708265:0;clear
+: 1728708266:0;l
+: 1728708267:0;clear
+: 1728708448:0;tmux a
+: 1728708451:0;clear
+: 1728708452:0;cd ..
+: 1728708453:0;ls
+: 1728708458:0;rm -r go_example
+: 1728708459:0;l
+: 1728708466:0;ls .vscode
+: 1728708467:0;l
+: 1728708478:0;l .vscode/settings.json
+: 1728708483:0;cat  .vscode/settings.json
+: 1728708508:0;l
+: 1728708508:0;clear
+: 1728708509:0;l
+: 1728708512:0;rm .vscode
+: 1728708512:0;l
+: 1728708522:0;rm -r .vscode
+: 1728708522:0;l
+: 1728708524:0;clear
+: 1728708529:0;ldd --version
+: 1728708534:0;clear
+: 1728708588:0;l
+: 1728708591:0;cd
+: 1728708594:0;cd .config
+: 1728708595:0;l
+: 1728708598:0;cd nvim
+: 1728708599:0;l
+: 1728708607:0;cd ..
+: 1728708612:0;rm nvim.bak
+: 1728708622:0;rm -r nvim.bak
+: 1728708636:0;y
+: 1728708638:0;clear
+: 1728708640:0;ls
+: 1728708647:0;rm -r nvim.bak
+: 1728708657:0;y
+: 1728708663:0;ls
+: 1728708669:0;ls nvim.bak
+: 1728708675:0;rm -r nvim.bak
+: 1728708681:0;ls 
+: 1728708687:0;clear
+: 1728708689:0;lc
+: 1728708689:0;l
+: 1728708691:0;clear
+: 1728708692:0;cd nvim
+: 1728708693:0;l
+: 1728708704:0;rm nvim-linux64.tar.gz
+: 1728708705:0;l
+: 1728708707:0;git status
+: 1728708708:0;clear
+: 1728708708:0;l
+: 1728708712:0;cd lua
+: 1728708713:0;l
+: 1728708714:0;clear
+: 1728708719:0;vim .
+: 1728709130:0;tmux 
+: 1728709132:0;vim .
+: 1728709478:0;l
+: 1728709480:0;clear
+: 1728709481:0;make
+: 1728709483:0;clear
+: 1728709777:0;lo
+: 1728709778:0;l
+: 1728709779:0;clear
+: 1728709788:0;grep -r devicon
+: 1728709801:0;vim
+: 1728709851:0;l
+: 1728709852:0;clear
+: 1728709859:0;vim
+: 1728709900:0;grep -r  devicons
+: 1728710297:0;cd
+: 1728710299:0;sudo apt install fonts-firacode
+: 1728710317:0;vim
+: 1728711061:0;l
+: 1728711062:0;vim
+: 1728711071:0;l
+: 1728711072:0;clear
+: 1728711072:0;l
+: 1728711235:0;tmux
+: 1728711238:0;vim
+: 1728711270:0;vim .
+: 1728712224:0;cd code/personal/interpreter/parser/
+: 1728712224:0;l
+: 1728712229:0;vim .
+: 1728712265:0;l
+: 1728712267:0;clear
+: 1728712268:0;l
+: 1728712269:0;clear
+: 1728712272:0;vim .
+: 1728712346:0;l
+: 1728712353:0;cd code/personal/interpreter
+: 1728712356:0;cd object/l
+: 1728712358:0;cd object/
+: 1728712358:0;l
+: 1728712359:0;clear
+: 1728712360:0;l
+: 1728712362:0;cd en
+: 1728712367:0;vim environment.go
+: 1728713065:0;vim ~/.zshrc
+: 1728713105:0;source ~/.zshrc
+: 1728713111:0;l
+: 1728713114:0;vim .
+: 1728713263:0;cd
+: 1728713273:0;cd .config/nvim/lua/jon/plugins/l
+: 1728713278:0;cd .config/nvim/lua/jon/plugins/
+: 1728713281:0;vim lualine.lua
+: 1728713972:0;vim ../../jon/
+: 1728713985:0;vim .
+: 1728714442:0;clear
+: 1728714442:0;l
+: 1728714443:0;claer
+: 1728714446:0;clear
+: 1728715379:0;exit
+: 1728715386:0;vim .
+: 1728715492:0;cd .config
+: 1728715493:0;l.
+: 1728715494:0;l
+: 1728715496:0;cd n
+: 1728715499:0;cd nvim
+: 1728715500:0;l
+: 1728715502:0;vim .
+: 1728715526:0;l
+: 1728715528:0;vim .
+: 1728716147:0;tmux a
+: 1728716152:0;vim .
+: 1728716165:0;cd code/personal/interpreter
+: 1728716165:0;l
+: 1728716166:0;clear
+: 1728716170:0;git status
+: 1728716172:0;l
+: 1728716173:0;clear
+: 1728716174:0;l
+: 1728716176:0;cd lexer
+: 1728716176:0;l
+: 1728716180:0;vim lexer
+: 1728716183:0;vim lexer.go
+: 1728716242:0;clear
+: 1728716242:0;l
+: 1728716243:0;clear
+: 1728716247:0;vim lexer.go
+: 1728716584:0;vim .
+: 1728718007:0;vim lexer.go
+: 1728718031:0;vim .
+: 1728718154:0;clear
+: 1728718155:0;l
+: 1728718156:0;clear
+: 1728718161:0;cd .con
+: 1728718163:0;cd .config
+: 1728718164:0;l
+: 1728718165:0;clear
+: 1728718168:0;git status
+: 1728718171:0;cd nvim
+: 1728718171:0;l
+: 1728718172:0;clear
+: 1728718174:0;git status
+: 1728718177:0;git add --all
+: 1728718221:0;git commit -m 'update to improve config filestructure, add lots of features, especially format on save'
+: 1728718223:0;git pull
+: 1728718228:0;git push
+: 1728719609:0;which $FONT
+: 1728719612:0;which font
+: 1728719614:0;clear
+: 1728721987:0;vim .
+: 1728722072:0;echo 'export VIMRUNTIME=/usr/local/share/nvim/runtime' >> ~/.zshrc
+: 1728722073:0;vim .
+: 1728722120:0;clear
+: 1728722124:0;cd
+: 1728722127:0;vim .zshrc
+: 1728722156:0;tmux a
+: 1728722159:0;vim lexer.go
+: 1728722161:0;cdc
+: 1728722168:0;clear
+: 1728722169:0;cd
+: 1728722169:0;ls
+: 1728722170:0;clear
+: 1728722173:0;vim .zshrc
+: 1728722180:0;l
+: 1728722181:0;clear
+: 1728722187:0;ls /usr
+: 1728722191:0;ls /usr/local
+: 1728722196:0;ls /usr/local/share/nvim
+: 1728722200:0;ls /usr/local/share/nvim/runtime
+: 1728722231:0;clear
+: 1728722235:0;l
+: 1728722238:0;cd neovim
+: 1728722239:0;l
+: 1728722250:0;ls
+: 1728722255:0;cd ..
+: 1728722255:0;l
+: 1728722261:0;ls /local
+: 1728722265:0;ls local
+: 1728722270:0;ls .local
+: 1728722275:0;ls .local/bin/
+: 1728722340:0;ls .local/share/nvim/
+: 1728722392:0;vim .zshrc
+: 1728722405:0;source .zshrc
+: 1728722408:0;vim .zshrc
+: 1728722435:0;vim
+: 1728722445:0;which nvim 
+: 1728722539:0;source .zshrc
+: 1728722541:0;clear
+: 1728722542:0;vim .
+: 1728722645:0;cd code/personal
+: 1728722645:0;l
+: 1728722648:0;cd interpreter
+: 1728722649:0;l
+: 1728722659:0;vim parser/parser.go
+: 1728723205:0;cd ~/.config/nvim
+: 1728723206:0;l
+: 1728723207:0;clear
+: 1728723209:0;l
+: 1728723212:0;cd lua
+: 1728723212:0;l
+: 1728723214:0;cd jon
+: 1728723215:0;l
+: 1728723224:0;cd plugins/lsp
+: 1728723224:0;l
+: 1728723225:0;clear
+: 1728723811:0;tmux a
+: 1728723826:0;exit
+: 1728729144:0;l
+: 1728729145:0;clear
+: 1728729146:0;l
+: 1728729147:0;clera
+: 1728729148:0;clear
+: 1728729153:0;cd code
+: 1728729154:0;l
+: 1728729157:0;cd po
+: 1728729159:0;cd personal
+: 1728729159:0;l
+: 1728729160:0;clear
+: 1728729160:0;l
+: 1728729164:0;clear
+: 1728729165:0;l s
+: 1728729165:0;ls
+: 1728729167:0;l
+: 1728729171:0;cd pySorts
+: 1728729172:0;git pull
+: 1728739060:0;l
+: 1728739061:0;clear
+: 1728739062:0;l
+: 1728739067:0;cd tests
+: 1728739068:0;l
+: 1728739069:0;clear
+: 1728739069:0;l
+: 1728739075:0;test
+: 1728739077:0;l
+: 1728739079:0;test
+: 1728739080:0;l
+: 1728739083:0;./test
+: 1728739085:0;clear
+: 1728739179:0;./python3 -m test
+: 1728739183:0;./python -m test
+: 1728739189:0;python3 -m test
+: 1728739269:0;./python -m test -j0
+: 1728739276:0;python -m test -j0
+: 1728739278:0;python3 -m test -j0
+: 1728739289:0;clear
+: 1728739302:0;python3 -bb -E -Wd -m test -r -w -uall
+: 1728739319:0;python3 -bb -E -Wd -m test -r -w -uall -R
+: 1728739326:0;python3 -bb -E -Wd -m test -r -R -w -uall
+: 1728739361:0;python3 -bb -E -R -Wd -m test -r -w -uall
+: 1728739369:0;clear
+: 1728739370:0;python3 -bb -E -R -Wd -m test -r -w -uall
+: 1728787772:0;vim .
+: 1728787777:0;cd code
+: 1728787777:0;l
+: 1728787781:0;tmux
+: 1728787782:0;clear
+: 1728787782:0;l
+: 1728787791:0;cd studies
+: 1728787792:0;l
+: 1728787797:0;cd ../personal
+: 1728787797:0;l
+: 1728787799:0;clera
+: 1728787799:0;l
+: 1728787800:0;clear
+: 1728787800:0;l
+: 1728787809:0;cd interpreter
+: 1728787810:0;l
+: 1728787813:0;clear
+: 1728787813:0;l
+: 1728787815:0;clear
+: 1728790109:0;l
+: 1728790110:0;clear
+: 1728790119:0;go run main.og
+: 1728790121:0;go run main.go
+: 1728790136:0;git pull
+: 1728790140:0;g pull
+: 1728795231:0;python3
+: 1728817689:0;clear
+: 1728817695:0;tmux a
+: 1728817700:0;t 
+: 1728817705:0;tmux a
+: 1728817706:0;al
+: 1728817707:0;l
+: 1728817708:0;clear
+: 1728817708:0;l
+: 1728817710:0;clear
+: 1728817712:0;vim .
+: 1728892643:0;l
+: 1728892645:0;clear
+: 1728892645:0;l
+: 1728892647:0;cd code
+: 1728892647:0;l
+: 1728892649:0;cd studies
+: 1728892649:0;l
+: 1728892654:0;cd  cs6841
+: 1728892655:0;l
+: 1728892658:0;git pull
+: 1728892662:0;clear
+: 1728892685:0;l
+: 1728892688:0;clear
+: 1728892690:0;make
+: 1728892693:0;clear
+: 1728892694:0;tmux a
+: 1728892695:0;clera
+: 1728892696:0;clear
+: 1728892698:0;vim  .
+: 1728892703:0;l
+: 1728892718:0;vim actuary_vals.py
+: 1728892933:0;python3 actuary_vals.py
+: 1728892971:0;clear
+: 1728892973:0;python3 actuary_vals.py
+: 1728892977:0;vim actuary_vals.py
+: 1728893003:0;python3 actuary_vals.py
+: 1728893013:0;clear
+: 1728893015:0;python3 actuary_vals.py
+: 1728893022:0;./actuary_vals.py
+: 1728893032:0;chmod u+x actuary_vals.py
+: 1728893033:0;./actuary_vals.py
+: 1728893036:0;clear
+: 1728893038:0;l
+: 1728893040:0;clear
+: 1728893042:0;vim actuary_vals.py
+: 1728893149:0;vim gen_actuary_values.py
+: 1728893194:0;chmod u+x get_actuary_values.py
+: 1728893203:0;chmod u+x gen_actuary_values.py
+: 1728893204:0;l
+: 1728893218:0;./actuary_vals.py < gen_actuary_values.py
+: 1728893246:0;./actuary_vals.py < ./gen_actuary_values.py
+: 1728893304:0;./gen_actuary_values.py >> values
+: 1728893306:0;cat values
+: 1728893312:0;clear
+: 1728893327:0;./actuary_vals.py < values
+: 1728893361:0;vim .
+: 1728893380:0;./actuary_vals.py < values
+: 1728893397:0;clear
+: 1728893431:0;./actuary_vals.py < values
+: 1728893436:0;clear
+: 1728893439:0;vim actuary_vals.py
+: 1728893610:0;./actuary_vals.py
+: 1728893616:0;./actuary_vals.py < values
+: 1728893650:0;vim actuary_vals.py
+: 1728893665:0;./actuary_vals.py < values
+: 1728893700:0;./gen_actuary_values.py >> 1_to_50_values
+: 1728893704:0;rm values
+: 1728893709:0;./actuary_vals.py < 1_to_50_values
+: 1728893729:0;vim actuary_vals.py
+: 1728893768:0;./actuary_vals.py < 1_to_50_values
+: 1728893777:0;clear
+: 1728893843:0;vim gen_random_vals.py
+: 1728894086:0;python3 gen_random_vals.py >> 50_randoms
+: 1728894090:0;cat 50_randoms
+: 1728894096:0;clear
+: 1728894105:0;./actuary_vals.py < 50_randoms
+: 1728894127:0;vim .
+: 1728894174:0;./actuary_vals.py < 50_randoms
+: 1728894345:0;./actuary_vals.py < 1_to_50_values
+: 1728894409:0;./actuary_vals.py < 50_randoms
+: 1728894438:0;clear
+: 1728894790:0;vim .
+: 1728895551:0;git status
+: 1728895552:0;git pul
+: 1728895554:0;git pull
+: 1728895566:0;./actuary_vals.py < user_generated
+: 1728895653:0;python3
+: 1728895719:0;clear
+: 1728896089:0;l
+: 1728896096:0;vim user_generated
+: 1728896139:0;cat user_generated
+: 1728897823:0;l
+: 1728897824:0;clera
+: 1728897825:0;clear
+: 1728897826:0;git status
+: 1728897829:0;git add .
+: 1728898002:0;git commit -m 'adding value text files and python scripts for the week 3 actuarial trick lab ex'
+: 1728898003:0;git pull
+: 1728898008:0;git push
+: 1728898016:0;lcear
+: 1728898017:0;clear
+: 1728898017:0;l
+: 1728898031:0;chmod u+x gen_random_vals.py
+: 1728898035:0;./gen_random_vals.py
+: 1728898047:0;vim gen_random_vals.py 
+: 1728898068:0;./gen_random_vals.py
+: 1728898070:0;clear
+: 1728898071:0;l
+: 1728898078:0;python3 length.py
+: 1728898096:0;vim length.py
+: 1728898121:0;chmod u+x length.py
+: 1728898122:0;l
+: 1728898123:0;clear
+: 1728898124:0;git status
+: 1728898157:0;fl
+: 1728898158:0;l
+: 1728898158:0;clear
+: 1728898160:0;git statsu
+: 1728898162:0;git status
+: 1728898163:0;git add .
+: 1728898185:0;git commit -m 'update scripts to run without python3 prefix on cli'
+: 1728898186:0;git pul
+: 1728898187:0;git pull
+: 1728898192:0;git push
+: 1728898197:0;clear
+: 1728898205:0;l
+: 1728898211:0;cat 50_randoms
+: 1728898212:0;clear
+: 1728898212:0;l
+: 1728898215:0;cd ..
+: 1728898215:0;l
+: 1728898217:0;cd ..
+: 1728898217:0;l
+: 1728898218:0;clear
+: 1728917190:0;cd work
+: 1728917191:0;l
+: 1728917197:0;cd  cs1511
+: 1728917198:0;l
+: 1728917201:0;cd course_materials
+: 1728917205:0;cd activities
+: 1728917208:0;cd cs_moonlander
+: 1728917208:0;l
+: 1728917209:0;clear
+: 1728917209:0;l
+: 1728917212:0;cd solutions
+: 1728917212:0;l
+: 1728917220:0;cd autotest
+: 1728917220:0;l
+: 1728917221:0;clear
+: 1728917223:0;cd tests
+: 1728917224:0;l
+: 1728917225:0;clear
+: 1728917251:0;l ../../solutions/
+: 1728917252:0;git pull
+: 1728917274:0;git status
+: 1728917277:0;clear
+: 1728917278:0;cse
+: 1728917609:0;l
+: 1728917618:0;cat 04_02_03
+: 1728917620:0;cat 04_02_03_travel_portal_levels_test
+: 1728917704:0;cd ..
+: 1728917716:0;cd ../solutions/
+: 1728917717:0;l
+: 1728917735:0;gcc cs_moonlander.c -o cs_moonlander
+: 1728917760:0;clear
+: 1728917777:0;vim cs_moonlander.c
+: 1728917798:0;git status
+: 1728917809:0;git stash
+: 1728917811:0;ls
+: 1728917813:0;vim cs_moonlander.c
+: 1728917838:0;gcc cs_moonlander.c -o cs_moonlander
+: 1728917873:0;./cs_moonlander << ../autotest/tests/04_02_03_travel_portal_levels_test
+: 1728917881:0;./cs_moonlander < ../autotest/tests/04_02_03_travel_portal_levels_test
+: 1728961512:0;cd code/personal/sc-takehome-2024-25
+: 1728961515:0;git status
+: 1728961520:0;go test ./...
+: 1728961620:0;go install
+: 1728961623:0;go test ./...
+: 1728961634:0;go mod install
+: 1728961635:0;clera
+: 1728961639:0;clear
+: 1728961666:0;go test ./...
+: 1728961855:0;go get github.com/stretchr/testify/assert
+: 1728961878:0;go mod tidy
+: 1728961881:0;l
+: 1728961882:0;clear
+: 1728961901:0;go test ./...
+: 1728964169:0;clear
+: 1728964171:0;tmux a
+: 1728964172:0;tmux
+: 1728964175:0;clear
+: 1728964177:0;g branch
+: 1728964182:0;git stash
+: 1728964209:0;git checkout -b fix_feedback_1
+: 1728964213:0;git stash pop
+: 1728964217:0;clear
+: 1728964225:0;go test ./...
+: 1728964322:0;clera
+: 1728964323:0;clear
+: 1728964324:0;go test ./...
+: 1728964402:0;clear
+: 1728964403:0;go test ./...
+: 1728964661:0;grep -r "georgechieng\
+"
+: 1728964667:0;grep -r "georgechieng"
+: 1728964669:0;clear
+: 1728964670:0;grep -r "georgechieng"
+: 1728965437:0;go test ./folder
+: 1728965496:0;grep -r main
+: 1728965566:0;go version
+: 1728965698:0;clear
+: 1728965770:0;l
+: 1728965771:0;clear
+: 1728965772:0;vim .
+: 1728965816:0;cd code/personal/sc-takehome-2024-25/folder
+: 1728965817:0;l
+: 1728965820:0;vim .
+: 1728966021:0;code .
+: 1728966200:0;go test ./...
+: 1728966665:0;clera
+: 1728966666:0;clear
+: 1728966669:0;go run main.
+: 1728966670:0;claer
+: 1728966671:0;clear
+: 1728966673:0;go run main.go
+: 1728966676:0;l
+: 1728966682:0;cd code/personal/sc-takehome-2024-25/folder
+: 1728966682:0;l
+: 1728966683:0;clear
+: 1728966684:0;cd ..
+: 1728966686:0;go run main.go
+: 1728966744:0;go clean
+: 1728966745:0;clear
+: 1728966747:0;go run main.go
+: 1728966749:0;clear
+: 1728966771:0;go clean
+: 1728966773:0;go run main.go
+: 1728966784:0;go clean
+: 1728966786:0;go run main.go
+: 1728966787:0;clear
+: 1728966795:0;l
+: 1728966798:0;git branch
+: 1728966802:0;l
+: 1728966804:0;cd ..
+: 1728966824:0;go status
+: 1728966826:0;clear
+: 1728966829:0;go clean
+: 1728966831:0;go clear
+: 1728966833:0;clera
+: 1728966834:0;clear
+: 1728966837:0;go run main.go
+: 1728966943:0;âƒ¾ƒ¼  sc-takehome-2024-25 git:(fix_feedback_1) âƒ¼ƒ· go run main.go\
+package command-line-arguments\
+        imports github.com/georgechieng-sc/interns-2022/folder\
+        imports github.com/georgechieng-sc/interns-2022/folder: import cycle not allowed
+: 1728966945:0;clear
+: 1728966951:0;grep -r 'import "github.com/georgechieng-sc/interns-2022/folder"' .
+: 1728966955:0;cd ..
+: 1728966955:0;l
+: 1728966956:0;clera
+: 1728966957:0;clear
+: 1728966959:0;grep -r 'import "github.com/georgechieng-sc/interns-2022/folder"' .
+: 1728966968:0;cd sc-takehome-2024-25
+: 1728966968:0;l
+: 1728966969:0;clear
+: 1728966974:0;grep -r 'import "github.com/georgechieng-sc/interns-2022/folder"' .
+: 1728967050:0;go run main.go
+: 1728967074:0;cclear
+: 1728967075:0;clear
+: 1728967080:0;go test ./...
+: 1728967335:0;code .
+: 1728967417:0;clear
+: 1728967430:0;go test ./...
+: 1728967834:0;clear
+: 1728967835:0;go test ./...
+: 1728968194:0;clear
+: 1728968195:0;go test ./...
+: 1728968219:0;go test -race -count=10000./...
+: 1728968223:0;go test -race -count=10000 ./...
+: 1728968652:0;go test -v -race -count=10000 ./...
+: 1728968717:0;go test -v -race ./...
+: 1728968749:0;git status
+: 1728968851:0;git add .
+: 1728968860:0;git status
+: 1728968864:0;git add --all
+: 1728968916:0;git commit -m 'fix, remove error handling from function signatures in IDriver definition, IDriver now back to original state'
+: 1728968919:0;git status
+: 1728968921:0;git pull
+: 1728968926:0;git checkout main
+: 1728968929:0;git pull
+: 1728968936:0;git status
+: 1728968941:0;git checkout
+: 1728968955:0;git checkout fix_feedback_1
+: 1728968959:0;git merge main
+: 1728968974:0;git status
+: 1728969110:0;git add .
+: 1728969120:0;go test -v -race ./...
+: 1728969134:0;clear
+: 1728969146:0;git status
+: 1728969153:0;git add .
+: 1728969154:0;git status
+: 1728969169:0;git commit -m 'merge cosmetic updates from main'
+: 1728969170:0;git pull
+: 1728969182:0;go test -v -race ./...
+: 1728969185:0;clear
+: 1728969187:0;go test -v -race ./...
+: 1728969192:0;clear
+: 1728969290:0;git status
+: 1728969295:0;git pull
+: 1728969303:0;git push
+: 1728969309:0;git push --set-upstream origin fix_feedback_1
+: 1728969462:0;git checkout main
+: 1728969465:0;git status
+: 1728969496:0;git checkout -b with_all_errors
+: 1728969500:0;git push
+: 1728969509:0;git checkout main
+: 1728969512:0;git pull
+: 1728969523:0;git checkout with_all_errors 
+: 1728969526:0;git merge main
+: 1728969529:0;clear
+: 1728969530:0;git push
+: 1728969535:0;git push --set-upstream origin with_all_errors
+: 1728969542:0;clear
+: 1728969658:0;git checkout main
+: 1728969660:0;git status
+: 1728969661:0;git pull
+: 1728969847:0;git checkout simplified_implementation
+: 1728969851:0;git checkout -b simplified_implementation
+: 1728969853:0;git status
+: 1728969854:0;clear
+: 1728969875:0;l
+: 1728969876:0;clear
+: 1728969877:0;l
+: 1728969878:0;cledra
+: 1728969879:0;clear
+: 1728969880:0;vim .
+: 1728971148:0;git status
+: 1728971152:0;git stash
+: 1728971156:0;git checkout mainnm
+: 1728971158:0;git checkout main
+: 1728971213:0;git status
+: 1728971215:0;git add .
+: 1728971234:0;git commit -m "hotfix, remove print in error collection'
+: 1728971244:0;git commit -m 'hotfix, remove print in error collection block'
+: 1728971246:0;git pu
+: 1728971249:0;git pull
+: 1728971253:0;git push
+: 1728971276:0;git checkout simplified_implementation
+: 1728971278:0;git stash pop
+: 1728971314:0;git stash
+: 1728971318:0;git checkout main
+: 1728971330:0;git checkout simplified_implementation
+: 1728971333:0;git stash pop
+: 1728971334:0;clear
+: 1728972878:0;go test -v -race ./...
+: 1728972896:0;go test -race ./...
+: 1728972929:0;clear
+: 1728972930:0;go test -race ./...
+: 1728973583:0;go run main.go
+: 1728973592:0;go run main.go >> output
+: 1728973732:0;go run main.go > output
+: 1728973904:0;clear
+: 1728973905:0;go run main.go > output
+: 1728973977:0;clear
+: 1728973978:0;go run main.go > output
+: 1728974178:0;go test -race ./...
+: 1728974181:0;clear
+: 1728974182:0;go run main.go > output
+: 1728974432:0;go test -race ./...
+: 1728974479:0;clear
+: 1728974481:0;go run main.go > output
+: 1728974731:0;go test -race ./...
+: 1728975145:0;go run main.go
+: 1728975256:0;clear
+: 1728975259:0;go run main.go > output
+: 1728975582:0;go test -race ./...
+: 1728975593:0;coera
+: 1728975595:0;clear
+: 1728975597:0;go run main.go
+: 1728975602:0;go run main.go > output
+: 1728975626:0;clera
+: 1728975627:0;clear
+: 1728975714:0;go run main.go > output
+: 1728975817:0;go test -race ./...
+: 1728975880:0;clear
+: 1728975882:0;go run main.go > output
+: 1728976674:0;go test -race ./...
+: 1728976699:0;clear
+: 1728976700:0;go test -race ./...
+: 1728976727:0;clear
+: 1728976728:0;go test -race ./...
+: 1728976844:0;go run main.go > output
+: 1728977565:0;go test -race ./...
+: 1728977570:0;clear
+: 1728977668:0;go run main.go > output
+: 1728977691:0;go test -v -race -count=100 ./...
+: 1728977710:0;clear
+: 1728977711:0;go test -v -race -count=100 ./...
+: 1728977734:0;clear
+: 1728977734:0;go test -v -race -count=100 ./...
+: 1728977818:0;clear
+: 1728977818:0;go test -v -race -count=100 ./...
+: 1728977829:0;git status
+: 1728977902:0;gofmt --version
+: 1728977907:0;gofmt -version
+: 1728977910:0;gofmt version
+: 1728977952:0;clear
+: 1728977954:0;go test -v -race -count=100 ./...
+: 1728977961:0;clear
+: 1728977961:0;go test -v -race -count=100 ./...
+: 1728977967:0;clear
+: 1728977971:0;vim .
+: 1728978075:0;clear
+: 1728978079:0;l
+: 1728978080:0;clear
+: 1728978083:0;git statsu
+: 1728978085:0;git status
+: 1728978098:0;go test -v -race ./...
+: 1728978119:0;clear
+: 1728978131:0;git add --all
+: 1728978133:0;git status
+: 1728978169:0;git commit -m 'refactor to more simplified implementation'
+: 1728978171:0;git status
+: 1728978173:0;git pull
+: 1728978177:0;clear
+: 1728978178:0;git push
+: 1728978183:0;git push --set-upstream origin simplified_implementation
+: 1728978189:0;clear
+: 1728978278:0;git status
+: 1728978281:0;git checkout main
+: 1728978332:0;clear
+: 1728978336:0;go test -v -race ./...
+: 1728978385:0;clear
+: 1728978387:0;git status
+: 1728978389:0;git add .
+: 1728978411:0;git commit -m 'hotfix, removed fmt from import group'
+: 1728978414:0;git pull
+: 1728978417:0;git push
+: 1728978583:0;git checkout simplified_implementation
+: 1728978616:0;git status
+: 1728978622:0;git add --all
+: 1728978651:0;git commit -m 'add branch testing on push and PR'
+: 1728978653:0;git pull
+: 1728978655:0;git  push
+: 1728978672:0;git checkout with_all_errors
+: 1728978682:0;git add --all
+: 1728978684:0;git  status
+: 1728978690:0;git commit -m 'add branch testing on push and PR'
+: 1728978693:0;git  push
+: 1728978697:0;git pull
+: 1728978701:0;clear
+: 1728978706:0;go test -v -race ./...
+: 1728978714:0;clear
+: 1728978744:0;go test -race -count=1000 ./...
+: 1728978755:0;git checkout main
+: 1728978757:0;go test -race -count=1000 ./...
+: 1728978769:0;git checkout simplified_implementation
+: 1728978771:0;go test -race -count=1000 ./...
+: 1728978784:0;go test -race -count=10000 ./...
+: 1728978839:0;git checkout main
+: 1728978851:0;go test -race -count=10000 ./...
+: 1728980291:0;clear
+: 1728980293:0;git status
+: 1728980861:0;git pull
+: 1728980883:0;ls folder/j*
+: 1728980885:0;clear
+: 1728980921:0;go test -race ./...
+: 1728981044:0;git stash
+: 1728981061:0;git checkout simplified_implementation
+: 1728981066:0;git  stash pop
+: 1728981070:0;git add .
+: 1728981078:0;git commit -m 'adding Jenny tests'
+: 1728981079:0;git pull
+: 1728981086:0;git checkout main
+: 1728981097:0;git status
+: 1728981101:0;clear
+: 1728981104:0;go test -race ./...
+: 1728981286:0;git status
+: 1728981288:0;clear
+: 1728981295:0;go test -race ./...
+: 1728981537:0;clear
+: 1728981538:0;go test -race ./...
+: 1728982018:0;clear
+: 1728982019:0;go test -race ./...
+: 1728982390:0;go run main.go
+: 1728982394:0;cd ..
+: 1728982395:0;go run main.go
+: 1728982597:0;clear
+: 1728982598:0;go run main.go
+: 1728982661:0;clear
+: 1728982662:0;go run main.go
+: 1728983111:0;go test -race ./...
+: 1728983165:0;go run main.go
+: 1728983432:0;clear
+: 1728983434:0;go test -race ./...
+: 1728983487:0;clear
+: 1728983489:0;go run main.go
+: 1728983574:0;clear
+: 1728983576:0;go run main.go
+: 1728983595:0;clera
+: 1728983599:0;clear
+: 1728983600:0;go run main.go
+: 1728983608:0;clear
+: 1728983609:0;go run main.go
+: 1728983698:0;clera
+: 1728983699:0;clear
+: 1728983700:0;clera
+: 1728983701:0;clear
+: 1728983702:0;clera
+: 1728983704:0;clear
+: 1728983706:0;go run main.go
+: 1728983794:0;clearw
+: 1728983795:0;clear
+: 1728983796:0;go run main.go
+: 1728983803:0;clear
+: 1728983805:0;go run main.go
+: 1728983902:0;clear
+: 1728983903:0;go run main.go
+: 1728983946:0;clera
+: 1728983948:0;clear
+: 1728983950:0;go run main.go
+: 1728984107:0;clear
+: 1728984108:0;go run main.go
+: 1728984139:0;clear
+: 1728984140:0;go run main.go
+: 1728984158:0;clear
+: 1728984164:0;go test -race ./...
+: 1728984383:0;clear
+: 1728984384:0;go test -race ./...
+: 1728984600:0;clear
+: 1728984601:0;go test -race ./...
+: 1728984632:0;clear
+: 1728984633:0;go test -race ./...
+: 1728984692:0;clera
+: 1728984696:0;clear
+: 1728984697:0;go test -race ./...
+: 1728985040:0;clera
+: 1728985043:0;clear
+: 1728985045:0;go test -race ./...
+: 1728985154:0;clear
+: 1728985155:0;go test -race ./...
+: 1728985184:0;head go test ./...
+: 1728985187:0;clear
+: 1728985193:0;head `go test ./...`
+: 1728985201:0;head -n=10 `go test ./...`
+: 1728985206:0;head -n=100 `go test ./...`
+: 1728985209:0;clera
+: 1728985210:0;clear
+: 1728985216:0;go test -race ./...
+: 1728985343:0;clear
+: 1728985343:0;go test -race ./...
+: 1728985363:0;clear
+: 1728985364:0;go test -race ./...
+: 1728985381:0;clera
+: 1728985385:0;clear
+: 1728985388:0;go test -race ./... > output
+: 1728985591:0;git pull
+: 1728985706:0;clear
+: 1728985707:0;git pull
+: 1728985710:0;clera
+: 1728985710:0;clear
+: 1728985712:0;go test -race ./... > output
+: 1728986188:0;clera
+: 1728986189:0;clear
+: 1728986189:0;clera
+: 1728986192:0;go test -race ./... > output
+: 1728986268:0;git checkout simplified_implementation
+: 1728986271:0;git stash
+: 1728986272:0;git checkout simplified_implementation
+: 1728986280:0;go test ./...
+: 1728986297:0;git checkout simplified_implementation
+: 1728986309:0;git stash
+: 1728986314:0;git add .
+: 1728986358:0;git commit -m 'adding Jenny's tests and output, TODO: fix failing cases'
+: 1728986365:0;git commit -m 'adding Jenny\'s tests and output, TODO: fix failing cases'
+: 1728986369:0;git commit -m 'adding Jennys tests and output, TODO: fix failing cases'
+: 1728986384:0;git  checkout simplified_implementation
+: 1728986388:0;go test ./...
+: 1728986500:0;clear
+: 1728986503:0;go test ./...
+: 1728986671:0;go test ./... > output
+: 1728986837:0;clera
+: 1728986864:0;clear
+: 1728986865:0;git status
+: 1728986896:0;clera
+: 1728986897:0;clear
+: 1728986901:0;go test ./... > output
+: 1728987049:0;go run main.go > output
+: 1728987066:0;go test ./... > output
+: 1728987757:0;clear
+: 1728987766:0;go test ./... > output
+: 1728988392:0;go run main.go > output
+: 1728988395:0;clear
+: 1728988402:0;go test ./... > output
+: 1728988810:0;go test ./...
+: 1728988827:0;go test -v ./...
+: 1728989008:0;clear
+: 1728989008:0;go test -v ./...
+: 1728989025:0;clear
+: 1728989027:0;go run main.go
+: 1728989094:0;go test -v ./...
+: 1728989131:0;clear
+: 1728989132:0;go test -v ./...
+: 1728989141:0;go test  ./...
+: 1728989148:0;clear
+: 1728989149:0;go test  ./...
+: 1728989219:0;clera
+: 1728989220:0;clear
+: 1728989221:0;go test  ./...
+: 1728989285:0;,
+: 1728989286:0;go test  ./...
+: 1728989287:0;clear
+: 1728989288:0;go test  ./...
+: 1728989351:0;clera
+: 1728989355:0;clear
+: 1728989356:0;go test  ./...
+: 1728989494:0;clear && go test  ./...
+: 1728990270:0;cear
+: 1728990272:0;clear
+: 1728990273:0;clear && go test  ./...
+: 1728990286:0;clear && go test -v  ./...
+: 1728990429:0;clear
+: 1728990431:0;git statuys
+: 1728990433:0;git status
+: 1728990435:0;git pull
+: 1728990439:0;git add .
+: 1728990481:0;git commit -m 'adding Jennys tests, changed my tests to match expected behaviour, update functions to pass tests'
+: 1728990482:0;git pull
+: 1728990485:0;git push
+: 1728990498:0;git checkout main
+: 1728990555:0;git stash pop
+: 1728990591:0;git checkout .l
+: 1728990592:0;git checkout .
+: 1728990595:0;clear
+: 1728990597:0;git status
+: 1728990603:0;clear
+: 1728990630:0;clear && go test  ./...
+: 1728991237:0;clear
+: 1728991250:0;clear && go test  ./...
+: 1728991439:0;clera
+: 1728991440:0;clear
+: 1728991441:0;clear && go test  ./...
+: 1728991654:0;clkear
+: 1728991655:0;clera
+: 1728991656:0;clear
+: 1728991657:0;clkear
+: 1728991659:0;clear && go test  ./...
+: 1728991698:0;clera
+: 1728991700:0;clear
+: 1728991701:0;clear && go test  ./...
+: 1728991775:0;clera
+: 1728991777:0;clear
+: 1728991778:0;clear && go test  ./...
+: 1728991815:0;clear
+: 1728991816:0;clear && go test  ./...
+: 1728992048:0;clear
+: 1728992049:0;clear && go test  ./...
+: 1728992160:0;git status
+: 1728992166:0;git stash pop
+: 1728992184:0;giclera
+: 1728992185:0;clear
+: 1728992187:0;clear && go test  ./...
+: 1728992251:0;clear
+: 1728992252:0;clear && go test  ./...
+: 1728992406:0;clear
+: 1728992407:0;clear && go test  ./...
+: 1728992642:0;git status
+: 1728992644:0;git stash
+: 1728992661:0;git checkout simplified_implementation
+: 1728992673:0;go test -race ./...
+: 1728992687:0;go test -race -v ./...
+: 1728992706:0;clera
+: 1728992707:0;clear
+: 1728992714:0;git checkout main
+: 1728992720:0;git stash pop
+: 1728992724:0;clear
+: 1728992728:0;go test -race -v ./...
+: 1728992877:0;clear
+: 1728992878:0;go test -race -v ./...
+: 1728993058:0;clear
+: 1728993058:0;go test -race -v ./...
+: 1728993130:0;go test -race ./...
+: 1728993141:0;clear && go test -race ./...
+: 1728993323:0;clear
+: 1728993323:0;clear && go test -race ./...
+: 1728993518:0;clear && go test -race ./... > output
+: 1728994223:0;git status
+: 1728994231:0;git stash
+: 1728994238:0;git checkout simplified_implementation
+: 1728994257:0;clear && go test -race ./...
+: 1728994712:0;cse
+: 1728994913:0;source /home/jon/miniconda3/bin/activate tensorflow
+: 1728994915:0;git pull
+: 1728995342:0;clear
+: 1728995343:0;l
+: 1728995366:0;cd code/work/cs1511/course_materials/activities/cs_moonlander/
+: 1728995366:0;l
+: 1728995367:0;clear
+: 1728995368:0;l
+: 1728995375:0;vim .l
+: 1728995378:0;vim .
+: 1728995453:0;git status
+: 1728995457:0;git stash
+: 1728995474:0;vim .
+: 1728995608:0;grep -r change
+: 1728995628:0;grep -r "function prototypes for print_player"
+: 1728995648:0;vim .
+: 1728995709:0;grep -r print_player_stats
+: 1728995893:0;vim index.md
+: 1728995907:0;l
+: 1728995910:0;cd ../
+: 1728995911:0;l
+: 1728995912:0;cd ..
+: 1728995913:0;l
+: 1728995919:0;cd ..
+: 1728995919:0;l
+: 1728995928:0;cd course_materials/assignments/ass1
+: 1728995937:0;l
+: 1728995939:0;vim .
+: 1728996060:0;git status
+: 1728996067:0;git stash pop
+: 1728996069:0;git status
+: 1728996075:0;git stash
+: 1728996102:0;git checkout -b cs_moonlander_correction_3
+: 1728996105:0;git stash pop
+: 1728996107:0;git status 
+: 1728996119:0;git add ../../activities/cs_moonlander/stage3.md
+: 1728996124:0;git add index.html
+: 1728996126:0;git status
+: 1728996150:0;git commit -m 'correct cs_moonlander 3.2.2 player input in spec'
+: 1728996151:0;git pull
+: 1728996162:0;git push
+: 1728996174:0;git push --set-upstream origin cs_moonlander_correction_3
+: 1728996468:0;git checkout main
+: 1728996474:0;git checkout 24T3
+: 1728996474:0;l
+: 1728996476:0;cleraa
+: 1728996477:0;clera
+: 1728996478:0;clear
+: 1728996673:0;clera
+: 1728996675:0;clear
+: 1728996812:0;xi
+: 1728996813:0;exi
+: 1728996814:0;exit
+: 1728996817:0;go test -race ./...
+: 1728996820:0;clear
+: 1728997378:0;vim .
+: 1728997425:0;go test -race ./...
+: 1728997432:0;git  status
+: 1728997434:0;clear
+: 1728997441:0;git checkout main
+: 1728997442:0;l
+: 1728997596:0;go test -race ./...
+: 1728997598:0;clera
+: 1728997601:0;clear
+: 1728997623:0;go test -race ./... > output
+: 1728997647:0;git pull
+: 1728997653:0;git stash diff
+: 1728997657:0;git stash show
+: 1728997677:0;git checkout simplified_implementation
+: 1728997680:0;git stash show
+: 1728997710:0;git stash pop
+: 1728997793:0;git status
+: 1728997803:0;git checkout .
+: 1728997808:0;git stash po
+: 1728997809:0;git stash pop
+: 1728997819:0;clear
+: 1728997829:0;go test -race ./... > output
+: 1728998025:0;go test -v -race ./... > output
+: 1728999543:0;l
+: 1728999547:0;clear
+: 1728999548:0;git staus
+: 1728999550:0;git status
+: 1728999551:0;clear
+: 1729000210:0;go test -v -race ./... > output
+: 1729000489:0;l
+: 1729000490:0;clear
+: 1729000621:0;l
+: 1729000622:0;clera
+: 1729000625:0;go test -v -race ./... > output
+: 1729001187:0;go test -v ./... > output
+: 1729001257:0;go test -v ./... > outputc
+: 1729001258:0;clear
+: 1729001263:0;go test -v ./... > outputc
+: 1729001266:0;go test -v ./... > output
+: 1729002083:0;python3
+: 1729002136:0;clear
+: 1729002137:0;python3
+: 1729002139:0;lera
+: 1729002140:0;clear
+: 1729002141:0;go test -v ./... > output
+: 1729002789:0;python3
+: 1729002792:0;clearz
+: 1729002794:0;clear
+: 1729002795:0;go test -v ./... > output
+: 1729002819:0;go test -race -v ./... > output
+: 1729003355:0;go run main.go > output
+: 1729003843:0;go test -race -v ./... > output
+: 1729003914:0;go test -race ./... > output
+: 1729004434:0;go test -v -race ./... > output
+: 1729004599:0;go test -race ./... > output
+: 1729004789:0;go run main.go > output
+: 1729004847:0;go test -race ./... > output
+: 1729005283:0;l
+: 1729005294:0;clear
+: 1729005330:0;cd ~/code/work/cs1511/course_materials/activities/cs_moonlander
+: 1729005330:0;l
+: 1729005360:0;cd ../../assignments/ass1/
+: 1729005361:0;l
+: 1729005362:0;vim .
+: 1729005379:0;git pull
+: 1729005396:0;vim .
+: 1729005422:0;cd ..
+: 1729005422:0;l
+: 1729005437:0;cd ../activities/cs_moonlander/
+: 1729005438:0;vim .
+: 1729005636:0;git status
+: 1729005645:0;git add stage3.md
+: 1729005656:0;git add ../../assignments/ass1/index.html
+: 1729005659:0;git status
+: 1729005690:0;git commit -m 'fix autoformat errors'
+: 1729005693:0;git pull
+: 1729005695:0;git push
+: 1729005801:0;l
+: 1729005905:0;git status
+: 1729005908:0;git add stage3.md
+: 1729005919:0;git commit -m 'fix player 3.2.2 example position'
+: 1729005920:0;git push
+: 1729005938:0;clear
+: 1729005946:0;l
+: 1729005947:0;clear
+: 1729006058:0;go test -race ./... > output
+: 1729006152:0;vim .
+: 1729006156:0;clear
+: 1729006161:0;go test -race ./... > output
+: 1729006762:0;go test -race -count=1000 ./... > output
+: 1729006876:0;go test -race -count=1000 ./... >> output
+: 1729007166:0;rm output
+: 1729007167:0;l
+: 1729007168:0;clear
+: 1729007170:0;git pull
+: 1729007182:0;go test -race ./...
+: 1729007184:0;clear
+: 1729007267:0;git status
+: 1729007273:0;git add  .
+: 1729007347:0;git staus
+: 1729007351:0;git status
+: 1729007377:0;git stash clean
+: 1729007382:0;git stash clear
+: 1729007385:0;git stash pop
+: 1729007388:0;git stash
+: 1729007404:0;git checkout -b 'hotfix_add_jenny_tests'
+: 1729007408:0;git stash pop
+: 1729007438:0;git commit -m 'adding Jenny test battery, better test script, functions comply with all testing'
+: 1729007444:0;git add .
+: 1729007448:0;git status
+: 1729007459:0;git commit -m 'adding Jenny test battery, better test script, functions comply with all testing'
+: 1729007462:0;git pull
+: 1729007464:0;git push
+: 1729007472:0;git push --set-upstream origin hotfix_add_jenny_tests
+: 1729007868:0;git status
+: 1729007869:0;git add .
+: 1729007879:0;git commit -m 'fix CI pipeline'
+: 1729007880:0;git pull
+: 1729007883:0;git push
+: 1729007938:0;git checkout main
+: 1729007940:0;git pull
+: 1729007950:0;git checkout hotfix_add_jenny_tests
+: 1729007953:0;git merge main
+: 1729007964:0;git pull
+: 1729007970:0;git push
+: 1729008440:0;cleawr
+: 1729008441:0;clear
+: 1729008443:0;vim .
+: 1729008447:0;git statu
+: 1729008455:0;git status
+: 1729008463:0;git checkout main
+: 1729008465:0;git pull
+: 1729008549:0;lsl
+: 1729008550:0;clear
+: 1729009413:0;vim .
+: 1729009580:0;git status
+: 1729009593:0;git stash clear
+: 1729009596:0;git stash
+: 1729009618:0;git checkout -b feat_update_readme
+: 1729009622:0;git stash pop
+: 1729009624:0;git add .
+: 1729009640:0;git commit -m 'adding versioning info to readme'
+: 1729009641:0;git pull
+: 1729009644:0;git push
+: 1729009695:0;git push --set-upstream origin feat_update_readme
+: 1729009892:0;git pull
+: 1729009897:0;clear
+: 1729009907:0;git pull
+: 1729009910:0;git checkout main
+: 1729009913:0;git pull
+: 1729009923:0;clear
+: 1729010015:0;l
+: 1729010017:0;clear
+: 1729010018:0;l
+: 1729010019:0;clear
+: 1729048912:0;cd code/personal/sc-takehome-2024-25
+: 1729048912:0;l
+: 1729048913:0;clear
+: 1729049077:0;code .
+: 1729049156:0;git status
+: 1729080498:0;cd code/personal/sc-takehome-2024-25
+: 1729080498:0;l
+: 1729080499:0;clear
+: 1729080516:0;go test ./...
+: 1729080525:0;go test -count=2 ./...
+: 1729080531:0;go test -count=3 ./...
+: 1729080536:0;go test -count=10 ./...
+: 1729080540:0;clear
+: 1729080541:0;go test -count=10 ./...
+: 1729080547:0;git pull
+: 1729080551:0;clear
+: 1729080552:0;go test -count=10 ./...
+: 1729080563:0;git checkout simplified_implementation
+: 1729080564:0;git pull
+: 1729080570:0;go test -count=10 ./...
+: 1729080974:0;git checkout main
+: 1729080977:0;clear
+: 1729080979:0;git status
+: 1729080983:0;code .
+: 1729081429:0;git checkout -b feat_trees_to_maps
+: 1729081642:0;go test -count=10 ./...
+: 1729086985:0;go test ./...
+: 1729086987:0;clearw
+: 1729086988:0;clera
+: 1729086989:0;clear
+: 1729087003:0;go test ./...
+: 1729087127:0;clera
+: 1729087128:0;clear
+: 1729087130:0;go test ./...
+: 1729087136:0;go test -count=10 ./...
+: 1729087148:0;git checkout main
+: 1729087149:0;go test -count=10 ./...
+: 1729087162:0;git checkout feat_trees_to_maps
+: 1729087216:0;clear
+: 1729087225:0;go test -count=1000 ./...
+: 1729087247:0;git checkout main
+: 1729087249:0;go test -count=1000 ./...
+: 1729089928:0;go test -count=10 ./...
+: 1729089930:0;clear
+: 1729089960:0;l
+: 1729089961:0;clear
+: 1729089965:0;git status
+: 1729089975:0;git stash
+: 1729089997:0;git checkout feat_trees_to_maps
+: 1729090001:0;git stash pop
+: 1729090004:0;l
+: 1729090006:0;clear
+: 1729090020:0;git add .
+: 1729090069:0;git commit -m 'trees are now maps'
+: 1729090072:0;git pull
+: 1729090076:0;git push
+: 1729090079:0;git branch --set-upstream-to=origin/<branch> feat_trees_to_maps
+: 1729090088:0;git push --set-upstream origin feat_trees_to_maps
+: 1729090096:0;clear
+: 1729090098:0;git status
+: 1729092447:0;go test -bench=.
+: 1729092556:0;go test -bench=. ./...
+: 1729092716:0;go test ./...
+: 1729092720:0;clear
+: 1729092721:0;go test ./...
+: 1729092723:0;go test -bench=. ./...
+: 1729092753:0;go test -bench=. ./... > output
+: 1729093203:0;clera
+: 1729093204:0;clear
+: 1729093206:0;go test -bench=. ./... > output
+: 1729093316:0;clear
+: 1729093320:0;go run main.go
+: 1729093370:0;go run main.go > output
+: 1729093502:0;clear
+: 1729093505:0;go test -bench=. ./... > output
+: 1729093530:0;go test -bench=. ./...
+: 1729093594:0;clear
+: 1729093600:0;go test -bench=. ./...
+: 1729093635:0;clear
+: 1729093636:0;go test -bench=. ./...
+: 1729093681:0;clear
+: 1729093682:0;go test -bench=. ./...
+: 1729093761:0;go test -bench=. -count=100 ./...
+: 1729093807:0;clear
+: 1729093811:0;go test -bench=. -count=5 ./...
+: 1729094342:0;go test -bench=. ./...
+: 1729094346:0;go test -bench=./...
+: 1729094352:0;go test -bench=. ./...
+: 1729094508:0;clera
+: 1729094510:0;clear
+: 1729094517:0;go run main.go > output
+: 1729095828:0;go test -bench=. ./...
+: 1729096080:0;go install golang.org/x/perf/cmd/benchstat@latest
+: 1729096110:0;go mod tidy
+: 1729096112:0;clear
+: 1729096298:0;go test -bench . -benchmem
+: 1729096302:0;go test -bench . -benchmem ./...
+: 1729096341:0;go test -bench . -benchmem ./... > bench_maps_impl
+: 1729096440:0;benchstat bench_maps_impl.txt
+: 1729096450:0;go install golang.org/x/perf/cmd/benchstat@latest
+: 1729096456:0;benchstat bench_maps_impl.txt
+: 1729096473:0;> benchstat bench_maps_impl.txt
+: 1729096476:0;clera
+: 1729096477:0;clear
+: 1729096500:0;benchstat
+: 1729096502:0;clear
+: 1729096525:0;benchstat old.txt new.txt
+: 1729096529:0;clear
+: 1729096601:0;git commit -m 'adding benchmarks and test data for maps impl'
+: 1729096611:0;l
+: 1729096618:0;./benchstat
+: 1729096631:0;chmod u+x benchstat
+: 1729096637:0;./benchstat 
+: 1729096645:0;./benchstat bench_maps_impl.txt
+: 1729096652:0;./benchstat bench_maps_impl.txt bench_maps_impl.txt
+: 1729096654:0;clear
+: 1729096661:0;cat benchstat
+: 1729096693:0;go install golang.org/x/perf/cmd/benchstat@latest
+: 1729096868:0;go test -bench . -benchmem -count=10 ./... > bench_maps_impl
+: 1729096901:0;go test -bench . -benchmem -count=10 ./... > bench_maps_impl.txt
+: 1729097050:0;git status
+: 1729097052:0;clear
+: 1729097097:0;benchstat bench_maps_impl.txt bench_maps_impl_copy.txt
+: 1729097138:0;go benchstat bench_maps_impl.txt bench_maps_impl_copy.txt
+: 1729097145:0;go tool benchstat bench_maps_impl.txt bench_maps_impl_copy.txt
+: 1729097150:0;clear
+: 1729097301:0;go benchstat old.bench new.bench
+: 1729097314:0;go install golang.org/x/perf/cmd/benchstat@latest
+: 1729097336:0;vim ~/.zshrc
+: 1729097369:0;source ~/.zshrc
+: 1729097373:0;go benchstat old.bench new.bench
+: 1729097406:0;ls $(go env GOPATH)/bin
+: 1729097419:0;echo $PATH
+: 1729097443:0;benchstat help
+: 1729097446:0;go benchstat
+: 1729097449:0;clear
+: 1729097458:0;benchstat --help
+: 1729097486:0;benchstat
+: 1729097488:0;clear
+: 1729097507:0;benchstat bench_maps_impl.txt
+: 1729097631:0;git add .
+: 1729097731:0;git commit -m 'updated static.go to be less noisy, included benchmarks and both raw and formatted results for the map implementation of folders'
+: 1729097733:0;git pull
+: 1729097743:0;git status
+: 1729097823:0;benchstat bench_maps_impl.txt > bench_maps_formatted.txt
+: 1729097826:0;git add .
+: 1729097886:0;git status
+: 1729097905:0;git pull
+: 1729097908:0;git push
+: 1729098509:0;git checkout main
+: 1729099706:0;go test -bench . -benchmem -count=10 ./... > bench_trees_impl.txt
+: 1729099871:0;benchstat bench_maps_impl.txt > bench_trees_impl.txt
+: 1729099903:0;go test -bench . -benchmem -count=10 ./... > bench_trees_impl.txt
+: 1729100081:0;benchstat bench_maps_impl.txt bench_trees_impl.txt > compare_benches.txt
+: 1729100086:0;printenv > "/tmp/tmp-13119IOsq77TofA9j.txt"
+: 1729100242:0;git checkout simplified_implementation
+: 1729100246:0;git status
+: 1729100297:0;go mod tidy
+: 1729100301:0;git status
+: 1729100304:0;git add .
+: 1729100308:0;git status
+: 1729100330:0;git commit -m 'adding benchmarking info'
+: 1729100341:0;git checkout simplified_implementation
+: 1729100342:0;git status
+: 1729100344:0;clear
+: 1729100569:0;go test -bench . -benchmem -count=10 ./... > bench_simple_impl.txt
+: 1729100722:0;git checkout main
+: 1729100738:0;git  add .
+: 1729100750:0;git commit -m 'adding benchmark raw data'
+: 1729100753:0;git pull
+: 1729100763:0;git checkout main
+: 1729100772:0;git pull
+: 1729100791:0;git config pull.rebase false
+: 1729100794:0;clear
+: 1729100878:0;benchstat bench_maps_impl.txt bench_trees_impl.txt bench_cimp_impl.txt > compare_benches.txt
+: 1729100885:0;benchstat bench_maps_impl.txt bench_trees_impl.txt bench_simp_impl.txt > compare_benches.txt
+: 1729101244:0;benchstat bench_simp_impl.txt bench_maps_impl.txt bench_trees_impl.txt > compare_benches.txt
+: 1729123196:0;cd code/personal/sc-takehome-2024-25
+: 1729123197:0;l
+: 1729123198:0;clear
+: 1729123241:0;git checkout feat_trees_to_maps
+: 1729123245:0;git status
+: 1729123246:0;git add .
+: 1729123269:0;git commit -m 'adding simplified version bench data and bench comparison'
+: 1729123272:0;git pull
+: 1729123294:0;l
+: 1729123297:0;git status
+: 1729123300:0;git push
+: 1729123305:0;clear
+: 1729123327:0;git checkout feat_trees_to_maps
+: 1729123333:0;git pull
+: 1729123339:0;git checkout main
+: 1729123341:0;git pull
+: 1729123344:0;git checkout feat_trees_to_maps
+: 1729123347:0;git merge main
+: 1729123438:0;git status
+: 1729123439:0;git pull
+: 1729123443:0;git add .
+: 1729123458:0;git commit -m 'fix benchmarking merge conflict'
+: 1729123460:0;git pull
+: 1729123464:0;git push
+: 1729123473:0;clear
+: 1729123684:0;git checkout -b smarter_maps_impl
+: 1729123687:0;git status
+: 1729129594:0;go test ./...
+: 1729129769:0;clear
+: 1729129769:0;go test ./...
+: 1729129888:0;clera
+: 1729129926:0;clear && go test '-run=^Test_Itern_MoveFolder/test_intern's_implementation_MoveFolder_-_happy_path$'
+: 1729129937:0;clear && go test '-run=_implementation_MoveFolder_-_happy_path$'
+: 1729129944:0;clear && go test '-run=_implementation_MoveFolder_-_happy_path$' ./...
+: 1729129957:0;clear && go test '*-run=_implementation_MoveFolder_-_happy_path$' ./...
+: 1729130062:0;clear && go test '-run=^Test_Itern_MoveFolder/test_intern\'s_implementation_MoveFolder_-_happy_path$'\
+
+: 1729130073:0;clear && go test "-run=^Test_Itern_MoveFolder/test_intern's_implementation_MoveFolder_-_happy_path$"\
+
+: 1729130080:0;clear && go test "-run=^Test_Itern_MoveFolder/test_intern's_implementation_MoveFolder_-_happy_path$" ./...\
+
+: 1729130097:0;clear && go test "-run=^Test_Itern_MoveFolder/test_intern's_implementation_MoveFolder_-_happy_path$" ./... > output\
+
+: 1729130282:0;go test ./...
+: 1729130355:0;go test -run='Test_*' ./...
+: 1729130371:0;go test -bench ./...
+: 1729130419:0;go test -v -bench ./...
+: 1729130422:0;go test -v ./...
+: 1729130511:0;clear
+: 1729130516:0;go test -v ./... > output
+: 1729130736:0;clear
+: 1729130833:0;clear && go test "-run=^Test_folder_MoveFolder_Complex$" ./... > output\
+
+: 1729131043:0;go test -v ./... > output
+: 1729131145:0;clear && go test "-run=^Test_folder_GetFoldersByOrgID$" ./... > output\
+
+: 1729134296:0;go test -v ./... > output
+: 1729134373:0;clear && go test "-run=^Test_folder_GetFoldersByOrgID$" ./... > output\
+
+: 1729134821:0;go test -v ./... > output
+: 1729135989:0;go test ./... > output
+: 1729137077:0;go run main.go
+: 1729137323:0;go test ./... > output
+: 1729137377:0;clear
+: 1729137378:0;go test ./... > output
+: 1729137423:0;go run main.go > output
+: 1729138895:0;go test ./... > output
+: 1729138915:0;clear
+: 1729138947:0;go test ./... > output
+: 1729138992:0;chmod u+x bench.sh 
+: 1729139004:0;clera
+: 1729139005:0;clear
+: 1729139093:0;echo $HISTFILEE
+: 1729139094:0;echo $HISTFILE
+: 1729139108:0;cat /home/jon/.zsh_history
+: 1729139125:0;cat /home/jon/.zsh_history >> output

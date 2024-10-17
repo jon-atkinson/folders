@@ -11,48 +11,44 @@ func (f *driver) MoveFolder(name string, dst string) ([]Folder, error) {
 		return []Folder{}, errors.New("Cannot move a folder to itself")
 	}
 
-	fromOrg, fromFolder, _ := f.nameToOrgFolder(name)
-	if fromFolder == nil {
+	fromFolder, found := f.folderMap[name]
+	if !found {
 		return []Folder{}, errors.New("Source folder does not exist")
 	}
 
-	toOrg, toFolder, _ := f.nameToOrgFolder(dst)
-	if toFolder == nil {
+	toFolder, found := f.folderMap[dst]
+	if !found {
 		return []Folder{}, errors.New("Destination folder does not exist")
 	}
 
-	if fromOrg.orgId != toOrg.orgId {
+	if fromFolder.folder.OrgId != toFolder.folder.OrgId {
 		return []Folder{}, errors.New("Cannot move a folder to a different organization")
 	}
 	if slices.Contains(strings.Split(toFolder.folder.Paths, "."), fromFolder.folder.Name) {
 		return []Folder{}, errors.New("Cannot move a folder to a child of itself")
 	}
 
-	_, err := fromOrg.pruneFolder(fromFolder)
+	_, err := f.pruneFolder(fromFolder)
 	if err != nil {
 		return []Folder{}, err
 	}
 	fixPaths(fromFolder, toFolder.folder.Paths)
-	toOrg.insertFolder(fromFolder)
+	toFolder.children[fromFolder.folder.Name] = fromFolder
 
-	allFolders, err := f.GetAllFolders()
-	if err != nil {
-		return []Folder{}, err
-	}
-	return allFolders, nil
+	return f.GetAllFolders(), nil
 }
 
 // removes target node from Org
 // errors on: no/incorrect path, folder not in the org
-func (org *Org) pruneFolder(node *FolderTreeNode) (*FolderTreeNode, error) {
+func (f *driver) pruneFolder(node *FolderTreeNode) (*FolderTreeNode, error) {
 	paths := strings.Split(node.folder.Paths, ".")
 	if len(paths) == 0 {
 		return nil, errors.New("Could not prune tree, requested path was empty")
 	}
 
-	curr, found := org.folders[paths[0]]
+	curr, found := f.folderTree[paths[0]]
 	if !found {
-		return nil, errors.New("Could not prune tree, folder not in this organization")
+		return nil, errors.New("Could not prune tree, folder does not exist")
 	}
 	paths = paths[1:]
 
@@ -71,11 +67,10 @@ func (org *Org) pruneFolder(node *FolderTreeNode) (*FolderTreeNode, error) {
 	}
 
 	// target is a top-level folder
-	if _, found := org.folders[node.folder.Name]; found {
-		res := org.folders[node.folder.Name]
-		delete(org.folders, node.folder.Name)
+	if _, found := f.folderTree[node.folder.Name]; found {
+		res := f.folderTree[node.folder.Name]
+		delete(f.folderTree, node.folder.Name)
 		return res, nil
-
 	}
 
 	return nil, errors.New("Likely Bug: prune tree, this should be unreachable")
