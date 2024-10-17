@@ -5,5 +5,4 @@ if [ -z "$1" ]; then
   exit 1
 fi
 
-# Run the Go benchmarks and write to the specified or default file
-go test -bench . -benchmem -count=10 ./... > "$1"
+go test -bench . -benchmem -count=10 ./... > "./benchmark/$1"
