@@ -1,18 +1,8 @@
-# Hello!
+# Updates
+There's a few implementations available on different branches, mostly so I could some go benchmarking practice. 
+Benchmark folder in root of main branch should have all the raw benchmarking outputs and the comparison generated with benchstat.
 
-Hi! Thanks for the opportunity to do this. I didn't have time to properly work on this until the weekend so rather than ask clarifying questions I made some assumptions, listed below.
-## Benchmarks Coming!
-Should find a couple hours to straighten all this out soon. Benchmark tests and some outputs available on feat_maps_impl branch.
-
-## Benchmarks Coming!
-Should find a couple hours to straighten all this out soon. Benchmark tests and some outputs available on this branch.
-
-## Different Versions
-
-Per the feedback after my initial runthrough I've created a much simpler implementation,
-it can be found at [this link](https://github.com/jon-atkinson/sc-takehome-2024-25/tree/simplified_implementation).
-
-### Versioning Overview
+## Versioning Overview
 
 |            | best driver build time | best lookup time | best insert time | in place edits | stable operations | concurrent scope |
 | ---------- | ---------------------- | ---------------- | ---------------- | -------------- | ----------------- | ---------------- |
