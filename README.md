@@ -12,6 +12,7 @@ The more important factors are therefore the cost to find a node in the tree and
 the cost of changing the ADT structure in a MoveFolder call, hence the table columns.
 
 n = number of folders.
+
 m = number of orgs.
 
 |                                                                                              	| driver build avg TC 	| driver build worst TC 	| lookup Folder avg TC 	| lookup Folder worst TC 	| move Folder update ADT avg TC 	| move Folder update ADT worst TC 	|
