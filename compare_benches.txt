@@ -1,0 +1,41 @@
+goos: linux
+goarch: amd64
+pkg: github.com/georgechieng-sc/interns-2022/folder
+cpu: 11th Gen Intel(R) Core(TM) i5-11400F @ 2.60GHz
+                                            │ bench_simp_impl.txt │               bench_maps_impl.txt                │              bench_trees_impl.txt               │
+                                            │       sec/op        │       sec/op        vs base                      │      sec/op        vs base                      │
+_folder_NewDriver-12                                 0.2399n ± 4%   123098.0000n ±  1%  +51301421.15% (p=0.000 n=10)   218241.0000n ± 0%  +90952598.48% (p=0.000 n=10)
+_folder_GetFoldersByOrgID-12                          3.965µ ± 1%         7.769µ ±  1%        +95.96% (p=0.000 n=10)         6.265µ ± 1%        +58.03% (p=0.000 n=10)
+_folder_GetAllChildFolders_large_subtree-12           23.53µ ± 1%         12.38µ ±  7%        -47.40% (p=0.000 n=10)         12.30µ ± 1%        -47.71% (p=0.000 n=10)
+_folder_GetAllChildFolders_small_subtree-12          21.750µ ± 3%         8.046µ ± 11%        -63.01% (p=0.000 n=10)        11.133µ ± 0%        -48.81% (p=0.000 n=10)
+_folder_MoveFolder_small_tree_to_shallow-12           27.90µ ± 3%         58.28µ ±  1%       +108.88% (p=0.000 n=10)         70.88µ ± 2%       +154.04% (p=0.000 n=10)
+_folder_MoveFolder_small_tree_to_deep-12              29.38µ ± 2%         67.16µ ±  4%       +128.57% (p=0.000 n=10)         75.37µ ± 2%       +156.52% (p=0.000 n=10)
+_folder_MoveFolder_large_tree_to_shallow-12           32.42µ ± 2%         67.73µ ±  4%       +108.88% (p=0.000 n=10)         80.30µ ± 1%       +147.67% (p=0.000 n=10)
+_folder_MoveFolder_large_tree_to_deep-12              42.02µ ± 1%         74.53µ ±  1%        +77.39% (p=0.000 n=10)         85.92µ ± 1%       +104.50% (p=0.000 n=10)
+geomean                                               5.211µ              34.22µ             +556.74%                        40.26µ            +672.63%
+
+                                            │ bench_simp_impl.txt │          bench_maps_impl.txt          │          bench_trees_impl.txt          │
+                                            │        B/op         │     B/op      vs base                 │     B/op       vs base                 │
+_folder_NewDriver-12                                0.00Ki ± 0%     74.16Ki ± 0%         ? (p=0.000 n=10)   218.03Ki ± 0%         ? (p=0.000 n=10)
+_folder_GetFoldersByOrgID-12                       15.33Ki ± 0%     15.57Ki ± 0%    +1.55% (p=0.000 n=10)    16.10Ki ± 0%    +5.05% (p=0.000 n=10)
+_folder_GetAllChildFolders_large_subtree-12       26.375Ki ± 0%     8.328Ki ± 1%   -68.43% (p=0.000 n=10)    8.938Ki ± 0%   -66.11% (p=0.000 n=10)
+_folder_GetAllChildFolders_small_subtree-12       19.188Ki ± 0%     1.161Ki ± 4%   -93.95% (p=0.000 n=10)    1.765Ki ± 0%   -90.80% (p=0.000 n=10)
+_folder_MoveFolder_small_tree_to_shallow-12        25.75Ki ± 0%     63.35Ki ± 3%  +146.02% (p=0.000 n=10)    66.13Ki ± 0%  +156.80% (p=0.000 n=10)
+_folder_MoveFolder_small_tree_to_deep-12           28.02Ki ± 0%     62.61Ki ± 0%  +123.47% (p=0.000 n=10)    67.52Ki ± 0%  +140.99% (p=0.000 n=10)
+_folder_MoveFolder_large_tree_to_shallow-12        31.44Ki ± 0%     69.01Ki ± 2%  +119.50% (p=0.000 n=10)    74.11Ki ± 0%  +135.73% (p=0.000 n=10)
+_folder_MoveFolder_large_tree_to_deep-12           46.42Ki ± 0%     72.20Ki ± 1%   +55.53% (p=0.000 n=10)    77.58Ki ± 0%   +67.13% (p=0.000 n=10)
+geomean                                                         ¹   26.18Ki       ?                          33.04Ki       ?
+¹ summaries must be >0 to compute geomean
+
+                                            │ bench_simp_impl.txt │         bench_maps_impl.txt         │         bench_trees_impl.txt         │
+                                            │      allocs/op      │  allocs/op   vs base                │  allocs/op   vs base                 │
+_folder_NewDriver-12                                0.000k ± 0%     1.276k ± 0%        ? (p=0.000 n=10)   4.811k ± 0%         ? (p=0.000 n=10)
+_folder_GetFoldersByOrgID-12                         8.000 ± 0%     12.000 ± 0%  +50.00% (p=0.000 n=10)   23.000 ± 0%  +187.50% (p=0.000 n=10)
+_folder_GetAllChildFolders_large_subtree-12         283.00 ± 0%      29.00 ± 3%  -89.75% (p=0.000 n=10)    39.00 ± 0%   -86.22% (p=0.000 n=10)
+_folder_GetAllChildFolders_small_subtree-12         278.00 ± 0%      26.00 ± 8%  -90.65% (p=0.000 n=10)    35.00 ± 0%   -87.41% (p=0.000 n=10)
+_folder_MoveFolder_small_tree_to_shallow-12          422.0 ± 0%      102.0 ± 3%  -75.83% (p=0.000 n=10)    144.0 ± 0%   -65.88% (p=0.000 n=10)
+_folder_MoveFolder_small_tree_to_deep-12             455.0 ± 0%      110.0 ± 2%  -75.82% (p=0.000 n=10)    164.0 ± 0%   -63.96% (p=0.000 n=10)
+_folder_MoveFolder_large_tree_to_shallow-12          438.0 ± 0%      177.0 ± 1%  -59.59% (p=0.000 n=10)    211.0 ± 0%   -51.83% (p=0.000 n=10)
+_folder_MoveFolder_large_tree_to_deep-12             562.0 ± 0%      161.0 ± 1%  -71.35% (p=0.000 n=10)    211.0 ± 0%   -62.46% (p=0.000 n=10)
+geomean                                                         ¹    88.29       ?                         141.3       ?
+¹ summaries must be >0 to compute geomean

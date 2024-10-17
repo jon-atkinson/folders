@@ -154,51 +154,6 @@ func Test_folder_GetFoldersByOrgID(t *testing.T) {
 	}
 }
 
-func Benchmark_folder_NewDriver(b *testing.B) {
-	folders := folder.GetSampleData()
-	b.ResetTimer()
-
-	for i := 0; i < b.N; i++ {
-		folder.NewDriver(folders)
-	}
-}
-
-func Benchmark_folder_GetFoldersByOrgID(b *testing.B) {
-	folders := folder.GetSampleData()
-	f := folder.NewDriver(folders)
-	orgID := uuid.FromStringOrNil(folder.DefaultOrgID)
-
-	b.ResetTimer()
-
-	for i := 0; i < b.N; i++ {
-		f.GetFoldersByOrgID(orgID)
-	}
-}
-
-func Benchmark_folder_GetAllChildFolders_large_subtree(b *testing.B) {
-	folders := folder.GetSampleData()
-	f := folder.NewDriver(folders)
-	orgID := uuid.FromStringOrNil(folder.DefaultOrgID)
-
-	b.ResetTimer()
-
-	for i := 0; i < b.N; i++ {
-		f.GetAllChildFolders(orgID, "noble-vixen")
-	}
-}
-
-func Benchmark_folder_GetAllChildFolders_small_subtree(b *testing.B) {
-	folders := folder.GetSampleData()
-	f := folder.NewDriver(folders)
-	orgID := uuid.FromStringOrNil(folder.DefaultOrgID)
-
-	b.ResetTimer()
-
-	for i := 0; i < b.N; i++ {
-		f.GetAllChildFolders(orgID, "noted-lady-bullseye")
-	}
-}
-
 func Test_folder_GetAllChildFolders(t *testing.T) {
 	firstOrgId := uuid.FromStringOrNil(FirstOrgID)
 	secondOrgID := uuid.FromStringOrNil(SecondOrgID)
@@ -379,5 +334,50 @@ func Test_folder_GetAllChildFolders(t *testing.T) {
 
 			testFolderResults(t, got, tt.want)
 		})
+	}
+}
+
+func Benchmark_folder_NewDriver(b *testing.B) {
+	folders := folder.GetSampleData()
+	b.ResetTimer()
+
+	for i := 0; i < b.N; i++ {
+		folder.NewDriver(folders)
+	}
+}
+
+func Benchmark_folder_GetFoldersByOrgID(b *testing.B) {
+	folders := folder.GetSampleData()
+	f := folder.NewDriver(folders)
+	orgID := uuid.FromStringOrNil(folder.DefaultOrgID)
+
+	b.ResetTimer()
+
+	for i := 0; i < b.N; i++ {
+		f.GetFoldersByOrgID(orgID)
+	}
+}
+
+func Benchmark_folder_GetAllChildFolders_large_subtree(b *testing.B) {
+	folders := folder.GetSampleData()
+	f := folder.NewDriver(folders)
+	orgID := uuid.FromStringOrNil(folder.DefaultOrgID)
+
+	b.ResetTimer()
+
+	for i := 0; i < b.N; i++ {
+		f.GetAllChildFolders(orgID, "noble-vixen")
+	}
+}
+
+func Benchmark_folder_GetAllChildFolders_small_subtree(b *testing.B) {
+	folders := folder.GetSampleData()
+	f := folder.NewDriver(folders)
+	orgID := uuid.FromStringOrNil(folder.DefaultOrgID)
+
+	b.ResetTimer()
+
+	for i := 0; i < b.N; i++ {
+		f.GetAllChildFolders(orgID, "noted-lady-bullseye")
 	}
 }
