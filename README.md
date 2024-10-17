@@ -1,34 +1,26 @@
-# Hello!
+# Updates
+There's a few implementations available on different branches, mostly so I could some go benchmarking practice. 
+Benchmark folder in root of main branch should have all the raw benchmarking outputs and the comparison generated with benchstat.
 
-Hi! Thanks for the opportunity to do this. I didn't have time to properly work on this until the weekend so rather than ask clarifying questions I made some assumptions, listed below.
-## Benchmarks Coming!
-Should find a couple hours to straighten all this out soon. Benchmark tests and some outputs available on feat_maps_impl branch.
+## Versioning Overview
+This table outlines some of common primitive operations' time complexities.
+I opted for this rather than the full functions because many of them require
+touching on order of O(n) Folder structs just to update them, meaning they all
+have a lower bound of O(n) anyway.
 
-## Different Versions
+The more important factors are therefore the cost to find a node in the tree and
+the cost of changing the ADT structure in a MoveFolder call, hence the table columns.
 
-Per the feedback after my initial runthrough I've created a much simpler implementation,
-it can be found at [this link](https://github.com/jon-atkinson/sc-takehome-2024-25/tree/simplified_implementation).
+|                                                                                              	| driver build avg TC 	| driver build worst TC 	| lookup Folder avg TC 	| lookup Folder worst TC 	| move Folder update ADT avg TC 	| move Folder update ADT worst TC 	|
+|----------------------------------------------------------------------------------------------	|---------------------	|-----------------------	|----------------------	|------------------------	|-------------------------------	|---------------------------------	|
+| [smarter_maps (main)](https://github.com/jon-atkinson/sc-takehome-2024-25/tree/main)         	| O(n log(n))         	| O(n^2 log(n))         	| O(1)                 	| O(n)                   	| O(log(n))                     	| O(n^2)                          	|
+| [btrees](https://github.com/jon-atkinson/sc-takehome-2024-25/tree/trees_impl)                	| O(n log(n))         	| O(n log(n))           	| O(log(m) log(n))     	| O(log(m) log(n))       	| O(log(m) log(n))              	| O(log(m) log(n))                	|
+| [map_trees](https://github.com/jon-atkinson/sc-takehome-2024-25/tree/feat_trees_to_maps)     	| O(n log(n))         	| O(n^2 log(n))         	| O(log(n))            	| O(m n)                 	| O(log(n))                     	| O(m n^2)                        	|
+| [simple](https://github.com/jon-atkinson/sc-takehome-2024-25/tree/simplified_implementation) 	| O(1)                	| O(1)                  	| O(n)                 	| O(n)                   	| O(n)                          	| O(n)                            	|
 
-### Versioning Overview
-
-|            | best driver build time | best lookup time | best insert time | in place edits | stable operations | concurrent scope |
-| ---------- | ---------------------- | ---------------- | ---------------- | -------------- | ----------------- | ---------------- |
-| main       |                        | ✅               | ✅               |                |                   | Between Orgs     |
-| simplified | ✅                     |                  |                  | ✅             | ✅                | None             |
-
-## My Assumptions:
-
-This is all to do with the implementation on main.
-
-- Drivers have long lifetimes
-- Frequent lookups
-- Orgs share Folder namespace
-  - Folder names are unique
-- Hardware is beefy, context switches are cheap
-  - goroutines will improve performance
-- Filesystem is very large
-  - Worst case TC a better target than median TC
-  - Threading setup overhead overtaken by concurrancy time saves
+## Benchmarking
+This branch contains a benchmark directory that contains benchmarking output
+and benchstat comparison for all implementations outlined above.
 
 # sc-interns-2024
 
