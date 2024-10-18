@@ -15,11 +15,12 @@ n = number of folders.
 
 m = number of orgs.
 
-|                                                                                              	| driver build avg TC 	| driver build worst TC 	| lookup Folder avg TC 	| lookup Folder worst TC 	| move Folder update ADT avg TC 	| move Folder update ADT worst TC 	|
+|                                                                                              	| driver build avg TC 	| driver build worst TC 	| lookup Folder avg TC 	| lookup Folder worst TC 	| delete Folder avg TC            | delete Folder worst TC            |
 |----------------------------------------------------------------------------------------------	|---------------------	|-----------------------	|----------------------	|------------------------	|-------------------------------	|---------------------------------	|
-| [smarter_maps (main)](https://github.com/jon-atkinson/sc-takehome-2024-25/tree/main)         	| O(n log(n))         	| O(n^2 log(n))         	| O(1)                 	| O(n)                   	| O(log(n))                     	| O(n^2)                          	|
-| [btrees](https://github.com/jon-atkinson/sc-takehome-2024-25/tree/trees_impl)                	| O(n log(n))         	| O(n log(n))           	| O(log(m) log(n))     	| O(log(m) log(n))       	| O(log(m) log(n))              	| O(log(m) log(n))                	|
+| [optimal, single threaded](https://github.com/jon-atkinson/sc-takehome-2024-25/tree/main)     | O(n log(n))         	| O(n^2)         	        | O(1)                 	| O(n)                   	| O(1)                     	      | O(n)                          	  |
+| [no orgs, all maps](https://github.com/jon-atkinson/sc-takehome-2024-25/tree/org_w_maps_impl) | O(n log(n))         	| O(n^2 log(n))         	| O(1)                 	| O(n)                   	| O(log(n))                     	| O(n^2)                          	|
 | [map_trees](https://github.com/jon-atkinson/sc-takehome-2024-25/tree/feat_trees_to_maps)     	| O(n log(n))         	| O(n^2 log(n))         	| O(log(n))            	| O(m n)                 	| O(log(n))                     	| O(m n^2)                        	|
+| [btrees](https://github.com/jon-atkinson/sc-takehome-2024-25/tree/trees_impl)                	| O(n log(n))         	| O(n log(n))           	| O(log(m) log(n))     	| O(log(m) log(n))       	| O(log(m) log(n))              	| O(log(m) log(n))                	|
 | [simple](https://github.com/jon-atkinson/sc-takehome-2024-25/tree/simplified_implementation) 	| O(1)                	| O(1)                  	| O(n)                 	| O(n)                   	| O(n)                          	| O(n)                            	|
 
 ## Benchmarking

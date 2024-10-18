@@ -6,6 +6,8 @@ import (
 	"strings"
 )
 
+// moves Folder name to be a child of Folder dst
+// runs in O(n) in length of folders due to path updates
 func (f *driver) MoveFolder(name string, dst string) ([]Folder, error) {
 	if name == dst {
 		return []Folder{}, errors.New("Cannot move a folder to itself")
@@ -28,52 +30,18 @@ func (f *driver) MoveFolder(name string, dst string) ([]Folder, error) {
 		return []Folder{}, errors.New("Cannot move a folder to a child of itself")
 	}
 
-	_, err := f.pruneFolder(fromFolder)
-	if err != nil {
-		return []Folder{}, err
-	}
-	fixPaths(fromFolder, toFolder.folder.Paths)
+	// update position
 	toFolder.children[fromFolder.folder.Name] = fromFolder
+	if fromFolder.parent != nil {
+		delete(fromFolder.parent.children, fromFolder.folder.Name)
+		toFolder.children[fromFolder.folder.Name] = fromFolder
+		fromFolder.parent = toFolder
+	}
+
+	// update paths
+	fixPaths(fromFolder, toFolder.folder.Paths)
 
 	return f.GetAllFolders(), nil
-}
-
-// removes target node from Org
-// errors on: no/incorrect path, folder not in the org
-func (f *driver) pruneFolder(node *FolderTreeNode) (*FolderTreeNode, error) {
-	paths := strings.Split(node.folder.Paths, ".")
-	if len(paths) == 0 {
-		return nil, errors.New("Could not prune tree, requested path was empty")
-	}
-
-	curr, found := f.folderTree[paths[0]]
-	if !found {
-		return nil, errors.New("Could not prune tree, folder does not exist")
-	}
-	paths = paths[1:]
-
-	for i, path := range paths {
-		next, found := curr.children[path]
-		if !found {
-			return nil, errors.New("Could not prune tree, missing folders on path")
-		}
-
-		if i == len(paths)-1 {
-			delete(curr.children, path)
-			return next, nil
-		}
-
-		curr = next
-	}
-
-	// target is a top-level folder
-	if _, found := f.folderTree[node.folder.Name]; found {
-		res := f.folderTree[node.folder.Name]
-		delete(f.folderTree, node.folder.Name)
-		return res, nil
-	}
-
-	return nil, errors.New("Likely Bug: prune tree, this should be unreachable")
 }
 
 // updates the paths for all nodes in the tree rooted at node

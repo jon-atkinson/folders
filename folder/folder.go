@@ -1,7 +1,6 @@
 package folder
 
 import (
-	"errors"
 	"slices"
 	"strings"
 
@@ -31,16 +30,17 @@ type driver struct {
 type FolderTreeNode struct {
 	folder   *Folder
 	children map[string]*FolderTreeNode
+	parent   *FolderTreeNode
 }
 
 func NewDriver(folders []Folder) IDriver {
-	folderMap := make(map[string]*FolderTreeNode)
-
-	return &driver{
-		folderMap:   folderMap,
-		folderTree:  buildFolderTree(&folders, &folderMap),
+	f := &driver{
+		folderMap:   make(map[string]*FolderTreeNode, len(folders)),
+		folderTree:  make(map[string]*FolderTreeNode, len(folders)),
 		folderSlice: &folders,
 	}
+	buildFolderTree(&folders, &f.folderTree, &f.folderMap)
+	return f
 }
 
 func NewFolderTreeNode(folder *Folder) *FolderTreeNode {
@@ -59,60 +59,30 @@ func preProcessFolders(folders *[]Folder) {
 
 // Builds the folderTree, inserting each node into the global name lookup map
 // Assumes well-formed folder trees in input which are properly seperated by OrgId
-func buildFolderTree(folders *[]Folder, folderMap *map[string]*FolderTreeNode) map[string]*FolderTreeNode {
+func buildFolderTree(folders *[]Folder, folderTree, folderMap *map[string]*FolderTreeNode) {
 	if len(*folders) == 0 {
-		return make(map[string]*FolderTreeNode)
+		return
 	}
 
 	preProcessFolders(folders)
-	folderTree := make(map[string]*FolderTreeNode)
 
+	// assumes folders sorted by path
 	for i := range *folders {
 		node := NewFolderTreeNode(&(*folders)[i])
-		insertFolder(node, folderTree)
+
+		// assumes all folders have a valid path
+		paths := strings.Split(node.folder.Paths, ".")
+		if len(paths) == 1 {
+			(*folderTree)[(*folders)[i].Name] = node
+		} else {
+			(*folderMap)[paths[len(paths)-2]].children[(*folders)[i].Name] = node
+			node.parent = (*folderMap)[paths[len(paths)-2]]
+		}
+
 		(*folderMap)[(*folders)[i].Name] = node
 	}
 
-	return folderTree
-}
-
-// inserts folder into correct position folderTree
-// navigates tree based on node.folder.Paths
-func insertFolder(node *FolderTreeNode, parent map[string]*FolderTreeNode) error {
-	parts := strings.Split(node.folder.Paths, ".")
-	if len(parts) == 0 {
-		return errors.New("Cannot insert folder with empty path")
-	}
-
-	curr, found := parent[parts[0]]
-
-	if !found {
-		if len(parts) == 1 {
-			parent[node.folder.Name] = node
-		}
-		return nil
-	}
-	parts = parts[1:]
-
-	for idx, part := range parts {
-		next, found := curr.children[part]
-
-		if !found {
-			if idx != len(parts)-1 {
-				// missing folders on path
-				return errors.New("Could not insert, missing folders on path")
-			}
-
-			// insert folder to tree
-			curr.children[node.folder.Name] = node
-			return nil
-		}
-
-		curr = next
-	}
-
-	// folder already exists at this location
-	return errors.New("Could not insert, folder already exists at this location")
+	return
 }
 
 // used to ensure unordered slices are ordered in the output to match tests that
