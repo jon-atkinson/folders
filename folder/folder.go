@@ -31,6 +31,7 @@ type driver struct {
 type FolderTreeNode struct {
 	folder   *Folder
 	children map[string]*FolderTreeNode
+	parent   *FolderTreeNode
 }
 
 func NewDriver(folders []Folder) IDriver {
@@ -86,8 +87,10 @@ func insertFolder(node *FolderTreeNode, parent map[string]*FolderTreeNode) error
 
 	curr, found := parent[parts[0]]
 
+	// top level folder
 	if !found {
 		if len(parts) == 1 {
+			node.parent = nil
 			parent[node.folder.Name] = node
 		}
 		return nil
@@ -104,6 +107,7 @@ func insertFolder(node *FolderTreeNode, parent map[string]*FolderTreeNode) error
 			}
 
 			// insert folder to tree
+			node.parent = curr
 			curr.children[node.folder.Name] = node
 			return nil
 		}
