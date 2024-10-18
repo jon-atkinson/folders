@@ -34,13 +34,13 @@ type FolderTreeNode struct {
 }
 
 func NewDriver(folders []Folder) IDriver {
-	folderMap := make(map[string]*FolderTreeNode)
-
-	return &driver{
-		folderMap:   folderMap,
-		folderTree:  buildFolderTree(&folders, &folderMap),
+	f := &driver{
+		folderMap:   make(map[string]*FolderTreeNode, len(folders)),
+		folderTree:  make(map[string]*FolderTreeNode, len(folders)),
 		folderSlice: &folders,
 	}
+	buildFolderTree(&folders, &f.folderTree, &f.folderMap)
+	return f
 }
 
 func NewFolderTreeNode(folder *Folder) *FolderTreeNode {
@@ -59,13 +59,12 @@ func preProcessFolders(folders *[]Folder) {
 
 // Builds the folderTree, inserting each node into the global name lookup map
 // Assumes well-formed folder trees in input which are properly seperated by OrgId
-func buildFolderTree(folders *[]Folder, folderMap *map[string]*FolderTreeNode) map[string]*FolderTreeNode {
+func buildFolderTree(folders *[]Folder, folderTree, folderMap *map[string]*FolderTreeNode) {
 	if len(*folders) == 0 {
-		return make(map[string]*FolderTreeNode)
+		return
 	}
 
 	preProcessFolders(folders)
-	folderTree := make(map[string]*FolderTreeNode)
 
 	// assumes folders sorted by path
 	for i := range *folders {
@@ -74,7 +73,7 @@ func buildFolderTree(folders *[]Folder, folderMap *map[string]*FolderTreeNode) m
 		// assumes all folders have a valid path
 		paths := strings.Split(node.folder.Paths, ".")
 		if len(paths) == 1 {
-			folderTree[(*folders)[i].Name] = node
+			(*folderTree)[(*folders)[i].Name] = node
 		} else {
 			(*folderMap)[paths[len(paths)-2]].children[(*folders)[i].Name] = node
 			node.parent = (*folderMap)[paths[len(paths)-2]]
@@ -83,7 +82,7 @@ func buildFolderTree(folders *[]Folder, folderMap *map[string]*FolderTreeNode) m
 		(*folderMap)[(*folders)[i].Name] = node
 	}
 
-	return folderTree
+	return
 }
 
 // used to ensure unordered slices are ordered in the output to match tests that
