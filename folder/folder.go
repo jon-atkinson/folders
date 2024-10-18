@@ -1,7 +1,6 @@
 package folder
 
 import (
-	"errors"
 	"slices"
 	"strings"
 
@@ -68,55 +67,23 @@ func buildFolderTree(folders *[]Folder, folderMap *map[string]*FolderTreeNode) m
 	preProcessFolders(folders)
 	folderTree := make(map[string]*FolderTreeNode)
 
+	// assumes folders sorted by path
 	for i := range *folders {
 		node := NewFolderTreeNode(&(*folders)[i])
-		insertFolder(node, folderTree)
+
+		// assumes all folders have a valid path
+		paths := strings.Split(node.folder.Paths, ".")
+		if len(paths) == 1 {
+			folderTree[(*folders)[i].Name] = node
+		} else {
+			(*folderMap)[paths[len(paths)-2]].children[(*folders)[i].Name] = node
+			node.parent = (*folderMap)[paths[len(paths)-2]]
+		}
+
 		(*folderMap)[(*folders)[i].Name] = node
 	}
 
 	return folderTree
-}
-
-// inserts folder into correct position folderTree
-// navigates tree based on node.folder.Paths
-func insertFolder(node *FolderTreeNode, parent map[string]*FolderTreeNode) error {
-	parts := strings.Split(node.folder.Paths, ".")
-	if len(parts) == 0 {
-		return errors.New("Cannot insert folder with empty path")
-	}
-
-	curr, found := parent[parts[0]]
-
-	// top level folder
-	if !found {
-		if len(parts) == 1 {
-			node.parent = nil
-			parent[node.folder.Name] = node
-		}
-		return nil
-	}
-	parts = parts[1:]
-
-	for idx, part := range parts {
-		next, found := curr.children[part]
-
-		if !found {
-			if idx != len(parts)-1 {
-				// missing folders on path
-				return errors.New("Could not insert, missing folders on path")
-			}
-
-			// insert folder to tree
-			node.parent = curr
-			curr.children[node.folder.Name] = node
-			return nil
-		}
-
-		curr = next
-	}
-
-	// folder already exists at this location
-	return errors.New("Could not insert, folder already exists at this location")
 }
 
 // used to ensure unordered slices are ordered in the output to match tests that
