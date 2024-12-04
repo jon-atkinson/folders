@@ -1,0 +1,87 @@
+?   	github.com/georgechieng-sc/interns-2022	[no test files]
+goos: darwin
+goarch: arm64
+pkg: github.com/georgechieng-sc/interns-2022/folder
+cpu: Apple M4 Pro
+Benchmark_folder_NewDriver-12                           	   23868	     50545 ns/op	   90087 B/op	     941 allocs/op
+Benchmark_folder_NewDriver-12                           	   23790	     50596 ns/op	   90087 B/op	     941 allocs/op
+Benchmark_folder_NewDriver-12                           	   23680	     50830 ns/op	   90086 B/op	     941 allocs/op
+Benchmark_folder_NewDriver-12                           	   23554	     50915 ns/op	   90087 B/op	     941 allocs/op
+Benchmark_folder_NewDriver-12                           	   23438	     50903 ns/op	   90087 B/op	     941 allocs/op
+Benchmark_folder_NewDriver-12                           	   23710	     51068 ns/op	   90087 B/op	     941 allocs/op
+Benchmark_folder_NewDriver-12                           	   23150	     50889 ns/op	   90086 B/op	     941 allocs/op
+Benchmark_folder_NewDriver-12                           	   23696	     50811 ns/op	   90087 B/op	     941 allocs/op
+Benchmark_folder_NewDriver-12                           	   23590	     50816 ns/op	   90087 B/op	     941 allocs/op
+Benchmark_folder_NewDriver-12                           	   23602	     51168 ns/op	   90086 B/op	     941 allocs/op
+Benchmark_folder_GetFoldersByOrgID-12                   	  234063	      5344 ns/op	   27175 B/op	      22 allocs/op
+Benchmark_folder_GetFoldersByOrgID-12                   	  221508	      5330 ns/op	   27097 B/op	      22 allocs/op
+Benchmark_folder_GetFoldersByOrgID-12                   	  233944	      5406 ns/op	   27364 B/op	      22 allocs/op
+Benchmark_folder_GetFoldersByOrgID-12                   	  231788	      5354 ns/op	   27516 B/op	      22 allocs/op
+Benchmark_folder_GetFoldersByOrgID-12                   	  232807	      5140 ns/op	   25235 B/op	      22 allocs/op
+Benchmark_folder_GetFoldersByOrgID-12                   	  231739	      5368 ns/op	   27097 B/op	      22 allocs/op
+Benchmark_folder_GetFoldersByOrgID-12                   	  218794	      5163 ns/op	   25463 B/op	      22 allocs/op
+Benchmark_folder_GetFoldersByOrgID-12                   	  233750	      5390 ns/op	   27325 B/op	      22 allocs/op
+Benchmark_folder_GetFoldersByOrgID-12                   	  228828	      5244 ns/op	   26184 B/op	      22 allocs/op
+Benchmark_folder_GetFoldersByOrgID-12                   	  234390	      5256 ns/op	   26149 B/op	      22 allocs/op
+Benchmark_folder_GetAllChildFolders_large_subtree-12    	  697474	      1747 ns/op	    7623 B/op	      10 allocs/op
+Benchmark_folder_GetAllChildFolders_large_subtree-12    	  689431	      1777 ns/op	    7623 B/op	      10 allocs/op
+Benchmark_folder_GetAllChildFolders_large_subtree-12    	  682814	      1743 ns/op	    7623 B/op	      10 allocs/op
+Benchmark_folder_GetAllChildFolders_large_subtree-12    	  675104	      1743 ns/op	    7623 B/op	      10 allocs/op
+Benchmark_folder_GetAllChildFolders_large_subtree-12    	  676608	      1743 ns/op	    7623 B/op	      10 allocs/op
+Benchmark_folder_GetAllChildFolders_large_subtree-12    	  700165	      1756 ns/op	    7623 B/op	      10 allocs/op
+Benchmark_folder_GetAllChildFolders_large_subtree-12    	  695419	      1742 ns/op	    7623 B/op	      10 allocs/op
+Benchmark_folder_GetAllChildFolders_large_subtree-12    	  684936	      1734 ns/op	    7623 B/op	      10 allocs/op
+Benchmark_folder_GetAllChildFolders_large_subtree-12    	  708838	      1735 ns/op	    7623 B/op	      10 allocs/op
+Benchmark_folder_GetAllChildFolders_large_subtree-12    	  683306	      1720 ns/op	    7623 B/op	      10 allocs/op
+Benchmark_folder_GetAllChildFolders_small_subtree-12    	11696128	       102.2 ns/op	     160 B/op	       3 allocs/op
+Benchmark_folder_GetAllChildFolders_small_subtree-12    	11561190	       103.5 ns/op	     160 B/op	       3 allocs/op
+Benchmark_folder_GetAllChildFolders_small_subtree-12    	11663757	       103.9 ns/op	     160 B/op	       3 allocs/op
+Benchmark_folder_GetAllChildFolders_small_subtree-12    	11580928	       103.4 ns/op	     160 B/op	       3 allocs/op
+Benchmark_folder_GetAllChildFolders_small_subtree-12    	11813164	       103.0 ns/op	     160 B/op	       3 allocs/op
+Benchmark_folder_GetAllChildFolders_small_subtree-12    	11394338	       103.1 ns/op	     160 B/op	       3 allocs/op
+Benchmark_folder_GetAllChildFolders_small_subtree-12    	11637426	       104.5 ns/op	     160 B/op	       3 allocs/op
+Benchmark_folder_GetAllChildFolders_small_subtree-12    	11462138	       103.5 ns/op	     160 B/op	       3 allocs/op
+Benchmark_folder_GetAllChildFolders_small_subtree-12    	11659106	       104.5 ns/op	     160 B/op	       3 allocs/op
+Benchmark_folder_GetAllChildFolders_small_subtree-12    	11624512	       104.1 ns/op	     160 B/op	       3 allocs/op
+Benchmark_folder_MoveFolder_small_tree_to_shallow-12    	 3944008	       306.9 ns/op	     384 B/op	       9 allocs/op
+Benchmark_folder_MoveFolder_small_tree_to_shallow-12    	 3945348	       300.1 ns/op	     384 B/op	       9 allocs/op
+Benchmark_folder_MoveFolder_small_tree_to_shallow-12    	 4045357	       301.0 ns/op	     384 B/op	       9 allocs/op
+Benchmark_folder_MoveFolder_small_tree_to_shallow-12    	 3971976	       300.6 ns/op	     384 B/op	       9 allocs/op
+Benchmark_folder_MoveFolder_small_tree_to_shallow-12    	 3962319	       303.0 ns/op	     384 B/op	       9 allocs/op
+Benchmark_folder_MoveFolder_small_tree_to_shallow-12    	 3971467	       299.0 ns/op	     384 B/op	       9 allocs/op
+Benchmark_folder_MoveFolder_small_tree_to_shallow-12    	 3998294	       299.5 ns/op	     384 B/op	       9 allocs/op
+Benchmark_folder_MoveFolder_small_tree_to_shallow-12    	 3971491	       301.7 ns/op	     384 B/op	       9 allocs/op
+Benchmark_folder_MoveFolder_small_tree_to_shallow-12    	 3927154	       303.5 ns/op	     384 B/op	       9 allocs/op
+Benchmark_folder_MoveFolder_small_tree_to_shallow-12    	 3943305	       298.3 ns/op	     384 B/op	       9 allocs/op
+Benchmark_folder_MoveFolder_small_tree_to_deep-12       	 2939091	       409.2 ns/op	     800 B/op	       9 allocs/op
+Benchmark_folder_MoveFolder_small_tree_to_deep-12       	 2931206	       409.5 ns/op	     800 B/op	       9 allocs/op
+Benchmark_folder_MoveFolder_small_tree_to_deep-12       	 2904032	       413.0 ns/op	     800 B/op	       9 allocs/op
+Benchmark_folder_MoveFolder_small_tree_to_deep-12       	 2912082	       411.6 ns/op	     800 B/op	       9 allocs/op
+Benchmark_folder_MoveFolder_small_tree_to_deep-12       	 2934685	       412.5 ns/op	     800 B/op	       9 allocs/op
+Benchmark_folder_MoveFolder_small_tree_to_deep-12       	 2917686	       412.8 ns/op	     800 B/op	       9 allocs/op
+Benchmark_folder_MoveFolder_small_tree_to_deep-12       	 2899423	       409.8 ns/op	     800 B/op	       9 allocs/op
+Benchmark_folder_MoveFolder_small_tree_to_deep-12       	 2907301	       413.7 ns/op	     800 B/op	       9 allocs/op
+Benchmark_folder_MoveFolder_small_tree_to_deep-12       	 2916096	       415.1 ns/op	     800 B/op	       9 allocs/op
+Benchmark_folder_MoveFolder_small_tree_to_deep-12       	 2910994	       415.1 ns/op	     800 B/op	       9 allocs/op
+Benchmark_folder_MoveFolder_large_tree_to_shallow-12    	  318183	      3696 ns/op	    7798 B/op	      86 allocs/op
+Benchmark_folder_MoveFolder_large_tree_to_shallow-12    	  322803	      3712 ns/op	    7798 B/op	      86 allocs/op
+Benchmark_folder_MoveFolder_large_tree_to_shallow-12    	  320661	      3736 ns/op	    7797 B/op	      86 allocs/op
+Benchmark_folder_MoveFolder_large_tree_to_shallow-12    	  318879	      3757 ns/op	    7798 B/op	      86 allocs/op
+Benchmark_folder_MoveFolder_large_tree_to_shallow-12    	  319946	      3735 ns/op	    7798 B/op	      86 allocs/op
+Benchmark_folder_MoveFolder_large_tree_to_shallow-12    	  330118	      3704 ns/op	    7798 B/op	      86 allocs/op
+Benchmark_folder_MoveFolder_large_tree_to_shallow-12    	  322435	      3724 ns/op	    7798 B/op	      86 allocs/op
+Benchmark_folder_MoveFolder_large_tree_to_shallow-12    	  324753	      3738 ns/op	    7798 B/op	      86 allocs/op
+Benchmark_folder_MoveFolder_large_tree_to_shallow-12    	  321814	      3741 ns/op	    7798 B/op	      86 allocs/op
+Benchmark_folder_MoveFolder_large_tree_to_shallow-12    	  321535	      3718 ns/op	    7798 B/op	      86 allocs/op
+Benchmark_folder_MoveFolder_large_tree_to_deep-12       	  378324	      3201 ns/op	    9863 B/op	      66 allocs/op
+Benchmark_folder_MoveFolder_large_tree_to_deep-12       	  370624	      3226 ns/op	    9863 B/op	      66 allocs/op
+Benchmark_folder_MoveFolder_large_tree_to_deep-12       	  374272	      3222 ns/op	    9863 B/op	      66 allocs/op
+Benchmark_folder_MoveFolder_large_tree_to_deep-12       	  374673	      3219 ns/op	    9863 B/op	      66 allocs/op
+Benchmark_folder_MoveFolder_large_tree_to_deep-12       	  375412	      3307 ns/op	    9863 B/op	      66 allocs/op
+Benchmark_folder_MoveFolder_large_tree_to_deep-12       	  333142	      3415 ns/op	    9863 B/op	      66 allocs/op
+Benchmark_folder_MoveFolder_large_tree_to_deep-12       	  367316	      3241 ns/op	    9863 B/op	      66 allocs/op
+Benchmark_folder_MoveFolder_large_tree_to_deep-12       	  373717	      3209 ns/op	    9863 B/op	      66 allocs/op
+Benchmark_folder_MoveFolder_large_tree_to_deep-12       	  372432	      3231 ns/op	    9863 B/op	      66 allocs/op
+Benchmark_folder_MoveFolder_large_tree_to_deep-12       	  373530	      3217 ns/op	    9863 B/op	      66 allocs/op
+PASS
+ok  	github.com/georgechieng-sc/interns-2022/folder	111.436s
