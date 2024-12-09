@@ -21,7 +21,8 @@ func main() {
 	fmt.Println("  - list: List all folders")
 	fmt.Println("  - get <orgID>: Get folders by organization ID")
 	fmt.Println("  - children <name>: Get children by name")
-	fmt.Println("  - exit: Exit the REPL")
+	fmt.Println("  - move <src,dst>: Move src to child of dst")
+	fmt.Println("  - exit|q|quit: Exit the REPL")
 	fmt.Println()
 
 	res := folder.GetAllFolders()
